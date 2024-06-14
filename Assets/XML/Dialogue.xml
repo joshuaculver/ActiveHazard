@@ -1,0 +1,8 @@
+<DialogueCollection>
+	<dialogue id= "T1">
+		<label>Test</label>
+		<sentence>This is a test sentence.</sentence>
+		<sentence>And so is this.</sentence>
+		<sentence>Finally, this one is also</sentence>
+	</dialogue>
+</DialogueCollection>

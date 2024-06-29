@@ -12,11 +12,12 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public GameObject player;
     //public GameObject cam;
     public Camera cam;
+    public PlayerAudEmitter aud;
     public Animator playerAnimator; 
     private PlayerInput pMove;
     private MouseLook pCamX;
     private MouseLook pCamY;
-    private Vector3 neutral = new Vector3(0, 0, 0);
+    //private Vector3 neutral = new Vector3(0, 0, 0);
     private DecalProjector projector;
     public RawImage black;
     public bool gameOver = false;
@@ -36,6 +37,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         pCamY = cam.GetComponent<MouseLook>();
         playerAnimator = playerAnimator.GetComponent<Animator>();
         projector = player.GetComponentInChildren<DecalProjector>();
+        aud = player.GetComponentInChildren<PlayerAudEmitter>();
+
         status = ManagerStatus.Started;
     }
 
@@ -68,17 +71,22 @@ public class PlayerManager : MonoBehaviour, IGameManager
             if(pMove.moving)
                 {
                     playerAnimator.SetBool("IsWalking", true);
+                    aud.running = true;
                 }
             else if(!pMove.moving)
                 {
                     playerAnimator.SetBool("IsWalking", false);
+                    aud.running = false;
                 }
             
             if(Input.GetKeyDown(KeyCode.F))
             {
                 Die();
             }
-            
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                Attacked();
+            }
         }
     }
 
@@ -149,5 +157,10 @@ public class PlayerManager : MonoBehaviour, IGameManager
         Debug.Log("Death wait done");
         dead = true;
         yield break;
+    }
+
+    public void Attacked()
+    {
+        aud.queFly();
     }
 }

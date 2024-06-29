@@ -773,6 +773,7 @@ public class AI : MonoBehaviour
         spotLights[0].spotAngle = 170f;
         spotLights[0].enabled = true;
         emit.emitBang();
+        Managers.Player.Attacked();
 
         while(timer < 0.125f)
         {

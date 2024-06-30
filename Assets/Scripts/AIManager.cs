@@ -47,7 +47,7 @@ public class AIManager : MonoBehaviour, IGameManager
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            if(!spawned && !titleMode)
+            if(!spawned)
             {
                 danger = 1;
                 SpawnActive(FurthestNode().transform);

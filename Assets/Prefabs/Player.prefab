@@ -152,7 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3602959589742088508}
+  - {fileID: 1352709625128645982}
   - {fileID: 5685521925142151924}
   - {fileID: 721779964751987652}
   - {fileID: 5259632746660815264}
@@ -188,7 +188,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.7248263
-  m_Radius: 0.4576858
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0
   m_SkinWidth: 0.08
@@ -255,6 +255,73 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &4130544683986435049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352709625128645982}
+  - component: {fileID: 6443032828897779766}
+  - component: {fileID: 75084186458194801}
+  m_Layer: 0
+  m_Name: CameraHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352709625128645982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130544683986435049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.035, y: 0.649, z: 0.207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3602959589742088508}
+  m_Father: {fileID: 4471705214867617930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6443032828897779766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130544683986435049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d59428195a26964eb67deefc03ab934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 2
+  sensitivityHor: 3
+  sensitivityVert: 3
+  minimumVert: -40
+  maximumVert: 45
+  canMove: 1
+--- !u!114 &75084186458194801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130544683986435049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb64f2b9e75a294e84aa380a66c17d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enable: 1
+  cam: {fileID: 3602959589742088508}
+  camHolder: {fileID: 1352709625128645982}
 --- !u!1 &5645619738157757190
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +568,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3602959589742088508}
   - component: {fileID: 369643414579055205}
-  - component: {fileID: 1843302570127808414}
   - component: {fileID: 345439259519088904}
   - component: {fileID: 110858987391597010}
   m_Layer: 0
@@ -519,13 +585,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6602592805407792470}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.035, y: 0.649, z: 0.169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9063339296841369916}
-  m_Father: {fileID: 4471705214867617930}
+  m_Father: {fileID: 1352709625128645982}
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!20 &369643414579055205
 Camera:
@@ -578,24 +644,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1843302570127808414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6602592805407792470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d59428195a26964eb67deefc03ab934, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 2
-  sensitivityHor: 3
-  sensitivityVert: 3
-  minimumVert: -40
-  maximumVert: 45
-  canMove: 1
 --- !u!111 &345439259519088904
 Animation:
   m_ObjectHideFlags: 0

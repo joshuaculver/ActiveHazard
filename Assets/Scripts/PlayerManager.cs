@@ -163,4 +163,9 @@ public class PlayerManager : MonoBehaviour, IGameManager
     {
         aud.queFly();
     }
+
+    private void headBob()
+    {
+        
+    }
 }

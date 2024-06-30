@@ -19,9 +19,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     private MouseLook pCamY;
     //private Vector3 neutral = new Vector3(0, 0, 0);
     private DecalProjector projector;
-    public RawImage black;
     public bool gameOver = false;
-    public bool dead = false;
     public bool titleMode;
 
     public float normalFOV = 70;
@@ -44,22 +42,6 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     public void Update()
     {
-        if(dead)
-        {
-            Debug.Log("Dead");
-            if(black.color.a < 1f)
-            {
-                Debug.Log("Fading");
-                black.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(black.color.a, 1f, 0.3f * Time.deltaTime));
-            }
-            else
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-            return;
-        }
-        else
-        {
             /*
             if(Input.GetKeyDown(KeyCode.Escape))
             {
@@ -87,7 +69,6 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 Attacked();
             }
-        }
     }
 
     public void SpawnPlayer()
@@ -126,23 +107,10 @@ public class PlayerManager : MonoBehaviour, IGameManager
         gameOver = true;
         Hold();
         Animation anim = cam.GetComponent<Animation>();
-        StartCoroutine(Cover(.15f));
+        Managers.Menu.CoverRoutine(.15f);
         projector.enabled = true;
         anim.Play();
         StartCoroutine(DeathWait(3f));
-    }
-
-    public IEnumerator Cover(float time)
-    {
-        black.color = new Color(1f, 0.81f, 0.5f, 1f);
-        float currTime = 0f;
-        while(currTime < time)
-        {
-            currTime += Time.deltaTime;
-            yield return null;
-        }
-        black.color = new Color(0f, 0f, 0f, 0f);
-        yield break;
     }
 
     public IEnumerator DeathWait(float seconds)
@@ -155,7 +123,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             yield return null;
         }
         Debug.Log("Death wait done");
-        dead = true;
+        Managers.Menu.playerDead = true;
         yield break;
     }
 

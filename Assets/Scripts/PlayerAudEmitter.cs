@@ -20,6 +20,11 @@ public class PlayerAudEmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Managers.isPaused)
+        {
+            return;
+        }
+
         if(waiting)
         {
             flyTimer += Time.deltaTime;

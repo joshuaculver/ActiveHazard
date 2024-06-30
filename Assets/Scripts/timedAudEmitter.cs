@@ -26,7 +26,7 @@ public class timedAudEmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!running)
+        if(!running || Managers.isPaused)
         {
             return;
         }

@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool dead = false;
     public bool titleMode;
 
-    public float normalFOV = 60;
+    public float normalFOV = 70;
 
     public void Startup()
     {
@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
         cam = player.GetComponentInChildren<Camera>();
         pMove = player.GetComponent<PlayerInput>();
         pCamX = player.GetComponent<MouseLook>();
-        pCamY = cam.GetComponent<MouseLook>();
+        pCamY = cam.GetComponentInParent<MouseLook>();
         playerAnimator = playerAnimator.GetComponent<Animator>();
         projector = player.GetComponentInChildren<DecalProjector>();
         aud = player.GetComponentInChildren<PlayerAudEmitter>();
@@ -162,10 +162,5 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public void Attacked()
     {
         aud.queFly();
-    }
-
-    private void headBob()
-    {
-        
     }
 }

@@ -20,7 +20,7 @@ public class AIManager : MonoBehaviour, IGameManager
     public bool chased = false;
     //15-minutes
     private float demoTimer = 900f;
-    public bool titleMode;
+
     // Start is called before the first frame update
     public void Startup()
     {
@@ -45,7 +45,6 @@ public class AIManager : MonoBehaviour, IGameManager
     // Update is called once per frame
     void Update()
     {
-        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             if(!spawned && !titleMode)
@@ -61,6 +60,7 @@ public class AIManager : MonoBehaviour, IGameManager
                 spawned = false;
             }
         }
+        /*
         //DEBUG
         else if(Input.GetKeyDown(KeyCode.K))
         {
@@ -71,7 +71,7 @@ public class AIManager : MonoBehaviour, IGameManager
         */
         if(dangTimer <= 0)
         {
-            if(!spawned && dangerUp && !titleMode)
+            if(!spawned && dangerUp)
             {
                 danger += 1;
                 SpawnActive(FurthestNode().transform);
@@ -158,31 +158,22 @@ public class AIManager : MonoBehaviour, IGameManager
     //Finds the furthest node from the player that the player doesn't have LOS to
     public Transform FurthestNode()
     {
-        if(!titleMode)
-        {
-            Transform player = Managers.Player.player.transform;
-            RaycastHit hit;
+        Transform player = Managers.Player.player.transform;
+        RaycastHit hit;
 
-            Transform returnNode = nodesA[0];
-            for(int i = 0; i < nodesA.Count; i++)
-                if(Physics.Raycast(Managers.Player.player.transform.position, nodesA[i].transform.position - Managers.Player.player.transform.position, out hit, Mathf.Infinity))
+        Transform returnNode = nodesA[0];
+        for(int i = 0; i < nodesA.Count; i++)
+            if(Physics.Raycast(Managers.Player.player.transform.position, nodesA[i].transform.position - Managers.Player.player.transform.position, out hit, Mathf.Infinity))
+            {
+                if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > hit.distance)
                 {
-                    if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > hit.distance)
+                    if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > Vector3.Distance(Managers.Player.player.transform.position, returnNode.transform.position))
                     {
-                        if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > Vector3.Distance(Managers.Player.player.transform.position, returnNode.transform.position))
-                        {
-                            returnNode = nodesA[i];
-                        }
+                        returnNode = nodesA[i];
                     }
                 }
+            }
 
-            return returnNode;
-        }
-        else
-        {
-            Transform returnNode = active.nodes[Random.Range(1,active.nodes.Count)].transform;
-            return returnNode;
-        }
+        return returnNode;
     }
-
 }

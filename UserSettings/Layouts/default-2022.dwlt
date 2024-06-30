@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 91
+  controlID: 102
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 540
     height: 956
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1437
     height: 956
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,16 +273,16 @@ MonoBehaviour:
     y: 0
     width: 583
     height: 1307
-  m_MinSize: {x: 276, y: 121}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 15}
   - {fileID: 23}
   - {fileID: 16}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 3
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1426,12 +1426,12 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
-  changeTab: 5
-  activeTab: 5
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
+  changeTab: 4
+  activeTab: 4
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -1474,8 +1474,8 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
-      - path: master
-        label: master
+      - path: main
+        label: main
         level: 1
         isFolder: 0
         isContainer: 0
@@ -1500,10 +1500,21 @@ MonoBehaviour:
       folders:
         keys:
         - Remote branches
+        - origin
         values:
         - path: Remote branches
           label: Remote branches
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1530,6 +1541,26 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/main
+        label: main
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       selectedNode:
         path: 
         label: 
@@ -1547,14 +1578,14 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2024-06-14T15:11:24.663-04:00
+      updatedTimeString: 2024-06-29T21:40:47.580-04:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:47.597-04:00
       cacheType: 1
     currentBranch:
-      name: master
-      tracking: 
+      name: main
+      tracking: origin/main
     currentRemote:
       name: origin
       url: https://github.com/joshuaculver/ActiveHazard.git
@@ -1564,16 +1595,18 @@ MonoBehaviour:
       function: 0
       token: 
     localBranches:
-    - name: master
-      tracking: 
-    remoteBranches: []
+    - name: main
+      tracking: origin/main
+    remoteBranches:
+    - name: origin/main
+      tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
     currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
-    currentBranch: master
+    currentBranch: main
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
@@ -1632,18 +1665,529 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:47.597-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:35.435-04:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:35.949-04:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: c80116c40a0584ab3e16adb49fe25a2924ac1509
+      mergeA: 
+      mergeB: 
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: Main Menu visuals
+      description: Switched title screen to use a rotating light instead of trying
+        to make hazard wander the backgroun
+      timeString: 2024-06-29T21:36:12.000-04:00
+      commitTimeString: 2024-06-29T21:36:12.000-04:00
+      changes:
+      - path: Assets\Scenes\MainMenu.unity
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\MainMenu.unity
+        projectPath: Assets\Scenes\MainMenu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Map.unity
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\Map.unity
+        projectPath: Assets\Scenes\Map.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TitleLight.cs
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\TitleLight.cs
+        projectPath: Assets\Scripts\TitleLight.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\TitleLight.cs.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\TitleLight.cs.meta
+        projectPath: Assets\Scripts\TitleLight.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: a77c82d26052ac97446e8988054ca029a0f1163a
+      mergeA: 
+      mergeB: 
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: Player Audio
+      description: Added player step audio and fly by sounds using a new script
+      timeString: 2024-06-29T19:57:09.000-04:00
+      commitTimeString: 2024-06-29T19:57:09.000-04:00
+      changes:
+      - path: Assets\Materials\SliderBox.mat
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\SliderBox.mat
+        projectPath: Assets\Materials\SliderBox.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\SliderBox.mat.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\SliderBox.mat.meta
+        projectPath: Assets\Materials\SliderBox.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\Player.prefab
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Player.prefab
+        projectPath: Assets\Prefabs\Player.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Map.unity
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\Map.unity
+        projectPath: Assets\Scenes\Map.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SlideTest.unity
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\SlideTest.unity
+        projectPath: Assets\Scenes\SlideTest.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SlideTest.unity.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\SlideTest.unity.meta
+        projectPath: Assets\Scenes\SlideTest.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\AI.cs
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\AI.cs
+        projectPath: Assets\Scripts\AI.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerAudEmitter.cs
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerAudEmitter.cs
+        projectPath: Assets\Scripts\PlayerAudEmitter.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerAudEmitter.cs.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerAudEmitter.cs.meta
+        projectPath: Assets\Scripts\PlayerAudEmitter.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\PlayerManager.cs
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerManager.cs
+        projectPath: Assets\Scripts\PlayerManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Shaders\SlideBorder.shadergraph
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBorder.shadergraph
+        projectPath: Assets\Shaders\SlideBorder.shadergraph
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Shaders\SlideBorder.shadergraph.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBorder.shadergraph.meta
+        projectPath: Assets\Shaders\SlideBorder.shadergraph.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Shaders\SlideBox.shadergraph
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph
+        projectPath: Assets\Shaders\SlideBox.shadergraph
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Shaders\SlideBox.shadergraph.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph.meta
+        projectPath: Assets\Shaders\SlideBox.shadergraph.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides.meta
+        projectPath: Assets\Slides.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\Secondary.mat
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.mat
+        projectPath: Assets\Slides\Secondary.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\Secondary.mat.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.mat.meta
+        projectPath: Assets\Slides\Secondary.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\Secondary.renderTexture
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.renderTexture
+        projectPath: Assets\Slides\Secondary.renderTexture
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\Secondary.renderTexture.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.renderTexture.meta
+        projectPath: Assets\Slides\Secondary.renderTexture.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\SlideCont.controller
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideCont.controller
+        projectPath: Assets\Slides\SlideCont.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\SlideCont.controller.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideCont.controller.meta
+        projectPath: Assets\Slides\SlideCont.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\SlideWobble.anim
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideWobble.anim
+        projectPath: Assets\Slides\SlideWobble.anim
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\SlideWobble.anim.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideWobble.anim.meta
+        projectPath: Assets\Slides\SlideWobble.anim.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord0.mat
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.mat
+        projectPath: Assets\Slides\overlord0.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord0.mat.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.mat.meta
+        projectPath: Assets\Slides\overlord0.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord0.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.png
+        projectPath: Assets\Slides\overlord0.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord0.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.png.meta
+        projectPath: Assets\Slides\overlord0.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord1.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord1.png
+        projectPath: Assets\Slides\overlord1.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord1.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord1.png.meta
+        projectPath: Assets\Slides\overlord1.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord2.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord2.png
+        projectPath: Assets\Slides\overlord2.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord2.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord2.png.meta
+        projectPath: Assets\Slides\overlord2.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord3.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord3.png
+        projectPath: Assets\Slides\overlord3.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord3.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord3.png.meta
+        projectPath: Assets\Slides\overlord3.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord4.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord4.png
+        projectPath: Assets\Slides\overlord4.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord4.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord4.png.meta
+        projectPath: Assets\Slides\overlord4.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord5.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord5.png
+        projectPath: Assets\Slides\overlord5.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord5.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord5.png.meta
+        projectPath: Assets\Slides\overlord5.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord6.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord6.png
+        projectPath: Assets\Slides\overlord6.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord6.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord6.png.meta
+        projectPath: Assets\Slides\overlord6.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord7.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord7.png
+        projectPath: Assets\Slides\overlord7.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Slides\overlord7.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord7.png.meta
+        projectPath: Assets\Slides\overlord7.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy.meta
+        projectPath: Assets\Sound\flyBy.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByL1.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL1.wav
+        projectPath: Assets\Sound\flyBy\FlyByL1.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByL1.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL1.wav.meta
+        projectPath: Assets\Sound\flyBy\FlyByL1.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByL2.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL2.wav
+        projectPath: Assets\Sound\flyBy\FlyByL2.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByL2.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL2.wav.meta
+        projectPath: Assets\Sound\flyBy\FlyByL2.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByR2.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByR2.wav
+        projectPath: Assets\Sound\flyBy\FlyByR2.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\FlyByR2.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByR2.wav.meta
+        projectPath: Assets\Sound\flyBy\FlyByR2.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\flyByR1.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\flyByR1.wav
+        projectPath: Assets\Sound\flyBy\flyByR1.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\flyBy\flyByR1.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\flyByR1.wav.meta
+        projectPath: Assets\Sound\flyBy\flyByR1.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep1Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep1Q.wav
+        projectPath: Assets\Sound\steps\PlStep1Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep1Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep1Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep1Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep2Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep2Q.wav
+        projectPath: Assets\Sound\steps\PlStep2Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep2Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep2Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep2Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep3Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep3Q.wav
+        projectPath: Assets\Sound\steps\PlStep3Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep3Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep3Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep3Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep4Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep4Q.wav
+        projectPath: Assets\Sound\steps\PlStep4Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep4Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep4Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep4Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep5Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep5Q.wav
+        projectPath: Assets\Sound\steps\PlStep5Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep5Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep5Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep5Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep6Q.wav
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep6Q.wav
+        projectPath: Assets\Sound\steps\PlStep6Q.wav
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sound\steps\PlStep6Q.wav.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep6Q.wav.meta
+        projectPath: Assets\Sound\steps\PlStep6Q.wav.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\static1.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static1.png
+        projectPath: Assets\Textures\static1.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\static1.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static1.png.meta
+        projectPath: Assets\Textures\static1.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\static2.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static2.png
+        projectPath: Assets\Textures\static2.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\static2.png.meta
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static2.png.meta
+        projectPath: Assets\Textures\static2.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
+        projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: README.md
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+        projectPath: README.md
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 695ab9ed5ef53aebc1aacc4ec261014f26b7a33f
+      mergeA: 
+      mergeB: 
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: cleaning
+      description: 
+      timeString: 2024-06-14T15:38:47.000-04:00
+      commitTimeString: 2024-06-14T15:38:47.000-04:00
+      changes:
+      - path: README.md
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+        projectPath: README.md
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Screenshot1.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Screenshot1.png
+        projectPath: Screenshot1.png
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Screenshot2.png
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Screenshot2.png
+        projectPath: Screenshot2.png
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
     - commitID: 5b39e6e9f53ad8c7cffb72e988783d89aa0c7bf6
       mergeA: 
       mergeB: 
@@ -8356,16 +8900,527 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 0
+    statusAhead: 1
     lastLogChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:36.088-04:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:35.465-04:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: c80116c40a0584ab3e16adb49fe25a2924ac1509
+        mergeA: 
+        mergeB: 
+        authorName: Joshua Culver
+        authorEmail: joshculver1@gmail.com
+        commitEmail: joshculver1@gmail.com
+        commitName: Joshua Culver
+        summary: Main Menu visuals
+        description: Switched title screen to use a rotating light instead of trying
+          to make hazard wander the backgroun
+        timeString: 2024-06-29T21:36:12.000-04:00
+        commitTimeString: 2024-06-29T21:36:12.000-04:00
+        changes:
+        - path: Assets\Scenes\MainMenu.unity
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Map.unity
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\Map.unity
+          projectPath: Assets\Scenes\Map.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TitleLight.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\TitleLight.cs
+          projectPath: Assets\Scripts\TitleLight.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\TitleLight.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\TitleLight.cs.meta
+          projectPath: Assets\Scripts\TitleLight.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: a77c82d26052ac97446e8988054ca029a0f1163a
+        mergeA: 
+        mergeB: 
+        authorName: Joshua Culver
+        authorEmail: joshculver1@gmail.com
+        commitEmail: joshculver1@gmail.com
+        commitName: Joshua Culver
+        summary: Player Audio
+        description: Added player step audio and fly by sounds using a new script
+        timeString: 2024-06-29T19:57:09.000-04:00
+        commitTimeString: 2024-06-29T19:57:09.000-04:00
+        changes:
+        - path: Assets\Materials\SliderBox.mat
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\SliderBox.mat
+          projectPath: Assets\Materials\SliderBox.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\SliderBox.mat.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\SliderBox.mat.meta
+          projectPath: Assets\Materials\SliderBox.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\Player.prefab
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Player.prefab
+          projectPath: Assets\Prefabs\Player.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Map.unity
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\Map.unity
+          projectPath: Assets\Scenes\Map.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SlideTest.unity
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\SlideTest.unity
+          projectPath: Assets\Scenes\SlideTest.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SlideTest.unity.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\SlideTest.unity.meta
+          projectPath: Assets\Scenes\SlideTest.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\AI.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\AI.cs
+          projectPath: Assets\Scripts\AI.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerAudEmitter.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerAudEmitter.cs
+          projectPath: Assets\Scripts\PlayerAudEmitter.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerAudEmitter.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerAudEmitter.cs.meta
+          projectPath: Assets\Scripts\PlayerAudEmitter.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\PlayerManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerManager.cs
+          projectPath: Assets\Scripts\PlayerManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Shaders\SlideBorder.shadergraph
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBorder.shadergraph
+          projectPath: Assets\Shaders\SlideBorder.shadergraph
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Shaders\SlideBorder.shadergraph.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBorder.shadergraph.meta
+          projectPath: Assets\Shaders\SlideBorder.shadergraph.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Shaders\SlideBox.shadergraph
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph
+          projectPath: Assets\Shaders\SlideBox.shadergraph
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Shaders\SlideBox.shadergraph.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph.meta
+          projectPath: Assets\Shaders\SlideBox.shadergraph.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides.meta
+          projectPath: Assets\Slides.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\Secondary.mat
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.mat
+          projectPath: Assets\Slides\Secondary.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\Secondary.mat.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.mat.meta
+          projectPath: Assets\Slides\Secondary.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\Secondary.renderTexture
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.renderTexture
+          projectPath: Assets\Slides\Secondary.renderTexture
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\Secondary.renderTexture.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\Secondary.renderTexture.meta
+          projectPath: Assets\Slides\Secondary.renderTexture.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\SlideCont.controller
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideCont.controller
+          projectPath: Assets\Slides\SlideCont.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\SlideCont.controller.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideCont.controller.meta
+          projectPath: Assets\Slides\SlideCont.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\SlideWobble.anim
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideWobble.anim
+          projectPath: Assets\Slides\SlideWobble.anim
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\SlideWobble.anim.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\SlideWobble.anim.meta
+          projectPath: Assets\Slides\SlideWobble.anim.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord0.mat
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.mat
+          projectPath: Assets\Slides\overlord0.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord0.mat.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.mat.meta
+          projectPath: Assets\Slides\overlord0.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord0.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.png
+          projectPath: Assets\Slides\overlord0.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord0.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord0.png.meta
+          projectPath: Assets\Slides\overlord0.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord1.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord1.png
+          projectPath: Assets\Slides\overlord1.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord1.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord1.png.meta
+          projectPath: Assets\Slides\overlord1.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord2.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord2.png
+          projectPath: Assets\Slides\overlord2.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord2.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord2.png.meta
+          projectPath: Assets\Slides\overlord2.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord3.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord3.png
+          projectPath: Assets\Slides\overlord3.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord3.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord3.png.meta
+          projectPath: Assets\Slides\overlord3.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord4.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord4.png
+          projectPath: Assets\Slides\overlord4.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord4.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord4.png.meta
+          projectPath: Assets\Slides\overlord4.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord5.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord5.png
+          projectPath: Assets\Slides\overlord5.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord5.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord5.png.meta
+          projectPath: Assets\Slides\overlord5.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord6.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord6.png
+          projectPath: Assets\Slides\overlord6.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord6.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord6.png.meta
+          projectPath: Assets\Slides\overlord6.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord7.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord7.png
+          projectPath: Assets\Slides\overlord7.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Slides\overlord7.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Slides\overlord7.png.meta
+          projectPath: Assets\Slides\overlord7.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy.meta
+          projectPath: Assets\Sound\flyBy.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByL1.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL1.wav
+          projectPath: Assets\Sound\flyBy\FlyByL1.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByL1.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL1.wav.meta
+          projectPath: Assets\Sound\flyBy\FlyByL1.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByL2.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL2.wav
+          projectPath: Assets\Sound\flyBy\FlyByL2.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByL2.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByL2.wav.meta
+          projectPath: Assets\Sound\flyBy\FlyByL2.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByR2.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByR2.wav
+          projectPath: Assets\Sound\flyBy\FlyByR2.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\FlyByR2.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\FlyByR2.wav.meta
+          projectPath: Assets\Sound\flyBy\FlyByR2.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\flyByR1.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\flyByR1.wav
+          projectPath: Assets\Sound\flyBy\flyByR1.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\flyBy\flyByR1.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\flyBy\flyByR1.wav.meta
+          projectPath: Assets\Sound\flyBy\flyByR1.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep1Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep1Q.wav
+          projectPath: Assets\Sound\steps\PlStep1Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep1Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep1Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep1Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep2Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep2Q.wav
+          projectPath: Assets\Sound\steps\PlStep2Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep2Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep2Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep2Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep3Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep3Q.wav
+          projectPath: Assets\Sound\steps\PlStep3Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep3Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep3Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep3Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep4Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep4Q.wav
+          projectPath: Assets\Sound\steps\PlStep4Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep4Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep4Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep4Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep5Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep5Q.wav
+          projectPath: Assets\Sound\steps\PlStep5Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep5Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep5Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep5Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep6Q.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep6Q.wav
+          projectPath: Assets\Sound\steps\PlStep6Q.wav
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sound\steps\PlStep6Q.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Sound\steps\PlStep6Q.wav.meta
+          projectPath: Assets\Sound\steps\PlStep6Q.wav.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\static1.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static1.png
+          projectPath: Assets\Textures\static1.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\static1.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static1.png.meta
+          projectPath: Assets\Textures\static1.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\static2.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static2.png
+          projectPath: Assets\Textures\static2.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\static2.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Textures\static2.png.meta
+          projectPath: Assets\Textures\static2.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
+          projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: README.md
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+          projectPath: README.md
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 695ab9ed5ef53aebc1aacc4ec261014f26b7a33f
+        mergeA: 
+        mergeB: 
+        authorName: Joshua Culver
+        authorEmail: joshculver1@gmail.com
+        commitEmail: joshculver1@gmail.com
+        commitName: Joshua Culver
+        summary: cleaning
+        description: 
+        timeString: 2024-06-14T15:38:47.000-04:00
+        commitTimeString: 2024-06-14T15:38:47.000-04:00
+        changes:
+        - path: README.md
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+          projectPath: README.md
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Screenshot1.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Screenshot1.png
+          projectPath: Screenshot1.png
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Screenshot2.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Screenshot2.png
+          projectPath: Screenshot2.png
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
       - commitID: 5b39e6e9f53ad8c7cffb72e988783d89aa0c7bf6
         mergeA: 
         mergeB: 
@@ -15102,7 +16157,7 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 0
+      statusAhead: 1
       selectedIndex: -1
     selectedEntry:
       commitID: 
@@ -15165,7 +16220,7 @@ MonoBehaviour:
       installSettingsHidden: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2024-06-19T13:58:23.525-04:00
+      updatedTimeString: 2024-06-29T21:23:28.375-04:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/joshuaculver/ActiveHazard.git
     repositoryRemoteName: origin
@@ -15178,7 +16233,7 @@ MonoBehaviour:
       newGitEmail: joshculver1@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2024-06-19T13:58:22.005-04:00
+        updatedTimeString: 2024-06-29T21:36:08.395-04:00
         cacheType: 8
       configSettingsHidden: 0
     repositorySettingsHidden: 0
@@ -15211,13 +16266,13 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 00:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:23:28.375-04:00
       cacheType: 1
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2024-06-29T21:40:35.435-04:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
@@ -15236,7 +16291,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/joshuaculver/ActiveHazard.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: main
@@ -15247,13 +16302,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-06-18T16:56:00.174-04:00
+    updatedTimeString: 2024-06-29T21:40:47.597-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-06-18T23:56:11.339-04:00
+    updatedTimeString: 2024-06-29T21:40:47.555-04:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-06-18T23:56:11.329-04:00
+    updatedTimeString: 2024-06-29T21:40:35.435-04:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -17015,16 +18070,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.38715485, y: 1.465296, z: -6.4052453}
+    m_Target: {x: -3.78967, y: -22.907425, z: 39.512722}
     speed: 2
-    m_Value: {x: -0.38715485, y: 1.465296, z: -6.4052453}
+    m_Value: {x: -3.78967, y: -22.907425, z: 39.512722}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -17070,13 +18125,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1763967, y: -0.114165485, z: 0.022328336, w: -0.97715133}
+    m_Target: {x: -0.23448506, y: 0.070555106, z: -0.01584072, w: -0.96917504}
     speed: 2
-    m_Value: {x: -0.1763967, y: -0.11416548, z: 0.022328336, w: -0.97715133}
+    m_Value: {x: -0.23454224, y: 0.07057231, z: -0.015844584, w: -0.9694114}
   m_Size:
-    m_Target: 0.60230064
+    m_Target: 34.257347
     speed: 2
-    m_Value: 0.60230064
+    m_Value: 34.257347
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -17138,23 +18193,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 76630000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff
+      m_ExpandedIDs: 4cc2f3ff2ecbf3fffef8ffff2cfbffffe66900008e6c0000da6c0000f26c0000426f00005e730000d2820600d8820600e48206002483060036830600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: LightPosition
+        m_OriginalName: LightPosition
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -804100
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -17209,7 +18264,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Music
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -17217,16 +18272,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Music
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 70}
-    m_SelectedIDs: 2a650000
-    m_LastClickedID: 25898
-    m_ExpandedIDs: 0000000076630000786300007a6300007c6300007e63000080630000826300008463000086630000886300008a6300008c6300008e630000906300002a65000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 76630000
+    m_LastClickedID: 25462
+    m_ExpandedIDs: 0000000076630000786300007a6300007c6300007e63000080630000826300008463000086630000886300008a6300008c6300008e630000906300003865000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

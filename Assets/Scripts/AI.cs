@@ -44,8 +44,6 @@ public class AI : MonoBehaviour
     public bool ignorePlayer = false;
     public bool killMode = false;
 
-    public bool titleMode;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -53,10 +51,7 @@ public class AI : MonoBehaviour
         flare = spotLights[0].GetComponent<LensFlareComponentSRP>();
         //Gets the region of nodes to start patrolling
 
-        if(!titleMode)
-        {
-            nodes = Managers.AI.reqNodes("!");
-        }
+        nodes = Managers.AI.reqNodes("!");
 
         Debug.Log("Status: " + status);
         destNode = 0;
@@ -66,10 +61,8 @@ public class AI : MonoBehaviour
         Debug.Log("Done");
 
         busy = false;
-        if(!titleMode)
-        {
-            Managers.Music.check();
-        }
+
+        Managers.Music.check();
     }
 
     //Move update actions to functions. Create busy variable to cause return during udpate if new action isn't wanted
@@ -140,11 +133,7 @@ public class AI : MonoBehaviour
             else if(!agent.pathPending && agent.remainingDistance < 1f)
             {
                 //chance that when wandering or hunting AI stops to look around
-                if(titleMode)
-                {
-                    PathBehav();
-                }
-                else if(status != AIStatus.Glance && status != AIStatus.Avoid && Random.Range(1,Managers.AI.danger) == 1)
+                if(status != AIStatus.Glance && status != AIStatus.Avoid && Random.Range(1,Managers.AI.danger) == 1)
                 {
                     changeState(AIStatus.Glance);
                 }
@@ -282,14 +271,8 @@ public class AI : MonoBehaviour
                 lastStatus = AIStatus.Wander;
                 status = AIStatus.Glance;
 
-                if(titleMode)
-                {   
+                Managers.AI.glanceRef.transform.position = nodes[Random.Range(0,nodes.Count)].transform.position;
 
-                }
-                else
-                {
-                    Managers.AI.glanceRef.transform.position = nodes[Random.Range(0,nodes.Count)].transform.position;
-                }
                 looks = Random.Range(1, 6);
                 lookTime = Random.Range(1f, 4f);
                 dir = Random.Range(3f,7f) * Flip();
@@ -309,10 +292,9 @@ public class AI : MonoBehaviour
                 Debug.Log("Cannot switch from " + status + " -> " + newState);
             }
         }
-        if(!titleMode)
-        {
-            Managers.Music.check();
-        }
+
+        Managers.Music.check();
+        
         Debug.Log("State:" + status);
     }
 

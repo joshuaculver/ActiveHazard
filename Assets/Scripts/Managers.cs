@@ -70,12 +70,16 @@ public class Managers : MonoBehaviour
     public static void Pause()
     {
         Debug.Log("Pausing");
+        isPaused = true;
+        Managers.Player.Hold();
         Time.timeScale = 0f;
     }
 
     public static void Unpause()
     {
-        Debug.Log("Pausing");
+        Debug.Log("Unpausing");
+        isPaused = false;
+        Managers.Player.Release();
         Time.timeScale = 1f;
     }
 }

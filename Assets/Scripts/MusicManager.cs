@@ -18,6 +18,7 @@ public class MusicManager : MonoBehaviour, IGameManager
     public AudioClip[] aim;
     public AudioClip death;
     public AudioClip killMode;
+    public AudioClip[] slidesA;
     private AudioClip playing;
     public AIStatus prevStatus;
     //Cooldown for "sting" playing
@@ -26,10 +27,12 @@ public class MusicManager : MonoBehaviour, IGameManager
     private float atkFade = 0f;
     private float aimFade = 0.25f;
     //Volume music moves to when going to "normal" volume
-    private float defaultVol = 0.2f;
+    public float defaultVol = 0.4f;
+    public float SFXVol = 0.3f;
     private bool stingCD = false;
     public int prevDanger;
     private bool MusLock;
+
     // Start is called before the first frame update
     public void Startup()
     {
@@ -151,7 +154,7 @@ public class MusicManager : MonoBehaviour, IGameManager
     }
 
     //Uses two audio sources to crossfade
-    private void PlayMus(AudioClip clip)
+    private void PlayMus(AudioClip clip, float vol)
     {
         AudioSource source = srcs[flip];
 
@@ -289,6 +292,38 @@ public class MusicManager : MonoBehaviour, IGameManager
             return;
         }
 
+        if(Managers.Menu.slideViewing)
+        {
+            if(Managers.Menu.slideSet == 0)
+            {
+                float slideVol = 0.9f;
+                if(Managers.Menu.slide > 7)
+                {
+                    return;
+                }
+                else if(Managers.Menu.slide == 7)
+                {
+                    PlayMus(slidesA[4], 1f);
+                }
+                else if(Managers.Menu.slide == 6)
+                {
+                    PlayMus(slidesA[3], slideVol);
+                }
+                else if(Managers.Menu.slide == 4 || Managers.Menu.slide == 5)
+                {
+                    PlayMus(slidesA[2], slideVol);
+                }
+                else if(Managers.Menu.slide == 2 || Managers.Menu.slide == 3)
+                {
+                    PlayMus(slidesA[1], slideVol); 
+                }
+                else if(Managers.Menu.slide == 0 || Managers.Menu.slide == 1)
+                {
+                    PlayMus(slidesA[0], slideVol);
+                }
+            }
+        }
+
         if(Managers.AI.spawned)
         {
             //DEBUG teehees
@@ -297,7 +332,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                 if(playing != killMode)
                 {
                     Debug.Log("Playing search");
-                    PlayMus(killMode);
+                    PlayMus(killMode, defaultVol);
                     prevStatus = Managers.AI.active.status;
                     prevDanger = Managers.AI.danger;
                 }
@@ -315,7 +350,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                     Debug.Log("Playing pursuit/chase");
                     if(playing != pursuit)
                     {
-                        PlayMus(pursuit);
+                        PlayMus(pursuit, defaultVol);
                         prevStatus = Managers.AI.active.status;
                         prevDanger = Managers.AI.danger;
                     }
@@ -325,7 +360,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                     if(playing != search)
                     {
                         Debug.Log("Playing search");
-                        PlayMus(search);
+                        PlayMus(search, defaultVol);
                         prevStatus = Managers.AI.active.status;
                         prevDanger = Managers.AI.danger;
                     }
@@ -337,7 +372,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                         if(playing != breath[1])
                         {
                             Debug.Log("Playing breath 1");
-                            PlayMus(breath[1]);
+                            PlayMus(breath[1], defaultVol);
                             prevStatus = Managers.AI.active.status;
                             prevDanger = Managers.AI.danger;
                         }

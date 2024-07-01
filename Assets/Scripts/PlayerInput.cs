@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
     public float speed = 3f;
     public float gravity = -9.8f;
 
-    public bool canMove = true;
+    public bool canMove;
     public bool moving = false;
 
     private CharacterController _charController;
@@ -16,12 +16,13 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
         _charController = GetComponent<CharacterController>();
+        canMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if(canMove)
         {
             if(Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
             {

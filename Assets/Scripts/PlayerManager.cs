@@ -10,17 +10,14 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public GameObject playerPrefab;
     public Transform playerSpawn;
     public GameObject player;
-    //public GameObject cam;
     public Camera cam;
     public PlayerAudEmitter aud;
     public Animator playerAnimator; 
     private PlayerInput pMove;
     private MouseLook pCamX;
     private MouseLook pCamY;
-    //private Vector3 neutral = new Vector3(0, 0, 0);
     private DecalProjector projector;
     public bool gameOver = false;
-    public bool titleMode;
 
     public float normalFOV = 70;
 
@@ -74,11 +71,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public void SpawnPlayer()
     {
         Debug.Log("Spawning player");
+        //Euler controls facing/orientation
         player = Instantiate(playerPrefab, playerSpawn.position, Quaternion.Euler(new Vector3(0, 90, 0)));
-        if(titleMode)
-        {
-            Hold();
-        }
     }
 
     public void Hold()

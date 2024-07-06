@@ -13,6 +13,7 @@ public class Managers : MonoBehaviour
     public static AIManager AI {get; private set;}
     public static MusicManager Music {get; private set;}
     public static MenuManager Menu {get; private set;}
+    public static SlideManager Slides {get; private set;}
 
     private List<IGameManager> _startSequence;
 
@@ -24,12 +25,14 @@ public class Managers : MonoBehaviour
         AI = GetComponent<AIManager>();
         Music = GetComponent<MusicManager>();
         Menu = GetComponent<MenuManager>();
+        Slides = GetComponent<SlideManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
         _startSequence.Add(AI);
         _startSequence.Add(Music);
         _startSequence.Add(Menu);
+        _startSequence.Add(Slides);
 
         StartCoroutine(StartupManagers());
     }

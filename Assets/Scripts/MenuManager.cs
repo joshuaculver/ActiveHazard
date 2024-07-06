@@ -1,8 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class MenuManager : MonoBehaviour, IGameManager
 {
@@ -10,11 +12,13 @@ public class MenuManager : MonoBehaviour, IGameManager
     public bool pauseMenuOpen = false;
     public GameObject pausePanel;
     public bool slideViewing = false;
+
+    private SlideManager slides;
+
     public RawImage solid;
+    private float fadeSpd = 1f;
     public UnityEngine.UIElements.Button resume;
     public UnityEngine.UIElements.Button mainMenu;
-    public int slideSet;
-    public int slide;
 
     private Camera mainCam;
     public Camera slideCam;
@@ -24,16 +28,17 @@ public class MenuManager : MonoBehaviour, IGameManager
 
     public bool playerDead = false;
 
-    //Slide image
-    //Slide background
-
-    void Awake()
+    public void Startup()
     {
+        solid.color = Color.black;
         mainCam = Managers.Player.cam;
         mainCam.enabled = true;
         slideCam.enabled = false;
         pausePanel.SetActive(false);
+        slides = GetComponent<SlideManager>();
+        status = ManagerStatus.Started;
     }
+
     void Update()
     {
         if(playerDead)
@@ -55,7 +60,7 @@ public class MenuManager : MonoBehaviour, IGameManager
             if(solid.color.a < 1f)
             {
                 Debug.Log("Fading to black");
-                solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 1f, 2f * Time.unscaledDeltaTime));
+                solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 1f, fadeSpd * Time.unscaledDeltaTime));
             }
             else if(solid.color.a >  0.9f)
             {
@@ -63,6 +68,7 @@ public class MenuManager : MonoBehaviour, IGameManager
                 //switch cameras
                 if(targCam == mainCam)
                 {
+                    Managers.Slides.HideSlideUI();
                     mainCam.enabled = true;
                     slideCam.enabled = false;
                 }
@@ -70,6 +76,8 @@ public class MenuManager : MonoBehaviour, IGameManager
                 {
                     mainCam.enabled = false;
                     slideCam.enabled = true;
+                    openSlideMenu(Managers.Slides.slideSet, Managers.Slides.slide);
+                    Managers.Slides.ShowSlideUI();
                 }
                 //Switch to not transitioning to fade back in
                 transitioning = false;
@@ -84,7 +92,7 @@ public class MenuManager : MonoBehaviour, IGameManager
         else if(!transitioning && solid.color.a > 0f)
         {
             Debug.Log("Fading from black");
-            solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 0f, 2f * Time.unscaledDeltaTime));
+            solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 0f, fadeSpd * Time.unscaledDeltaTime));
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -106,11 +114,6 @@ public class MenuManager : MonoBehaviour, IGameManager
         {
             closeSlideMenu();
         }
-    }
-
-    public void Startup()
-    {
-        status = ManagerStatus.Started;
     }
 
     public void MainMenu()
@@ -145,8 +148,6 @@ public class MenuManager : MonoBehaviour, IGameManager
             //Setup or switch slides here
             SwitchCamera(slideCam);
             slideViewing = true;
-            slideSet = initSet;
-            slide = initSlide;
             Managers.Music.check();
         }
     }
@@ -158,12 +159,6 @@ public class MenuManager : MonoBehaviour, IGameManager
         SwitchCamera(mainCam);
         slideViewing = false;
         Managers.Music.check();
-    }
-
-    public void switchSlide(int newSet, int newSlide)
-    {
-        slideSet = newSet;
-        slide = newSlide;
     }
 
     public void SwitchCamera(Camera cam)

@@ -85,14 +85,14 @@ public class MusicManager : MonoBehaviour, IGameManager
         {
             if(CD > 0)
             {
-                CD -= Time.deltaTime;
+                CD -= Time.unscaledDeltaTime;
             }
 
             if(Managers.AI.spawned && !Managers.AI.active.killMode)
             {
                 if(Managers.AI.active.attacking && atk.volume < defaultVol)
                 {
-                    atkFade += Time.deltaTime;
+                    atkFade += Time.unscaledDeltaTime;
 
                     if(atkFade >= aimFade)
                     {
@@ -122,7 +122,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
                 if(!Managers.AI.active.attacking && atk.volume > 0f)
                 {
-                    atkFade += Time.deltaTime;
+                    atkFade += Time.unscaledDeltaTime;
 
                     if(atkFade >= aimFade)
                     {
@@ -260,7 +260,7 @@ public class MusicManager : MonoBehaviour, IGameManager
         float start = src.volume;
         while (currTime < duration)
         {
-            currTime += Time.deltaTime;
+            currTime += Time.unscaledDeltaTime;
             src.volume = Mathf.Lerp(start, targetVolume, currTime / duration);
             yield return null;
         }
@@ -275,7 +275,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         while(time < seconds)
         {
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             yield return null;
         }
 
@@ -286,7 +286,7 @@ public class MusicManager : MonoBehaviour, IGameManager
     public void check()
     {
         Debug.Log("Music check");
-        if(!running || CD > 0)
+        if(!running || CD > 0 && !Managers.Menu.slideViewing)
         {
             Debug.Log("Not running");
             return;
@@ -294,34 +294,38 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         if(Managers.Menu.slideViewing)
         {
-            if(Managers.Menu.slideSet == 0)
+            Debug.Log("Slide music");
+            if(Managers.Slides.slideSet == 'A')
             {
+                Debug.Log("Set A");
                 float slideVol = 0.9f;
-                if(Managers.Menu.slide > 7)
+                if(Managers.Slides.slide == 7)
                 {
-                    return;
-                }
-                else if(Managers.Menu.slide == 7)
-                {
+                    Debug.Log("8");
                     PlayMus(slidesA[4], 1f);
                 }
-                else if(Managers.Menu.slide == 6)
+                else if(Managers.Slides.slide == 6)
                 {
+                    Debug.Log("7");
                     PlayMus(slidesA[3], slideVol);
                 }
-                else if(Managers.Menu.slide == 4 || Managers.Menu.slide == 5)
+                else if(Managers.Slides.slide == 4 || Managers.Slides.slide == 5)
                 {
+                    Debug.Log("4-6");
                     PlayMus(slidesA[2], slideVol);
                 }
-                else if(Managers.Menu.slide == 2 || Managers.Menu.slide == 3)
+                else if(Managers.Slides.slide == 2 || Managers.Slides.slide == 3)
                 {
+                    Debug.Log("2/3");
                     PlayMus(slidesA[1], slideVol); 
                 }
-                else if(Managers.Menu.slide == 0 || Managers.Menu.slide == 1)
+                else if(Managers.Slides.slide == 0 || Managers.Slides.slide == 1)
                 {
+                    Debug.Log("0/1");
                     PlayMus(slidesA[0], slideVol);
                 }
             }
+            return;
         }
 
         if(Managers.AI.spawned)

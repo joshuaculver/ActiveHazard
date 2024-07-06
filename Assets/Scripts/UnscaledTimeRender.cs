@@ -5,10 +5,12 @@ using UnityEngine;
 public class UnscaledTimeRender : MonoBehaviour
 {
     Renderer ren;
+    public Color color;
 
     void Start()
     {
         ren = GetComponent<Renderer>();
+        color = new Color(0.356f, 0.356f, 0.356f, 1f);
     }
 
     // Update is called once per frame

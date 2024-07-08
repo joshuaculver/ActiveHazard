@@ -17,6 +17,12 @@ public class PlayerAudEmitter : MonoBehaviour
     public AudioClip[] stepClip;
     public AudioClip[] flyByClip;
 
+    void Awake()
+    {
+        audSrc.volume = 0.6f;
+        FXsrc.volume = 0.8f;
+    }
+
     // Update is called once per frame
     void Update()
     {

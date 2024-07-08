@@ -14,8 +14,8 @@ public class SlideManager : MonoBehaviour, IGameManager
 
     public Light slideLight;
     private float lightIntensity = 5f;
-    private float innerSpot = 15f;
-    private float outerSpot = 19.5f;
+    private float innerSpot = 16f;
+    private float outerSpot = 21.5f;
 
     public char slideSet;
     public int slide;
@@ -24,6 +24,10 @@ public class SlideManager : MonoBehaviour, IGameManager
 
     public bool switchingSlide = false;
     private float switchSpd = 0.01f;
+
+    //public List<SlideBtnBig> setButtons;
+    public List<SlideBtnSmall> buttonsA;
+
     public void Startup()
     {
         slideSet = 'A';
@@ -50,11 +54,13 @@ public class SlideManager : MonoBehaviour, IGameManager
                     if(slideSet == 'A' && slide == 7)
                     {
                         slideLight.color = Color.red;
-                        slideLight.spotAngle = 15.5f;
-                        slideLight.innerSpotAngle = 14.5f;
+                        slideLight.spotAngle = 17.5f;
+                        slideLight.innerSpotAngle = 15.5f;
+                        shader.spd = 25f;
                     }
                     else if(slideLight.color != Color.white)
                     {
+                        shader.spd = 1f;
                         slideLight.color = Color.white;
                         slideLight.spotAngle = outerSpot;
                         slideLight.innerSpotAngle = innerSpot;
@@ -76,15 +82,32 @@ public class SlideManager : MonoBehaviour, IGameManager
         }
     }
 
+    //Initiates change
     public void switchSlide(char set, int sli)
     {
+        if(slideSet == set && slide == sli)
+        {
+            return;
+        }
         //If menu manager not transitioning
         newSet = set;
         newSlide = sli;
 
         switchingSlide = true;
     }
-    
+
+    //Swaps material
+    private void SetSlide(char setChar, int slideNum)
+    {
+        if(setChar == 'A')
+        {
+            slideImage.material = slidesA[slideNum];
+        }
+        //If special slide set back color
+        slideSet = setChar;
+        slide = slideNum;
+        Managers.Music.check();
+    }    
     public void ShowSlideUI()
     {
         slideUI.SetActive(true);
@@ -96,27 +119,5 @@ public class SlideManager : MonoBehaviour, IGameManager
         slideUI.SetActive(false);
     }
 
-    private void SetSlide(char setChar, int slideNum)
-    {
-        if(setChar == 'A')
-        {
-            slideImage.material = slidesA[slideNum];
-        }
-        //If special slide set back color
-        slideSet = setChar;
-        slide = slideNum;
-        Managers.Music.check();
-    }
-
-    public void Temp1()
-    {
-        Debug.Log("Temp1");
-        switchSlide('A', 0);
-    }
-
-    public void Temp2()
-    {
-        Debug.Log("Temp2");
-        switchSlide('A', 1);
-    }
+    
 }

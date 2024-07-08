@@ -21,17 +21,25 @@ public class MusicManager : MonoBehaviour, IGameManager
     public AudioClip[] slidesA;
     private AudioClip playing;
     public AIStatus prevStatus;
+
+    public AudioClip[] ambience;
+
     //Cooldown for "sting" playing
     private float CD;
     //Timer for fading ques over normal music
     private float atkFade = 0f;
     private float aimFade = 0.25f;
     //Volume music moves to when going to "normal" volume
-    public float defaultVol = 0.4f;
+    public float defaultVol = 1f;
     public float SFXVol = 0.3f;
     private bool stingCD = false;
     public int prevDanger;
     private bool MusLock;
+
+    private float noMusTime = 0f;
+    //Low for testing
+    private float ambThreshold = 300f;
+    private int ambInstances = 0;
 
     // Start is called before the first frame update
     public void Startup()
@@ -151,11 +159,32 @@ public class MusicManager : MonoBehaviour, IGameManager
                 }
             }
         }
+
+        if(!srcs[flip].isPlaying || srcs[flip].volume <= 0f)
+        {
+            noMusTime += Time.deltaTime;
+
+            if(noMusTime >= ambThreshold)
+            {
+                if(ambInstances <= Random.Range(3,10))
+                {
+                    PlayMus(ambience[Random.Range(0,2)], defaultVol);
+                }
+                else
+                {
+                    PlayMus(ambience[3], defaultVol);
+                }
+            }
+        }
     }
 
     //Uses two audio sources to crossfade
     private void PlayMus(AudioClip clip, float vol)
     {
+        if(srcs[flip].clip == clip)
+        {
+            return;
+        }
         AudioSource source = srcs[flip];
 
         float dur = 3f;
@@ -177,6 +206,7 @@ public class MusicManager : MonoBehaviour, IGameManager
         }
 
         CD = 10f;
+        noMusTime = 0f;
     }
 
     private void PlayOverride(AudioClip clip)

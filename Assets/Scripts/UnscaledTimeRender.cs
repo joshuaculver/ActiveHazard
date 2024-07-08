@@ -7,6 +7,8 @@ public class UnscaledTimeRender : MonoBehaviour
     Renderer ren;
     public Color color;
 
+    public float spd = 1f;
+
     void Start()
     {
         ren = GetComponent<Renderer>();
@@ -16,8 +18,7 @@ public class UnscaledTimeRender : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ren.material.SetFloat("_UnSinTime", Mathf.Sin(Time.unscaledTime));
-        ren.material.SetFloat("_UnCosTime", Mathf.Cos(Time.unscaledTime));
+        ren.material.SetFloat("_UnSinTime", Mathf.Sin(Time.unscaledTime * spd));
+        ren.material.SetFloat("_UnCosTime", Mathf.Cos(Time.unscaledTime * spd));
     }
-    
 }

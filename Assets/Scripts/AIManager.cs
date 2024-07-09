@@ -7,6 +7,7 @@ public class AIManager : MonoBehaviour, IGameManager
     public ManagerStatus status {get; private set;}
     public List<Transform> nodesA;
     public List<Transform> nodesB;
+    public List<Transform> nodesC;
     public List<Transform> allNodes;
     public GameObject glanceRef;
     public AI active;

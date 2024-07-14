@@ -171,6 +171,7 @@ MonoBehaviour:
   radius: 0.75
   set: 65
   ID: 0
+  beam: {fileID: 7837093006414634581}
 --- !u!135 &4143260713634015823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -369,6 +370,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a32dbaca58bd9284b9e32a2160ecb229, type: 3}
   - {fileID: 8300000, guid: 3747e6ff90157e24b8aa20f9cce7f131, type: 3}
   - {fileID: 8300000, guid: 34648c4f585fb6748866d56d5c3e3436, type: 3}
+  timer: 0
+  active: 0
 --- !u!1 &8051401445837555501
 GameObject:
   m_ObjectHideFlags: 0

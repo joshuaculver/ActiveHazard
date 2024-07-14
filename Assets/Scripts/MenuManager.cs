@@ -154,7 +154,6 @@ public class MenuManager : MonoBehaviour, IGameManager
             Managers.Pause();
             slideViewing = true;
             Managers.Slides.switchSlide(initSet, initSlide);
-            //Setup or switch slides here
             SwitchCamera(slideCam);
         }
     }
@@ -165,6 +164,7 @@ public class MenuManager : MonoBehaviour, IGameManager
         slideViewing = false;
         SwitchCamera(mainCam);
         Managers.Music.check();
+        Managers.Slides.slideLight.intensity = 0;
     }
 
     public void SwitchCamera(Camera cam)

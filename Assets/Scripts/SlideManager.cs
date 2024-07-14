@@ -29,17 +29,20 @@ public class SlideManager : MonoBehaviour, IGameManager
 
     //public List<SlideBtnBig> setButtons;
     public List<SlideBtnSmall> buttonsA;
+    public List<SlideCollectible> collectiblesA;
 
     public void Startup()
     {
         Debug.Log("Slide manager starting...");
 
-        slideSet = 'A';
-        slide = 0;
+        slideSet = 'X';
+        slide = -1;
         slideUI.SetActive(false);
         slideLight.intensity = 0;
         shader = slideBack.GetComponent<UnscaledTimeRender>();
         haveSlide = false;
+
+        slideLight.intensity = 0;
 
         status = ManagerStatus.Started;
     }
@@ -102,6 +105,8 @@ public class SlideManager : MonoBehaviour, IGameManager
         //If menu manager not transitioning
         newSet = set;
         newSlide = sli;
+
+        switchingSlide = true;
     }
 
     //Swaps material
@@ -131,6 +136,21 @@ public class SlideManager : MonoBehaviour, IGameManager
         slideUI.SetActive(false);
     }
 
+    public void EnableSlideCollectible(char set, int id)
+    {
+        //Add check for if inventory
+        for(int i = 0; i < collectiblesA.Count; i++)
+        {
+            if(set == 'A')
+            {
+                if(collectiblesA[i].set == set && collectiblesA[i].ID == id)
+                {
+                    collectiblesA[i].gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
     public void CollectSlide(char set, int id)
     {
         Debug.Log("Collecting Slide");
@@ -141,8 +161,8 @@ public class SlideManager : MonoBehaviour, IGameManager
             {
                 if(buttonsA[i].set == set && buttonsA[i].slideNum == id)
                 {
-                    buttonsA[i].gameObject.SetActive(true);
                     haveSlide = true;
+                    buttonsA[i].gameObject.SetActive(true);
                     Managers.Menu.openSlideMenu('A', i);
                     buttonsA[i].SetSelected();
                 }

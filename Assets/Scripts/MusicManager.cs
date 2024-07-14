@@ -191,6 +191,11 @@ public class MusicManager : MonoBehaviour, IGameManager
             Debug.Log("Already playing");
             return;
         }
+        else if(Managers.Menu.slideViewing && srcs[flip].clip == clip && srcs[flip].volume != 0)
+        {
+            Debug.Log("Already playing");
+            return;
+        }
         AudioSource source = srcs[flip];
 
         float dur = 3f;

@@ -14,7 +14,14 @@ public class SlideBtnSmall : MonoBehaviour
     {
         thisButton = GetComponent<Button>();
         thisButton.onClick.AddListener(ButtonClick);
-        thisButton.gameObject.SetActive(unlocked);
+        if(set == 'A' && slideNum == 0)
+        {
+            thisButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            thisButton.gameObject.SetActive(unlocked);
+        }
     }
 
     public void ButtonClick()

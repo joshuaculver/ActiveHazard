@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 445
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 2001
-    height: 832
+    height: 833
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 546
-    height: 832
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 547
+    height: 833
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 546
+    x: 547
     y: 0
-    width: 1455
-    height: 832
+    width: 1454
+    height: 833
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -243,9 +243,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 832
+    y: 833
     width: 2001
-    height: 475
+    height: 474
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 559
     height: 1307
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -283,7 +283,7 @@ MonoBehaviour:
   - {fileID: 24}
   - {fileID: 25}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 3
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,10 +304,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 546
+    x: 547
     y: 73
-    width: 1453
-    height: 811
+    width: 1452
+    height: 812
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -759,9 +759,9 @@ MonoBehaviour:
     \"61407becd0cb45769e8ff17d99fd8d49\",\n    \"m_Id\": 1,\n    \"m_DisplayName\":
     \"Tiling\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
     \"Tiling\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": {\n        \"x\":
-    0.5,\n        \"y\": 0.5\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n       
-    \"y\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n   
-    \"m_Type\": \"UnityEditor.ShaderGraph.Vector1MaterialSlot\",\n    \"m_ObjectId\":
+    0.25,\n        \"y\": 0.25\n    },\n    \"m_DefaultValue\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector1MaterialSlot\",\n    \"m_ObjectId\":
     \"643561cb913d48d9b1c4231b081e4e77\",\n    \"m_Id\": 3,\n    \"m_DisplayName\":
     \"Opacity\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
     \"Opacity\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": 1.0,\n    \"m_DefaultValue\":
@@ -1231,16 +1231,16 @@ MonoBehaviour:
     \"m_ObjectId\": \"d2b61d420f494f298b09ec228450adc8\",\n    \"m_Id\": 1,\n   
     \"m_DisplayName\": \"Tiling\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
     \"m_ShaderOutputName\": \"Tiling\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
-    {\n        \"x\": 0.5,\n        \"y\": 0.5\n    },\n    \"m_DefaultValue\": {\n       
-    \"x\": 0.0,\n        \"y\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\":
-    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n    \"m_ObjectId\":
-    \"d31e4b057a344ed4827df4cb8aaa8be3\",\n    \"m_Group\": {\n        \"m_Id\":
-    \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.BaseColor\",\n    \"m_DrawState\":
-    {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
-    \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n            \"width\":
-    0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\": [\n       
-    {\n            \"m_Id\": \"dd6b0b9125964cd0b63da42b19b86c19\"\n        }\n   
-    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    {\n        \"x\": 0.25,\n        \"y\": 0.25\n    },\n    \"m_DefaultValue\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"d31e4b057a344ed4827df4cb8aaa8be3\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.BaseColor\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"dd6b0b9125964cd0b63da42b19b86c19\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
     true,\n    \"m_DismissedVersion\": 0,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\":
     {\n        \"m_SerializableColors\": []\n    },\n    \"m_SerializedDescriptor\":
     \"SurfaceDescription.BaseColor\"\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
@@ -2501,10 +2501,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 546
+    x: 547
     y: 73
-    width: 1453
-    height: 811
+    width: 1452
+    height: 812
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2818,7 +2818,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 1213, y: 353}
+      snapOffset: {x: 1212, y: 353}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
@@ -2837,9 +2837,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.830832, y: -3.5909085, z: 0.57947326}
+    m_Target: {x: 24.051285, y: -6.8692036, z: -4.1413107}
     speed: 2
-    m_Value: {x: 17.830832, y: -3.5909085, z: 0.57947326}
+    m_Value: {x: 24.051285, y: -6.8692036, z: -4.1413107}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2885,13 +2885,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15414365, y: -0.7551236, z: 0.19287524, w: -0.60849077}
+    m_Target: {x: 0.13074805, y: 0.8255691, z: -0.20947587, w: 0.50904053}
     speed: 2
-    m_Value: {x: -0.15403326, y: -0.7545828, z: 0.1927371, w: -0.608055}
+    m_Value: {x: 0.13063955, y: 0.824884, z: -0.20930204, w: 0.5086181}
   m_Size:
-    m_Target: 7.14268
+    m_Target: 11.114872
     speed: 2
-    m_Value: 7.14268
+    m_Value: 11.114872
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2909,7 +2909,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.27038503, y: 0.7147018, z: -0.3634985, w: 0.5342362}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -2938,8 +2938,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 545
-    height: 811
+    width: 546
+    height: 812
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2952,10 +2952,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 474}
-      m_SelectedIDs: 4a190000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: ee840000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9e9bfcff7ec0fcffd6dafdff7208ffffd20dffff2432ffffd24fffff38c7ffff2cfbffff6064000094670000be670000f2670000dc680000ce6900005e6c0000e66c0000246e00003c700000ee72000050790000626d06006c6d06008a6d0600b86d060044740600707506008c7606009877060088790600f27a0600047d0600c88506000487060066870600
+      m_ExpandedIDs: 2cfbffffe4680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2999,10 +2999,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 546
+    x: 547
     y: 73
-    width: 1453
-    height: 811
+    width: 1452
+    height: 812
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1404, y: 790}
+  m_TargetSize: {x: 1406, y: 791}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3036,10 +3036,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -702
-    m_HBaseRangeMax: 702
-    m_VBaseRangeMin: -395
-    m_VBaseRangeMax: 395
+    m_HBaseRangeMin: -703
+    m_HBaseRangeMax: 703
+    m_VBaseRangeMin: -395.5
+    m_VBaseRangeMax: 395.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3057,23 +3057,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1453
-      height: 790
+      width: 1452
+      height: 791
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 726.5, y: 395}
+    m_Translation: {x: 726, y: 395.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -726.5
-      y: -395
-      width: 1453
-      height: 790
+      x: -726
+      y: -395.5
+      width: 1452
+      height: 791
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1453, y: 811}
+  m_LastWindowPixelSize: {x: 1452, y: 812}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 0
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -5590,9 +5590,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 905
+    y: 906
     width: 2000
-    height: 454
+    height: 453
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5614,7 +5614,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/UI
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -5622,16 +5622,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 18}
-    m_SelectedIDs: 68840000
-    m_LastClickedID: 33896
-    m_ExpandedIDs: 00000000d8830000da830000dc830000de830000e0830000e2830000e4830000e6830000e8830000ea830000ec830000f2830000f48300003a55060000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 19}
+    m_SelectedIDs: d0840000
+    m_LastClickedID: 34000
+    m_ExpandedIDs: 00000000e8830000ea830000ec830000ee830000f0830000f2830000f4830000f6830000f8830000fa830000fc830000fe830000008400000284000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5659,7 +5659,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d8830000da830000dc830000de830000e0830000e2830000e4830000e6830000e8830000ea830000ec830000ee830000f0830000f2830000f4830000
+    m_ExpandedIDs: 00000000e8830000ea830000ec830000ee830000f0830000f2830000f4830000f6830000f8830000fa830000fc830000fe8300000084000002840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5687,7 +5687,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000209e0000f283fdffc46200006c5c000066730000b86f000094ce0300c48f0300ea8f030000900300e271000002bc0300a602000006e2010056e201004ce2010050660a00d67b0000a492000080ac0000fa910000969200004c9c0000b0020000ae020000969d020000000000667e000044850000b40200003e6e0600
+    m_ExpandedInstanceIDs: c6230000209e0000f283fdffc46200006c5c000066730000b86f000094ce0300c48f0300ea8f030000900300e271000002bc0300a602000006e2010056e201004ce2010050660a00d67b0000a492000080ac0000fa910000969200004c9c0000b0020000969d020000000000667e000044850000b40200003e6e06005c7f00008c540d0096540d005a7f000080540d00ae020000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5736,9 +5736,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 905
-    width: 2054
-    height: 454
+    y: 906
+    width: 2000
+    height: 453
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -6066,9 +6066,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2055
+    x: 2001
     y: 73
-    width: 504
+    width: 558
     height: 1286
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -6080,13 +6080,13 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 10011.385005400001
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
@@ -6270,10 +6270,11 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - b850024d3b949074bb9fb16034aed58c
+        - 17d10cebc546cfa4bbd48c7e903fc188
         - 2f39e4ee40014c548ada80fcef221fb5
-        - 4a08385751f519e4a82e9685f7c9faaf
-        - 25554a7e345abd54faa60321875d6ca7
         - 94739c14e36fced4aa886f0cff1486b2
+        - 096af7de5b82b934cab0cf50de7c8624
         - db0430a691ff598418b1b6a460a3797b
         - e09252a8981c0d94bbf2ce1e9e1531ec
         - a251de90c4222fe43b5a0bd908b0996a
@@ -6285,12 +6286,64 @@ MonoBehaviour:
         - c7eb723408e0cb14e9dc16185fbd03b7
         - 21f198a06ebd7cf42af4af4ea1d3d833
         - 2d5d8e56997062c439b3315cd20c33a3
+        - a87d7cec1aa1c6d4881c35de92933ec5
+        - 83e22f5336d75e44cb2431219dc08647
+        - af6ea6623bb36df409fb079e84464a7f
+        - e56a80bb745ab704e860402fd989b267
+        - 5c69582eb0804b6468979fce9d40a7e6
+        - 179da98145e337f4cb22303fd01dc24b
+        - bd8cb466d4411c3428a17ba4bacce15e
+        - 90e88ba6be768c24bab28a82d2892abd
+        - 171e10190e29f614d83670b16e74a9e8
+        - 9640c26b0edc487468bb5df8946cca1c
+        - b134165c657179645ac61134d36f62d2
+        - d53d286a2ddff0441bc8f675b83010c0
+        - 6d97cbceb2c395d41a9e3df3d9e08d2b
+        - 1823a3c303b794240ae43812977c2cfe
+        - a32dbaca58bd9284b9e32a2160ecb229
+        - 3747e6ff90157e24b8aa20f9cce7f131
+        - 34648c4f585fb6748866d56d5c3e3436
+        - db2eee200d92de84c9518c004fedb370
+        - 17d3d6830456ae244afd53c8031f17c5
+        - a4770b381c24aa04287957a579a7e3d6
         - 12d6a7f1d4ee5e4479add510b9d9c90c
+        - 849d22d77a580fb439b2ac835f5a263b
         - 669a254b513d9ac4dad4af1a827acb9e
         - ea588652dc09bea4188adc860db3cf95
         - fea1c4f916cf0c548b2f3a623e7baebd
+        - 751b06f499de5e046b2d9c593fc026a1
+        - 26a4cb27c567dfb419e0db8fc99b362f
+        - beb64f2b9e75a294e84aa380a66c17d0
+        - 5fba7d088b909d04891e257836431978
+        - ac91ab55aaf5e8844be426a849076752
+        - f77b6bc015dcb8c4db3d8b9c2d7e66c3
+        - 0c5fb34cacb2e4e4c8b83ac036e4443e
+        - 19db01abf8c17664f825c4523f99316b
+        - e8acc524037118445b6f8121d6989871
+        - 1ab6245046a11c04aa41e1801a5129a7
+        - c9de4d0313b31d149a81240e68ab7db0
+        - 96d9e7de304991d43b272c7663553e24
+        - d29647df748f33942a84fb4a06ec40c7
+        - 9c098168ebd0d674cb24007eaaa9e156
         - 8b1c96d33fa61a4449b7a2a6ba149db0
+        - e6770a04d39af9747a5c37f879b50ecf
         - cb90752db4a95f4419d9e326fc749651
+        - a381ce920d8b0b44ebd8d80cbbf3edbb
+        - f54d1bd14bd3ca042bd867b519fee8cc
+        - ce51c8e33b734b4db6086586558c53a3
+        - d6d3a169ad794942a21da6a552d62f6f
+        - 4f1e85c79acf49968737939ce8b445c7
+        - 8a89fa14b10d46a99122fd4f73fca9a2
+        - 125cb55b44b24c4393181402bc6200e6
+        - 5302535af1044152a457ed104f1f4b91
+        - 243e06394e614e5d99fab26083b707fa
+        - 731f1baa9d144a9897cb1d341c2092b8
+        - 2e498d1c8094910479dc3e1b768306a4
+        - 89dfd24e51c3b72458a825e457335cff
+        - 64b83f9de8c7bb64c8370daad9fcaa14
+        - 6071ff610ae882742a203b1133d8c6f7
+        - df71f7da1787b7f48adcb29f70832c63
+        - aa649abc672d7f543bb920ca5db846f2
         values:
         - path: Assets
           label: Assets
@@ -6310,6 +6363,43 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Fonts
+          label: Fonts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+          label: ATTriumvirate-CondensedBold SDF.asset
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts\ATTriumvirate-CondensedBold
+              SDF.asset
+            projectPath: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Materials
           label: Materials
           level: 1
@@ -6328,42 +6418,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Materials\Fence02.mat
-          label: Fence02.mat
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Materials\Fence02.mat
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\Fence02.mat
-            projectPath: Assets\Materials\Fence02.mat
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 5
-        - path: Assets\Materials\FenceFull.mat
-          label: FenceFull.mat
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Materials\FenceFull.mat
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\FenceFull.mat
-            projectPath: Assets\Materials\FenceFull.mat
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 5
         - path: Assets\Materials\Invisible.mat
           label: Invisible.mat
           level: 2
@@ -6379,6 +6433,24 @@ MonoBehaviour:
             path: Assets\Materials\Invisible.mat
             fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\Invisible.mat
             projectPath: Assets\Materials\Invisible.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\WoodChips001.mat
+          label: WoodChips001.mat
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\WoodChips001.mat
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\WoodChips001.mat
+            projectPath: Assets\Materials\WoodChips001.mat
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
@@ -6580,6 +6652,366 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 1
             workTreeStatus: 1
+        - path: Assets\Models\Textures
+          label: Textures
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Textures\Grass003
+          label: Grass003
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Textures\WoodChips001
+          label: WoodChips001
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+          label: WoodChips001_1K-JPG_AmbientOcclusion.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+          label: WoodChips001_1K-JPG_Color.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+          label: WoodChips001_1K-JPG_Displacement.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+          label: WoodChips001_1K-JPG_NormalDX.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+          label: WoodChips001_1K-JPG_NormalGL.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+          label: WoodChips001_1K-JPG_Roughness.jpg
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+            projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Music
+          label: Music
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music\IrregularHeart.wav
+          label: IrregularHeart.wav
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Music\IrregularHeart.wav
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\IrregularHeart.wav
+            projectPath: Assets\Music\IrregularHeart.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Music\MeatSounds.wav
+          label: MeatSounds.wav
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Music\MeatSounds.wav
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\MeatSounds.wav
+            projectPath: Assets\Music\MeatSounds.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Music\Slides
+          label: Slides
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music\Slides\call
+          label: call
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music\Slides\call\SlideCall1.wav
+          label: SlideCall1.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Music\Slides\call\SlideCall1.wav
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall1.wav
+            projectPath: Assets\Music\Slides\call\SlideCall1.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Music\Slides\call\SlideCall2.wav
+          label: SlideCall2.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Music\Slides\call\SlideCall2.wav
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall2.wav
+            projectPath: Assets\Music\Slides\call\SlideCall2.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Music\Slides\call\SlideCall3.wav
+          label: SlideCall3.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Music\Slides\call\SlideCall3.wav
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall3.wav
+            projectPath: Assets\Music\Slides\call\SlideCall3.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Prefabs
+          label: Prefabs
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Prefabs\Player.prefab
+          label: Player.prefab
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Prefabs\Player.prefab
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Player.prefab
+            projectPath: Assets\Prefabs\Player.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Prefabs\SlideCollectible.prefab
+          label: SlideCollectible.prefab
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Prefabs\SlideCollectible.prefab
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\SlideCollectible.prefab
+            projectPath: Assets\Prefabs\SlideCollectible.prefab
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Scenes
           label: Scenes
           level: 1
@@ -6598,6 +7030,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Scenes\MainMenu.unity
+          label: MainMenu.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\MainMenu.unity
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\MainMenu.unity
+            projectPath: Assets\Scenes\MainMenu.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scenes\Map.unity
           label: Map.unity
           level: 2
@@ -6652,6 +7102,258 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\AIManager.cs
+          label: AIManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\AIManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\AIManager.cs
+            projectPath: Assets\Scripts\AIManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\HeadBob.cs
+          label: HeadBob.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\HeadBob.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\HeadBob.cs
+            projectPath: Assets\Scripts\HeadBob.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Interactable.cs
+          label: Interactable.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Interactable.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Interactable.cs
+            projectPath: Assets\Scripts\Interactable.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\Managers.cs
+          label: Managers.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Managers.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Managers.cs
+            projectPath: Assets\Scripts\Managers.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\MenuManager.cs
+          label: MenuManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\MenuManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MenuManager.cs
+            projectPath: Assets\Scripts\MenuManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\MusicManager.cs
+          label: MusicManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\MusicManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MusicManager.cs
+            projectPath: Assets\Scripts\MusicManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\PlayerManager.cs
+          label: PlayerManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\PlayerManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerManager.cs
+            projectPath: Assets\Scripts\PlayerManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\SlideAudEmitter.cs
+          label: SlideAudEmitter.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\SlideAudEmitter.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideAudEmitter.cs
+            projectPath: Assets\Scripts\SlideAudEmitter.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\SlideBtnBack.cs
+          label: SlideBtnBack.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\SlideBtnBack.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnBack.cs
+            projectPath: Assets\Scripts\SlideBtnBack.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\SlideBtnSmall.cs
+          label: SlideBtnSmall.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\SlideBtnSmall.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnSmall.cs
+            projectPath: Assets\Scripts\SlideBtnSmall.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\SlideCollectible.cs
+          label: SlideCollectible.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\SlideCollectible.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideCollectible.cs
+            projectPath: Assets\Scripts\SlideCollectible.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\SlideManager.cs
+          label: SlideManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\SlideManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideManager.cs
+            projectPath: Assets\Scripts\SlideManager.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\StateManager.cs
+          label: StateManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\StateManager.cs
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\StateManager.cs
+            projectPath: Assets\Scripts\StateManager.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Shaders
           label: Shaders
           level: 1
@@ -6670,6 +7372,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Shaders\LightBeam.shadergraph
+          label: LightBeam.shadergraph
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Shaders\LightBeam.shadergraph
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\LightBeam.shadergraph
+            projectPath: Assets\Shaders\LightBeam.shadergraph
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Shaders\LivingMeat.shadergraph
           label: LivingMeat.shadergraph
           level: 2
@@ -6688,24 +7408,357 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
+        - path: Assets\Shaders\SlideBox.shadergraph
+          label: SlideBox.shadergraph
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Shaders\SlideBox.shadergraph
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph
+            projectPath: Assets\Shaders\SlideBox.shadergraph
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras
+          label: Examples & Extras
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources
+          label: Resources
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+            SDF.asset
+          label: Anton SDF.asset
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+              SDF.asset
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+              & Extras\Resources\Fonts & Materials\Anton SDF.asset
+            projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts &
+              Materials\Anton SDF.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+            SDF.asset
+          label: Bangers SDF.asset
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+              SDF.asset
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+              & Extras\Resources\Fonts & Materials\Bangers SDF.asset
+            projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts &
+              Materials\Bangers SDF.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          label: Roboto-Bold SDF.asset
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+              SDF.asset
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+              & Extras\Resources\Fonts & Materials\Roboto-Bold SDF.asset
+            projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts &
+              Materials\Roboto-Bold SDF.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\TextMesh Pro\Resources
+          label: Resources
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          label: LiberationSans SDF - Fallback.asset
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Fallback.asset
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Resources\Fonts
+              & Materials\LiberationSans SDF - Fallback.asset
+            projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+              SDF - Fallback.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\UI
+          label: UI
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UI\BackArrow.png
+          label: BackArrow.png
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UI\BackArrow.png
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrow.png
+            projectPath: Assets\UI\BackArrow.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UI\BackArrowHover.png
+          label: BackArrowHover.png
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UI\BackArrowHover.png
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowHover.png
+            projectPath: Assets\UI\BackArrowHover.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UI\BackArrowInvert.png
+          label: BackArrowInvert.png
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UI\BackArrowInvert.png
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowInvert.png
+            projectPath: Assets\UI\BackArrowInvert.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\UI\handsReceiveIcon.png
+          label: handsReceiveIcon.png
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\UI\handsReceiveIcon.png
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\handsReceiveIcon.png
+            projectPath: Assets\UI\handsReceiveIcon.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
       folders:
         keys:
         - Assets
+        - Assets\Fonts
         - Assets\Materials
         - Assets\Models
         - Assets\Models\Playground
+        - Assets\Models\Textures
+        - Assets\Models\Textures\Grass003
+        - Assets\Models\Textures\WoodChips001
+        - Assets\Music
+        - Assets\Music\Slides
+        - Assets\Music\Slides\call
+        - Assets\Prefabs
         - Assets\Scenes
         - Assets\Scenes\Map
+        - Assets\Scripts
         - Assets\Shaders
-        - ProjectSettings
-        - ProjectSettings\Packages
-        - ProjectSettings\Packages\com.unity.probuilder
-        - UserSettings
-        - UserSettings\Layouts
+        - Assets\TextMesh Pro
+        - Assets\TextMesh Pro\Examples & Extras
+        - Assets\TextMesh Pro\Examples & Extras\Resources
+        - Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+        - Assets\TextMesh Pro\Resources
+        - Assets\TextMesh Pro\Resources\Fonts & Materials
+        - Assets\UI
         values:
         - path: Assets
           label: Assets
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Fonts
+          label: Fonts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -6775,6 +7828,132 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Models\Textures
+          label: Textures
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Textures\Grass003
+          label: Grass003
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Textures\WoodChips001
+          label: WoodChips001
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music
+          label: Music
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music\Slides
+          label: Slides
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Music\Slides\call
+          label: call
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Prefabs
+          label: Prefabs
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: Assets\Scenes
           label: Scenes
           level: 1
@@ -6811,6 +7990,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: Assets\Shaders
           label: Shaders
           level: 1
@@ -6829,26 +8026,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings\Packages
-          label: Packages
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
           level: 1
           isFolder: 1
           isContainer: 0
@@ -6865,8 +8044,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: ProjectSettings\Packages\com.unity.probuilder
-          label: com.unity.probuilder
+        - path: Assets\TextMesh Pro\Examples & Extras
+          label: Examples & Extras
           level: 2
           isFolder: 1
           isContainer: 0
@@ -6883,9 +8062,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources
+          label: Resources
+          level: 3
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -6901,8 +8080,62 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources
+          label: Resources
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\UI
+          label: UI
           level: 1
           isFolder: 1
           isContainer: 0
@@ -6965,6 +8198,62 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Fonts
+        label: Fonts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+        label: ATTriumvirate-CondensedBold SDF.asset
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts\ATTriumvirate-CondensedBold
+            SDF.asset
+          projectPath: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset.meta
+        label: ATTriumvirate-CondensedBold SDF.asset.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts\ATTriumvirate-CondensedBold
+            SDF.asset.meta
+          projectPath: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Materials
         label: Materials
         level: 1
@@ -7088,6 +8377,42 @@ MonoBehaviour:
           path: Assets\Materials\Invisible.mat.meta
           fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\Invisible.mat.meta
           projectPath: Assets\Materials\Invisible.mat.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\WoodChips001.mat
+        label: WoodChips001.mat
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\WoodChips001.mat
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\WoodChips001.mat
+          projectPath: Assets\Materials\WoodChips001.mat
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\WoodChips001.mat.meta
+        label: WoodChips001.mat.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\WoodChips001.mat.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\WoodChips001.mat.meta
+          projectPath: Assets\Materials\WoodChips001.mat.meta
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
@@ -7469,6 +8794,636 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 1
           workTreeStatus: 1
+      - path: Assets\Models\Textures
+        label: Textures
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Models\Textures\Grass003
+        label: Grass003
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+        label: Grass003_1K-JPG_Color.jpg.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+          projectPath: Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Models\Textures\WoodChips001.meta
+        label: WoodChips001.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001.meta
+          projectPath: Assets\Models\Textures\WoodChips001.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001
+        label: WoodChips001
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+        label: WoodChips001_1K-JPG_AmbientOcclusion.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+        label: WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+        label: WoodChips001_1K-JPG_Color.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+        label: WoodChips001_1K-JPG_Color.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+        label: WoodChips001_1K-JPG_Displacement.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+        label: WoodChips001_1K-JPG_Displacement.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+        label: WoodChips001_1K-JPG_NormalDX.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+        label: WoodChips001_1K-JPG_NormalDX.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+        label: WoodChips001_1K-JPG_NormalGL.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+        label: WoodChips001_1K-JPG_NormalGL.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+        label: WoodChips001_1K-JPG_Roughness.jpg
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+        label: WoodChips001_1K-JPG_Roughness.jpg.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+          projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music
+        label: Music
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Music\IrregularHeart.wav
+        label: IrregularHeart.wav
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\IrregularHeart.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\IrregularHeart.wav
+          projectPath: Assets\Music\IrregularHeart.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\IrregularHeart.wav.meta
+        label: IrregularHeart.wav.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\IrregularHeart.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\IrregularHeart.wav.meta
+          projectPath: Assets\Music\IrregularHeart.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\MeatSounds.wav
+        label: MeatSounds.wav
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\MeatSounds.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\MeatSounds.wav
+          projectPath: Assets\Music\MeatSounds.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\MeatSounds.wav.meta
+        label: MeatSounds.wav.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\MeatSounds.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\MeatSounds.wav.meta
+          projectPath: Assets\Music\MeatSounds.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides
+        label: Slides
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Music\Slides\call.meta
+        label: call.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call.meta
+          projectPath: Assets\Music\Slides\call.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call
+        label: call
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Music\Slides\call\SlideCall1.wav
+        label: SlideCall1.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall1.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall1.wav
+          projectPath: Assets\Music\Slides\call\SlideCall1.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call\SlideCall1.wav.meta
+        label: SlideCall1.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall1.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall1.wav.meta
+          projectPath: Assets\Music\Slides\call\SlideCall1.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call\SlideCall2.wav
+        label: SlideCall2.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall2.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall2.wav
+          projectPath: Assets\Music\Slides\call\SlideCall2.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call\SlideCall2.wav.meta
+        label: SlideCall2.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall2.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall2.wav.meta
+          projectPath: Assets\Music\Slides\call\SlideCall2.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call\SlideCall3.wav
+        label: SlideCall3.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall3.wav
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall3.wav
+          projectPath: Assets\Music\Slides\call\SlideCall3.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Music\Slides\call\SlideCall3.wav.meta
+        label: SlideCall3.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Music\Slides\call\SlideCall3.wav.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall3.wav.meta
+          projectPath: Assets\Music\Slides\call\SlideCall3.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Prefabs
+        label: Prefabs
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Prefabs\Player.prefab
+        label: Player.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Prefabs\Player.prefab
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Player.prefab
+          projectPath: Assets\Prefabs\Player.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Prefabs\SlideCollectible.prefab
+        label: SlideCollectible.prefab
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Prefabs\SlideCollectible.prefab
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\SlideCollectible.prefab
+          projectPath: Assets\Prefabs\SlideCollectible.prefab
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Prefabs\SlideCollectible.prefab.meta
+        label: SlideCollectible.prefab.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Prefabs\SlideCollectible.prefab.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\SlideCollectible.prefab.meta
+          projectPath: Assets\Prefabs\SlideCollectible.prefab.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Scenes
         label: Scenes
         level: 1
@@ -7487,6 +9442,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Scenes\MainMenu.unity
+        label: MainMenu.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\MainMenu.unity
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scenes\Map.unity
         label: Map.unity
         level: 2
@@ -7541,6 +9514,384 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\AIManager.cs
+        label: AIManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\AIManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\AIManager.cs
+          projectPath: Assets\Scripts\AIManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\GameState.cs
+        label: GameState.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\GameState.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\GameState.cs
+          projectPath: Assets\Scripts\GameState.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Scripts\GameState.cs.meta
+        label: GameState.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\GameState.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\GameState.cs.meta
+          projectPath: Assets\Scripts\GameState.cs.meta
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 5
+      - path: Assets\Scripts\HeadBob.cs
+        label: HeadBob.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\HeadBob.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\HeadBob.cs
+          projectPath: Assets\Scripts\HeadBob.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Interactable.cs
+        label: Interactable.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Interactable.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Interactable.cs
+          projectPath: Assets\Scripts\Interactable.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Interactable.cs.meta
+        label: Interactable.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Interactable.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Interactable.cs.meta
+          projectPath: Assets\Scripts\Interactable.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Managers.cs
+        label: Managers.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Managers.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Managers.cs
+          projectPath: Assets\Scripts\Managers.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\MenuManager.cs
+        label: MenuManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\MenuManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MenuManager.cs
+          projectPath: Assets\Scripts\MenuManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\MusicManager.cs
+        label: MusicManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\MusicManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MusicManager.cs
+          projectPath: Assets\Scripts\MusicManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\PlayerManager.cs
+        label: PlayerManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\PlayerManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerManager.cs
+          projectPath: Assets\Scripts\PlayerManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\SlideAudEmitter.cs
+        label: SlideAudEmitter.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideAudEmitter.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideAudEmitter.cs
+          projectPath: Assets\Scripts\SlideAudEmitter.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideAudEmitter.cs.meta
+        label: SlideAudEmitter.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideAudEmitter.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideAudEmitter.cs.meta
+          projectPath: Assets\Scripts\SlideAudEmitter.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideBtnBack.cs
+        label: SlideBtnBack.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideBtnBack.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnBack.cs
+          projectPath: Assets\Scripts\SlideBtnBack.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideBtnBack.cs.meta
+        label: SlideBtnBack.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideBtnBack.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnBack.cs.meta
+          projectPath: Assets\Scripts\SlideBtnBack.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideBtnSmall.cs
+        label: SlideBtnSmall.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideBtnSmall.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnSmall.cs
+          projectPath: Assets\Scripts\SlideBtnSmall.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\SlideCollectible.cs
+        label: SlideCollectible.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideCollectible.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideCollectible.cs
+          projectPath: Assets\Scripts\SlideCollectible.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideCollectible.cs.meta
+        label: SlideCollectible.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideCollectible.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideCollectible.cs.meta
+          projectPath: Assets\Scripts\SlideCollectible.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\SlideManager.cs
+        label: SlideManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\SlideManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideManager.cs
+          projectPath: Assets\Scripts\SlideManager.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\StateManager.cs
+        label: StateManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\StateManager.cs
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\StateManager.cs
+          projectPath: Assets\Scripts\StateManager.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\StateManager.cs.meta
+        label: StateManager.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\StateManager.cs.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\StateManager.cs.meta
+          projectPath: Assets\Scripts\StateManager.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Shaders
         label: Shaders
         level: 1
@@ -7559,6 +9910,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Shaders\LightBeam.shadergraph
+        label: LightBeam.shadergraph
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Shaders\LightBeam.shadergraph
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\LightBeam.shadergraph
+          projectPath: Assets\Shaders\LightBeam.shadergraph
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Shaders\LivingMeat.shadergraph
         label: LivingMeat.shadergraph
         level: 2
@@ -7577,10 +9946,10 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: ProjectSettings
-        label: ProjectSettings
-        level: 0
-        isFolder: 1
+      - path: Assets\Shaders\SlideBox.shadergraph
+        label: SlideBox.shadergraph
+        level: 2
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -7589,14 +9958,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Shaders\SlideBox.shadergraph
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph
+          projectPath: Assets\Shaders\SlideBox.shadergraph
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\Packages
-        label: Packages
+          workTreeStatus: 3
+      - path: Assets\TextMesh Pro
+        label: TextMesh Pro
         level: 1
         isFolder: 1
         isContainer: 0
@@ -7613,8 +9982,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings\Packages\com.unity.probuilder
-        label: com.unity.probuilder
+      - path: Assets\TextMesh Pro\Examples & Extras
+        label: Examples & Extras
         level: 2
         isFolder: 1
         isContainer: 0
@@ -7631,8 +10000,204 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-        label: Settings.json
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources
+        label: Resources
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials
+        label: Fonts & Materials
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+          SDF.asset
+        label: Anton SDF.asset
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+            SDF.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+            & Extras\Resources\Fonts & Materials\Anton SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+            SDF.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+          SDF.asset
+        label: Bangers SDF.asset
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+            SDF.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+            & Extras\Resources\Fonts & Materials\Bangers SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+            SDF.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+          SDF.asset
+        label: Roboto-Bold SDF.asset
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+            & Extras\Resources\Fonts & Materials\Roboto-Bold SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+            SDF.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\TextMesh Pro\Resources
+        label: Resources
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+        label: Fonts & Materials
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset
+        label: LiberationSans SDF - Fallback.asset
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Resources\Fonts
+            & Materials\LiberationSans SDF - Fallback.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\UI
+        label: UI
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\UI\BackArrow.png
+        label: BackArrow.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\BackArrow.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrow.png
+          projectPath: Assets\UI\BackArrow.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\BackArrow.png.meta
+        label: BackArrow.png.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -7643,51 +10208,33 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
-          projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+          path: Assets\UI\BackArrow.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrow.png.meta
+          projectPath: Assets\UI\BackArrow.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\BackArrowHover.png
+        label: BackArrowHover.png
         level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\BackArrowHover.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowHover.png
+          projectPath: Assets\UI\BackArrowHover.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\BackArrowHover.png.meta
+        label: BackArrowHover.png.meta
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -7697,12 +10244,84 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
+          path: Assets\UI\BackArrowHover.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowHover.png.meta
+          projectPath: Assets\UI\BackArrowHover.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\BackArrowInvert.png
+        label: BackArrowInvert.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\BackArrowInvert.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowInvert.png
+          projectPath: Assets\UI\BackArrowInvert.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\BackArrowInvert.png.meta
+        label: BackArrowInvert.png.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\BackArrowInvert.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowInvert.png.meta
+          projectPath: Assets\UI\BackArrowInvert.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\handsReceiveIcon.png
+        label: handsReceiveIcon.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\handsReceiveIcon.png
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\handsReceiveIcon.png
+          projectPath: Assets\UI\handsReceiveIcon.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\UI\handsReceiveIcon.png.meta
+        label: handsReceiveIcon.png.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\UI\handsReceiveIcon.png.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\handsReceiveIcon.png.meta
+          projectPath: Assets\UI\handsReceiveIcon.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       selectedNode:
         path: 
         label: 
@@ -7723,6 +10342,20 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
+    - path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts\ATTriumvirate-CondensedBold
+        SDF.asset
+      projectPath: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts\ATTriumvirate-CondensedBold
+        SDF.asset.meta
+      projectPath: Assets\Fonts\ATTriumvirate-CondensedBold SDF.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Materials\Fence02.mat
       fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\Fence02.mat
       projectPath: Assets\Materials\Fence02.mat
@@ -7756,6 +10389,18 @@ MonoBehaviour:
     - path: Assets\Materials\Invisible.mat.meta
       fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\Invisible.mat.meta
       projectPath: Assets\Materials\Invisible.mat.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\WoodChips001.mat
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\WoodChips001.mat
+      projectPath: Assets\Materials\WoodChips001.mat
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\WoodChips001.mat.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Materials\WoodChips001.mat.meta
+      projectPath: Assets\Materials\WoodChips001.mat.meta
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
@@ -7873,6 +10518,180 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 1
       workTreeStatus: 1
+    - path: Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+      projectPath: Assets\Models\Textures\Grass003\Grass003_1K-JPG_Color.jpg.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Models\Textures\WoodChips001.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001.meta
+      projectPath: Assets\Models\Textures\WoodChips001.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_AmbientOcclusion.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Color.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Displacement.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalDX.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_NormalGL.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+      projectPath: Assets\Models\Textures\WoodChips001\WoodChips001_1K-JPG_Roughness.jpg.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\IrregularHeart.wav
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\IrregularHeart.wav
+      projectPath: Assets\Music\IrregularHeart.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\IrregularHeart.wav.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\IrregularHeart.wav.meta
+      projectPath: Assets\Music\IrregularHeart.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\MeatSounds.wav
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\MeatSounds.wav
+      projectPath: Assets\Music\MeatSounds.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\MeatSounds.wav.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\MeatSounds.wav.meta
+      projectPath: Assets\Music\MeatSounds.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call.meta
+      projectPath: Assets\Music\Slides\call.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall1.wav
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall1.wav
+      projectPath: Assets\Music\Slides\call\SlideCall1.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall1.wav.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall1.wav.meta
+      projectPath: Assets\Music\Slides\call\SlideCall1.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall2.wav
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall2.wav
+      projectPath: Assets\Music\Slides\call\SlideCall2.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall2.wav.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall2.wav.meta
+      projectPath: Assets\Music\Slides\call\SlideCall2.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall3.wav
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall3.wav
+      projectPath: Assets\Music\Slides\call\SlideCall3.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Music\Slides\call\SlideCall3.wav.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Music\Slides\call\SlideCall3.wav.meta
+      projectPath: Assets\Music\Slides\call\SlideCall3.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Prefabs\Player.prefab
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Player.prefab
+      projectPath: Assets\Prefabs\Player.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Prefabs\SlideCollectible.prefab
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\SlideCollectible.prefab
+      projectPath: Assets\Prefabs\SlideCollectible.prefab
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Prefabs\SlideCollectible.prefab.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\SlideCollectible.prefab.meta
+      projectPath: Assets\Prefabs\SlideCollectible.prefab.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scenes\MainMenu.unity
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\MainMenu.unity
+      projectPath: Assets\Scenes\MainMenu.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scenes\Map.unity
       fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\Map.unity
       projectPath: Assets\Scenes\Map.unity
@@ -7885,38 +10704,273 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: Assets\Scripts\AIManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\AIManager.cs
+      projectPath: Assets\Scripts\AIManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\GameState.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\GameState.cs
+      projectPath: Assets\Scripts\GameState.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Scripts\GameState.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\GameState.cs.meta
+      projectPath: Assets\Scripts\GameState.cs.meta
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 5
+    - path: Assets\Scripts\HeadBob.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\HeadBob.cs
+      projectPath: Assets\Scripts\HeadBob.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Interactable.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Interactable.cs
+      projectPath: Assets\Scripts\Interactable.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Interactable.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Interactable.cs.meta
+      projectPath: Assets\Scripts\Interactable.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Managers.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\Managers.cs
+      projectPath: Assets\Scripts\Managers.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\MenuManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MenuManager.cs
+      projectPath: Assets\Scripts\MenuManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\MusicManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\MusicManager.cs
+      projectPath: Assets\Scripts\MusicManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\PlayerManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\PlayerManager.cs
+      projectPath: Assets\Scripts\PlayerManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\SlideAudEmitter.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideAudEmitter.cs
+      projectPath: Assets\Scripts\SlideAudEmitter.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideAudEmitter.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideAudEmitter.cs.meta
+      projectPath: Assets\Scripts\SlideAudEmitter.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideBtnBack.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnBack.cs
+      projectPath: Assets\Scripts\SlideBtnBack.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideBtnBack.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnBack.cs.meta
+      projectPath: Assets\Scripts\SlideBtnBack.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideBtnSmall.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideBtnSmall.cs
+      projectPath: Assets\Scripts\SlideBtnSmall.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\SlideCollectible.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideCollectible.cs
+      projectPath: Assets\Scripts\SlideCollectible.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideCollectible.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideCollectible.cs.meta
+      projectPath: Assets\Scripts\SlideCollectible.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SlideManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SlideManager.cs
+      projectPath: Assets\Scripts\SlideManager.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\StateManager.cs
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\StateManager.cs
+      projectPath: Assets\Scripts\StateManager.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\StateManager.cs.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\StateManager.cs.meta
+      projectPath: Assets\Scripts\StateManager.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Shaders\LightBeam.shadergraph
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\LightBeam.shadergraph
+      projectPath: Assets\Shaders\LightBeam.shadergraph
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Shaders\LivingMeat.shadergraph
       fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\LivingMeat.shadergraph
       projectPath: Assets\Shaders\LivingMeat.shadergraph
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
-      projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+    - path: Assets\Shaders\SlideBox.shadergraph
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Shaders\SlideBox.shadergraph
+      projectPath: Assets\Shaders\SlideBox.shadergraph
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
+    - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+        SDF.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+        & Extras\Resources\Fonts & Materials\Anton SDF.asset
+      projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+        SDF.asset
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 30 changed files
+    - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+        SDF.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+        & Extras\Resources\Fonts & Materials\Bangers SDF.asset
+      projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+        SDF.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+        SDF.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Examples
+        & Extras\Resources\Fonts & Materials\Roboto-Bold SDF.asset
+      projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Roboto-Bold
+        SDF.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF -
+        Fallback.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\TextMesh Pro\Resources\Fonts
+        & Materials\LiberationSans SDF - Fallback.asset
+      projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+        SDF - Fallback.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\UI\BackArrow.png
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrow.png
+      projectPath: Assets\UI\BackArrow.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\BackArrow.png.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrow.png.meta
+      projectPath: Assets\UI\BackArrow.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\BackArrowHover.png
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowHover.png
+      projectPath: Assets\UI\BackArrowHover.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\BackArrowHover.png.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowHover.png.meta
+      projectPath: Assets\UI\BackArrowHover.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\BackArrowInvert.png
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowInvert.png
+      projectPath: Assets\UI\BackArrowInvert.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\BackArrowInvert.png.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\BackArrowInvert.png.meta
+      projectPath: Assets\UI\BackArrowInvert.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\handsReceiveIcon.png
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\handsReceiveIcon.png
+      projectPath: Assets\UI\handsReceiveIcon.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\UI\handsReceiveIcon.png.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\UI\handsReceiveIcon.png.meta
+      projectPath: Assets\UI\handsReceiveIcon.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    changedFilesText: 95 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-07-12T21:53:16.502-04:00
+      updatedTimeString: 2024-07-13T22:00:27.845-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-07-12T21:55:23.947-04:00
+      updatedTimeString: 2024-07-13T22:02:55.931-04:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-07-12T21:55:20.639-04:00
+      updatedTimeString: 2024-07-13T22:02:19.382-04:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: dcc57a5030c12e8842dc66485c6513f2819d189f
+      mergeA: ae2cd565a38afb452158b610824941ace3571fc4
+      mergeB: 69b2f7a3a58d8395d550a1e79b627bcef09c37f5
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: Merge branch 'main' of https://github.com/joshuaculver/ActiveHazard
+        into main
+      description: 
+      timeString: 2024-07-10T20:59:49.000-04:00
+      commitTimeString: 2024-07-10T20:59:49.000-04:00
+      changes: []
+    - commitID: ae2cd565a38afb452158b610824941ace3571fc4
+      mergeA: 
+      mergeB: 
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: Fixing Git
+      description: 
+      timeString: 2024-07-10T20:59:44.000-04:00
+      commitTimeString: 2024-07-10T20:59:44.000-04:00
+      changes:
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 358f901b67965c9f034adde17af97083f5bbacd6
       mergeA: 
       mergeB: 
@@ -8806,6 +11860,24 @@ MonoBehaviour:
       - path: UserSettings\Layouts\default-2022.dwlt
         fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
         projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 69b2f7a3a58d8395d550a1e79b627bcef09c37f5
+      mergeA: 
+      mergeB: 
+      authorName: joshuaculver
+      authorEmail: 63064987+joshuaculver@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Update README.md
+      description: 
+      timeString: 2024-07-08T15:04:29.000-04:00
+      commitTimeString: 2024-07-08T15:04:29.000-04:00
+      changes:
+      - path: README.md
+        fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+        projectPath: README.md
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
@@ -17371,16 +20443,47 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 2
+    statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2024-07-10T20:59:12.072-04:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2024-07-10T20:59:32.394-04:00
+      updatedTimeString: 2024-07-13T21:22:52.292-04:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: dcc57a5030c12e8842dc66485c6513f2819d189f
+        mergeA: ae2cd565a38afb452158b610824941ace3571fc4
+        mergeB: 69b2f7a3a58d8395d550a1e79b627bcef09c37f5
+        authorName: Joshua Culver
+        authorEmail: joshculver1@gmail.com
+        commitEmail: joshculver1@gmail.com
+        commitName: Joshua Culver
+        summary: Merge branch 'main' of https://github.com/joshuaculver/ActiveHazard
+          into main
+        description: 
+        timeString: 2024-07-10T20:59:49.000-04:00
+        commitTimeString: 2024-07-10T20:59:49.000-04:00
+        changes: []
+      - commitID: ae2cd565a38afb452158b610824941ace3571fc4
+        mergeA: 
+        mergeB: 
+        authorName: Joshua Culver
+        authorEmail: joshculver1@gmail.com
+        commitEmail: joshculver1@gmail.com
+        commitName: Joshua Culver
+        summary: Fixing Git
+        description: 
+        timeString: 2024-07-10T20:59:44.000-04:00
+        commitTimeString: 2024-07-10T20:59:44.000-04:00
+        changes:
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 358f901b67965c9f034adde17af97083f5bbacd6
         mergeA: 
         mergeB: 
@@ -18272,6 +21375,24 @@ MonoBehaviour:
         - path: UserSettings\Layouts\default-2022.dwlt
           fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
           projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 69b2f7a3a58d8395d550a1e79b627bcef09c37f5
+        mergeA: 
+        mergeB: 
+        authorName: joshuaculver
+        authorEmail: 63064987+joshuaculver@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Update README.md
+        description: 
+        timeString: 2024-07-08T15:04:29.000-04:00
+        commitTimeString: 2024-07-08T15:04:29.000-04:00
+        changes:
+        - path: README.md
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\README.md
+          projectPath: README.md
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
@@ -26861,20 +29982,20 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 2
-      selectedIndex: -1
+      statusAhead: 0
+      selectedIndex: 3
     selectedEntry:
-      commitID: 
+      commitID: 98201cae2e9f198ee39e465f5e24ad2824426f97
       mergeA: 
       mergeB: 
-      authorName: 
-      authorEmail: 
-      commitEmail: 
-      commitName: 
-      summary: 
+      authorName: Joshua Culver
+      authorEmail: joshculver1@gmail.com
+      commitEmail: joshculver1@gmail.com
+      commitName: Joshua Culver
+      summary: Added courtyard
       description: 
-      timeString: 0001-01-01T00:00:00.000+00:00
-      commitTimeString: 0001-01-01T00:00:00.000+00:00
+      timeString: 2024-07-08T21:24:25.000-04:00
+      commitTimeString: 2024-07-08T21:24:25.000-04:00
       changes:
       - path: Assets\Fonts.meta
         fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Fonts.meta
@@ -30946,9 +34067,9 @@ MonoBehaviour:
           indexStatus: 3
           workTreeStatus: 0
       selectedNode:
-        path: Assets\Models\Textures\0Hieroglyphs\Small\HieroSmall2.mat.meta
-        label: HieroSmall2.mat.meta
-        level: 6
+        path: 
+        label: 
+        level: 0
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -30958,11 +34079,11 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Models\Textures\0Hieroglyphs\Small\HieroSmall2.mat.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Textures\0Hieroglyphs\Small\HieroSmall2.mat.meta
-          projectPath: Assets\Models\Textures\0Hieroglyphs\Small\HieroSmall2.mat.meta
-          originalPath: Assets\Models\Textures\Hieroglyphs\Small\HieroSmall2.mat.meta
-          indexStatus: 6
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
           workTreeStatus: 0
     detailsScroll: {x: 0, y: 0}
   settingsView:
@@ -31064,13 +34185,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-07-11T23:42:02.967-04:00
+    updatedTimeString: 2024-07-13T21:23:46.601-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-07-11T23:42:04.251-04:00
+    updatedTimeString: 2024-07-13T21:23:47.091-04:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-07-11T23:42:04.243-04:00
+    updatedTimeString: 2024-07-13T21:23:37.212-04:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -31088,7 +34209,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.99987656
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 

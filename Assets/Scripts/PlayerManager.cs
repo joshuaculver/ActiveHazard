@@ -10,16 +10,22 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public GameObject playerPrefab;
     public Transform playerSpawn;
     public GameObject player;
+    public bool playerInput;
+    public bool interacting;
+    public float interactRange = 5f;
+
     public Camera cam;
     public PlayerAudEmitter aud;
     public Animator playerAnimator; 
-    private PlayerInput pMove;
+    public PlayerInput pMove;
     private MouseLook pCamX;
     private MouseLook pCamY;
     private DecalProjector projector;
     public bool gameOver = false;
 
     public float normalFOV = 70;
+
+    public RawImage icon;
 
     public void Startup()
     {
@@ -33,20 +39,13 @@ public class PlayerManager : MonoBehaviour, IGameManager
         playerAnimator = playerAnimator.GetComponent<Animator>();
         projector = player.GetComponentInChildren<DecalProjector>();
         aud = player.GetComponentInChildren<PlayerAudEmitter>();
+        playerInput = true;
 
         status = ManagerStatus.Started;
     }
 
     public void Update()
     {
-            /*
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                SceneManager.LoadScene("MainMenu");
-            }
-            */
             if(pMove.moving)
                 {
                     playerAnimator.SetBool("IsWalking", true);
@@ -58,6 +57,56 @@ public class PlayerManager : MonoBehaviour, IGameManager
                     aud.running = false;
                 }
             
+            if(playerInput)
+            {
+                Ray ray = cam.ViewportPointToRay(new Vector3(.5f, 0.5f, 0));
+                RaycastHit hit;
+
+                if(Physics.Raycast(ray, out hit, interactRange))
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if(interactable != null)
+                    {
+                        if(icon.color.a < 1f)
+                        {
+                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 1f, Time.unscaledDeltaTime * 2f));
+                        }
+                    }
+                    else
+                    {
+                        if(icon.color.a > 0f)
+                        {
+                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2f));
+                        }
+                    }
+                }
+                else
+                {
+                    if(icon.color.a > 0f)
+                    {
+                        icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2f));
+                    }
+                }
+
+                if(Input.GetMouseButtonDown(0))
+                {
+                    if(Physics.Raycast(ray, out hit, interactRange))
+                    {
+                        Interactable interactable = hit.collider.GetComponent<Interactable>();
+                        Debug.Log(interactable);
+                        if(interactable != null)
+                        {
+                            Debug.Log("Interacting");
+                            interactable.Interact();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2.75f));
+            }
+
             if(Input.GetKeyDown(KeyCode.F))
             {
                 Die();
@@ -72,7 +121,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Spawning player");
         //Euler controls facing/orientation
-        player = Instantiate(playerPrefab, playerSpawn.position, Quaternion.Euler(new Vector3(0, 90, 0)));
+        player = Instantiate(playerPrefab, playerSpawn.position, Quaternion.Euler(new Vector3(0, 180, 0)));
     }
 
     public void Hold()
@@ -83,7 +132,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
         pMove.canMove = false;
         pCamX.canMove = false;
         pCamY.canMove = false;
-
+        playerInput = false;
     }
 
     public void Release()
@@ -94,6 +143,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
         pMove.canMove = true;
         pCamX.canMove = true;
         pCamY.canMove = true;
+        playerInput = true;
     }
 
     public void Die()

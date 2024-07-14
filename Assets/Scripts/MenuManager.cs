@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour, IGameManager
     private SlideManager slides;
 
     public RawImage solid;
-    private float fadeSpd = 1f;
+    private float fadeSpd = 2f;
     public UnityEngine.UIElements.Button resume;
     public UnityEngine.UIElements.Button mainMenu;
 
@@ -59,7 +59,6 @@ public class MenuManager : MonoBehaviour, IGameManager
         {
             if(solid.color.a < 1f)
             {
-                Debug.Log("Fading to black");
                 solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 1f, fadeSpd * Time.unscaledDeltaTime));
             }
             else if(solid.color.a >  0.9f)
@@ -78,6 +77,11 @@ public class MenuManager : MonoBehaviour, IGameManager
                     slideCam.enabled = true;
                     openSlideMenu(Managers.Slides.slideSet, Managers.Slides.slide);
                     Managers.Slides.ShowSlideUI();
+                    Debug.Log("Intro: " + Managers.State.playerProgress.inIntro);
+                    if(Managers.State.playerProgress.inIntro)
+                    {
+                        Managers.State.OpenLobby();
+                    }
                 }
                 //Switch to not transitioning to fade back in
                 transitioning = false;
@@ -91,7 +95,6 @@ public class MenuManager : MonoBehaviour, IGameManager
         }
         else if(!transitioning && solid.color.a > 0f)
         {
-            Debug.Log("Fading from black");
             solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 0f, fadeSpd * Time.unscaledDeltaTime));
         }
 
@@ -106,11 +109,15 @@ public class MenuManager : MonoBehaviour, IGameManager
                 openPauseMenu();
             }
         }
-        else if(Input.GetKeyDown(KeyCode.N))
+        //Right mouse toggles slide menu
+        else if(Input.GetMouseButtonDown(1) && !slideViewing)
         {
-            openSlideMenu(0,0);
+            if(Managers.Slides.haveSlide)
+            {
+                openSlideMenu(Managers.Slides.slideSet, Managers.Slides.slide);
+            }
         }
-        else if(Input.GetKeyDown(KeyCode.M))
+        else if(Input.GetMouseButtonDown(1) && slideViewing)
         {
             closeSlideMenu();
         }
@@ -135,7 +142,7 @@ public class MenuManager : MonoBehaviour, IGameManager
         pauseMenuOpen = false;
     }
 
-    public void openSlideMenu(int initSet, int initSlide)
+    public void openSlideMenu(char initSet, int initSlide)
     {
         if(Managers.AI.spawned && Managers.AI.active.status == AIStatus.Chase || Managers.AI.spawned && Managers.AI.active.status == AIStatus.Pursue)
         {
@@ -145,19 +152,18 @@ public class MenuManager : MonoBehaviour, IGameManager
         else
         {
             Managers.Pause();
+            slideViewing = true;
+            Managers.Slides.switchSlide(initSet, initSlide);
             //Setup or switch slides here
             SwitchCamera(slideCam);
-            slideViewing = true;
-            Managers.Music.check();
         }
     }
 
     public void closeSlideMenu()
     {
         Managers.Unpause();
-        //Setup or switch slides here
-        SwitchCamera(mainCam);
         slideViewing = false;
+        SwitchCamera(mainCam);
         Managers.Music.check();
     }
 

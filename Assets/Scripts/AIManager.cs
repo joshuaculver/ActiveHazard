@@ -25,7 +25,7 @@ public class AIManager : MonoBehaviour, IGameManager
     // Start is called before the first frame update
     public void Startup()
     {
-        Debug.Log("Dialogue manager starting...");
+        Debug.Log("AI manager starting...");
 
         GameObject[] newNodes = GameObject.FindGameObjectsWithTag("Node");
 

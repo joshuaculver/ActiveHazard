@@ -41,6 +41,9 @@ public class MusicManager : MonoBehaviour, IGameManager
     private float ambThreshold = 300f;
     private int ambInstances = 0;
 
+    //Was the last track for a menu/timescale = 0f context
+    private bool menuMus;
+
     // Start is called before the first frame update
     public void Startup()
     {
@@ -60,6 +63,8 @@ public class MusicManager : MonoBehaviour, IGameManager
         atk.loop = true;
         atk.volume = 0f;
         atk.Pause();
+
+        menuMus = false;
 
         MusLock = false;
 
@@ -181,8 +186,9 @@ public class MusicManager : MonoBehaviour, IGameManager
     //Uses two audio sources to crossfade
     private void PlayMus(AudioClip clip, float vol)
     {
-        if(srcs[flip].clip == clip)
+        if(srcs[flip].clip == clip && srcs[flip].volume == vol)
         {
+            Debug.Log("Already playing");
             return;
         }
         AudioSource source = srcs[flip];
@@ -202,7 +208,7 @@ public class MusicManager : MonoBehaviour, IGameManager
         playing = clip;
         if(!atk.isPlaying)
         {
-            StartCoroutine(StartFade(source, dur, 0.3f));
+            StartCoroutine(StartFade(source, dur, defaultVol));
         }
 
         CD = 10f;
@@ -319,6 +325,13 @@ public class MusicManager : MonoBehaviour, IGameManager
         if(!running || CD > 0 && !Managers.Menu.slideViewing)
         {
             Debug.Log("Not running");
+
+            if(menuMus && !Managers.Menu.slideViewing)
+            {
+                Debug.Log("Fading menu music out");
+                StartCoroutine(StartFade(srcs[flip], 3f, 0f));
+                menuMus = false;
+            }
             return;
         }
 
@@ -333,26 +346,31 @@ public class MusicManager : MonoBehaviour, IGameManager
                 {
                     Debug.Log("8");
                     PlayMus(slidesA[4], 1f);
+                    menuMus = true;
                 }
                 else if(Managers.Slides.slide == 6)
                 {
                     Debug.Log("7");
                     PlayMus(slidesA[3], slideVol);
+                    menuMus = true;
                 }
                 else if(Managers.Slides.slide == 4 || Managers.Slides.slide == 5)
                 {
                     Debug.Log("4-6");
                     PlayMus(slidesA[2], slideVol);
+                    menuMus = true;
                 }
                 else if(Managers.Slides.slide == 2 || Managers.Slides.slide == 3)
                 {
                     Debug.Log("2/3");
-                    PlayMus(slidesA[1], slideVol); 
+                    PlayMus(slidesA[1], slideVol);
+                    menuMus = true;
                 }
                 else if(Managers.Slides.slide == 0 || Managers.Slides.slide == 1)
                 {
                     Debug.Log("0/1");
                     PlayMus(slidesA[0], slideVol);
+                    menuMus = true;
                 }
             }
             return;

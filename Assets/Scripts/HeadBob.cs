@@ -25,6 +25,11 @@ public class HeadBob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!Managers.Player.pMove.canMove)
+        {
+            return;
+        }
+
         if(!enable)
         {
             return;

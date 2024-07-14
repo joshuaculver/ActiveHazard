@@ -10,12 +10,9 @@ public class SlideBtnSmall : MonoBehaviour
     public int slideNum;
     public bool unlocked = false;
 
-
-
     void Awake()
     {
         thisButton = GetComponent<Button>();
-
         thisButton.onClick.AddListener(ButtonClick);
         thisButton.gameObject.SetActive(unlocked);
     }
@@ -23,5 +20,11 @@ public class SlideBtnSmall : MonoBehaviour
     public void ButtonClick()
     {
         Managers.Slides.switchSlide(set, slideNum);
+    }
+
+    public void SetSelected()
+    {
+        thisButton = GetComponent<Button>();
+        thisButton.Select();
     }
 }

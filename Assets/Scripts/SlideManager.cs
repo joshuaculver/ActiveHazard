@@ -25,16 +25,23 @@ public class SlideManager : MonoBehaviour, IGameManager
     public bool switchingSlide = false;
     private float switchSpd = 0.01f;
 
+    public bool haveSlide;
+
     //public List<SlideBtnBig> setButtons;
     public List<SlideBtnSmall> buttonsA;
 
     public void Startup()
     {
+        Debug.Log("Slide manager starting...");
+
         slideSet = 'A';
         slide = 0;
         slideUI.SetActive(false);
         slideLight.intensity = 0;
         shader = slideBack.GetComponent<UnscaledTimeRender>();
+        haveSlide = false;
+
+        status = ManagerStatus.Started;
     }
 
     // Update is called once per frame
@@ -50,7 +57,10 @@ public class SlideManager : MonoBehaviour, IGameManager
                 }
                 else
                 {
+                    Managers.Player.icon.color = new Color(1f, 1f, 1f, 0f);
+
                     SetSlide(newSet, newSlide);
+                    
                     if(slideSet == 'A' && slide == 7)
                     {
                         slideLight.color = Color.red;
@@ -92,8 +102,6 @@ public class SlideManager : MonoBehaviour, IGameManager
         //If menu manager not transitioning
         newSet = set;
         newSlide = sli;
-
-        switchingSlide = true;
     }
 
     //Swaps material
@@ -106,8 +114,12 @@ public class SlideManager : MonoBehaviour, IGameManager
         //If special slide set back color
         slideSet = setChar;
         slide = slideNum;
+
+        Managers.State.CheckInventory(slideSet, slide);
+        
         Managers.Music.check();
-    }    
+    }
+
     public void ShowSlideUI()
     {
         slideUI.SetActive(true);
@@ -119,5 +131,22 @@ public class SlideManager : MonoBehaviour, IGameManager
         slideUI.SetActive(false);
     }
 
-    
+    public void CollectSlide(char set, int id)
+    {
+        Debug.Log("Collecting Slide");
+        Managers.State.AddInventory(set, id);
+        if(set == 'A')
+        {
+            for (int i = 0; i < buttonsA.Count; i++)
+            {
+                if(buttonsA[i].set == set && buttonsA[i].slideNum == id)
+                {
+                    buttonsA[i].gameObject.SetActive(true);
+                    haveSlide = true;
+                    Managers.Menu.openSlideMenu('A', i);
+                    buttonsA[i].SetSelected();
+                }
+            }
+        }
+    }
 }

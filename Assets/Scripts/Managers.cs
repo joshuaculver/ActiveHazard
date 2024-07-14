@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(AIManager))]
 [RequireComponent(typeof(MusicManager))]
+[RequireComponent(typeof(MenuManager))]
+[RequireComponent(typeof(SlideManager))]
+
 
 public class Managers : MonoBehaviour
 {
@@ -14,6 +17,7 @@ public class Managers : MonoBehaviour
     public static MusicManager Music {get; private set;}
     public static MenuManager Menu {get; private set;}
     public static SlideManager Slides {get; private set;}
+    public static StateManager State {get; private set;}
 
     private List<IGameManager> _startSequence;
 
@@ -26,6 +30,7 @@ public class Managers : MonoBehaviour
         Music = GetComponent<MusicManager>();
         Menu = GetComponent<MenuManager>();
         Slides = GetComponent<SlideManager>();
+        State = GetComponent<StateManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
@@ -33,6 +38,7 @@ public class Managers : MonoBehaviour
         _startSequence.Add(Music);
         _startSequence.Add(Menu);
         _startSequence.Add(Slides);
+        _startSequence.Add(State);
 
         StartCoroutine(StartupManagers());
     }

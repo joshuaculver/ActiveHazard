@@ -144,6 +144,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         pCamX.canMove = true;
         pCamY.canMove = true;
         playerInput = true;
+
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void Die()

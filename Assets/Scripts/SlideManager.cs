@@ -42,8 +42,6 @@ public class SlideManager : MonoBehaviour, IGameManager
         shader = slideBack.GetComponent<UnscaledTimeRender>();
         haveSlide = false;
 
-        slideLight.intensity = 0;
-
         status = ManagerStatus.Started;
     }
 
@@ -110,7 +108,7 @@ public class SlideManager : MonoBehaviour, IGameManager
     }
 
     //Swaps material
-    private void SetSlide(char setChar, int slideNum)
+    public void SetSlide(char setChar, int slideNum)
     {
         if(setChar == 'A')
         {
@@ -138,17 +136,39 @@ public class SlideManager : MonoBehaviour, IGameManager
 
     public void EnableSlideCollectible(char set, int id)
     {
-        //Add check for if inventory
-        for(int i = 0; i < collectiblesA.Count; i++)
+        if(set == 'A')
         {
-            if(set == 'A')
+            for(int i = 0; i < collectiblesA.Count; i++)
             {
-                if(collectiblesA[i].set == set && collectiblesA[i].ID == id)
+                Debug.Log(collectiblesA[i].ID.ToString() + " - " + id.ToString());
+                if(collectiblesA[i].ID == id)
                 {
                     collectiblesA[i].gameObject.SetActive(true);
+                    Debug.Log("Enabled");
                 }
             }
         }
+    }
+
+    public void EnableNext()
+    {
+        for(int i = 0; i < collectiblesA.Count; i++)
+        {
+            if(!collectiblesA[i].isActiveAndEnabled)
+            {
+                if(collectiblesA[i].ID != 7)
+                {
+                    Debug.Log("Enablng: A" + i.ToString());
+                    collectiblesA[i].gameObject.SetActive(true);
+                    return;
+                }
+            }
+        }
+
+        Debug.Log("No slides except final remaining");
+        Debug.Log("Enabling");
+
+        collectiblesA[7].gameObject.SetActive(true);
     }
 
     public void CollectSlide(char set, int id)
@@ -167,6 +187,11 @@ public class SlideManager : MonoBehaviour, IGameManager
                     buttonsA[i].SetSelected();
                 }
             }
+        }
+
+        if(id == 7)
+        {
+            Managers.State.playerProgress.AEnding = true;
         }
     }
 }

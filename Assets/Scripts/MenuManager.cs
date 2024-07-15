@@ -151,9 +151,10 @@ public class MenuManager : MonoBehaviour, IGameManager
         }
         else
         {
+            Managers.Slides.SetSlide(initSet, initSlide);
             Managers.Pause();
             slideViewing = true;
-            Managers.Slides.switchSlide(initSet, initSlide);
+            //Managers.Slides.switchSlide(initSet, initSlide);
             SwitchCamera(slideCam);
         }
     }
@@ -164,7 +165,6 @@ public class MenuManager : MonoBehaviour, IGameManager
         slideViewing = false;
         SwitchCamera(mainCam);
         Managers.Music.check();
-        Managers.Slides.slideLight.intensity = 0;
     }
 
     public void SwitchCamera(Camera cam)

@@ -165,7 +165,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 2001
-    height: 833
+    height: 885
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 547
-    height: 833
+    height: 885
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -214,7 +214,7 @@ MonoBehaviour:
     x: 547
     y: 0
     width: 1454
-    height: 833
+    height: 885
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -243,9 +243,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 833
+    y: 885
     width: 2001
-    height: 474
+    height: 422
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -274,16 +274,16 @@ MonoBehaviour:
     y: 0
     width: 559
     height: 1307
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 25}
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
   - {fileID: 23}
   - {fileID: 24}
   - {fileID: 25}
-  m_Selected: 3
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 3
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2504,7 +2504,7 @@ MonoBehaviour:
     x: 547
     y: 73
     width: 1452
-    height: 812
+    height: 864
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2837,9 +2837,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.762252, y: 3.0448222, z: 3.3152072}
+    m_Target: {x: 24.403738, y: 18.239347, z: 15.071393}
     speed: 2
-    m_Value: {x: 14.762252, y: 3.0448222, z: 3.3152072}
+    m_Value: {x: 24.403738, y: 18.239347, z: 15.071393}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2885,13 +2885,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.066761285, y: 0.8283384, z: -0.0962706, w: 0.5493923}
+    m_Target: {x: -0.009091608, y: 0.94508874, z: -0.328765, w: -0.02208728}
     speed: 2
-    m_Value: {x: 0.066704564, y: 0.82763463, z: -0.096188806, w: 0.5489255}
+    m_Value: {x: -0.009050224, y: 0.9447076, z: -0.3270447, w: -0.022080433}
   m_Size:
-    m_Target: 6.0621777
+    m_Target: 0.51603234
     speed: 2
-    m_Value: 6.0621777
+    m_Value: 0.51603234
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2909,7 +2909,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.27038503, y: 0.7147018, z: -0.3634985, w: 0.5342362}
+  m_LastSceneViewRotation: {x: -0.113774635, y: -0.83515733, z: 0.50606704, w: -0.1876313}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -2939,7 +2939,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 546
-    height: 812
+    height: 864
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2952,10 +2952,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa0f0000
+      scrollPos: {x: 0, y: 1253}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5c4effff2cfbffff86670000e4680000bc6c00002c6e00006e730000387500005a7900008a7a0000
+      m_ExpandedIDs: 0a55fdff02a4fdff14c8fdff2cfbffff9c680000566c0000be6c00002e6e0000926e000050700000627000007073000064790000947a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3002,7 +3002,7 @@ MonoBehaviour:
     x: 547
     y: 73
     width: 1452
-    height: 812
+    height: 864
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1406, y: 791}
+  m_TargetSize: {x: 1452, y: 817}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3036,10 +3036,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -703
-    m_HBaseRangeMax: 703
-    m_VBaseRangeMin: -395.5
-    m_VBaseRangeMax: 395.5
+    m_HBaseRangeMin: -726
+    m_HBaseRangeMax: 726
+    m_VBaseRangeMin: -408.5
+    m_VBaseRangeMax: 408.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3058,9 +3058,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1452
-      height: 791
+      height: 843
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 726, y: 395.5}
+    m_Translation: {x: 726, y: 421.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -3068,12 +3068,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -726
-      y: -395.5
+      y: -421.5
       width: 1452
-      height: 791
+      height: 843
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1452, y: 812}
+  m_LastWindowPixelSize: {x: 1452, y: 864}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 0
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -5590,9 +5590,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 906
+    y: 958
     width: 2000
-    height: 453
+    height: 401
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5614,7 +5614,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -5622,16 +5622,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: bc840000
-    m_LastClickedID: 33980
-    m_ExpandedIDs: 00000000e8830000ea830000ec830000ee830000f0830000f2830000f4830000f6830000f8830000fa830000fc830000fe8300000084000002840000b684000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b8840000
+    m_LastClickedID: 33976
+    m_ExpandedIDs: 00000000f2830000f4830000f6830000f8830000fa830000fc830000fe83000000840000028400000484000006840000088400000a8400000c840000c084000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5659,7 +5659,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8830000ea830000ec830000ee830000f0830000f2830000f4830000f6830000f8830000fa830000fc830000fe8300000084000002840000
+    m_ExpandedIDs: 00000000f2830000f4830000f6830000f8830000fa830000fc830000fe83000000840000028400000484000006840000088400000a8400000c840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -5686,7 +5686,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000209e0000f283fdffc46200006c5c000066730000b86f000094ce0300c48f0300ea8f030000900300e271000002bc0300a602000006e2010056e201004ce2010050660a00d67b0000a492000080ac0000fa910000969200004c9c0000b0020000969d020000000000667e000044850000b40200003e6e06005c7f00008c540d0096540d005a7f000080540d00ae0200008ec30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -5736,9 +5736,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 906
+    y: 958
     width: 2000
-    height: 453
+    height: 401
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -6084,12 +6084,12 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
-  changeTab: 2
-  activeTab: 2
+  currentTrackingStatusHasUpdate: 1
+  currentStatusEntriesHasUpdate: 1
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -6259,13 +6259,13 @@ MonoBehaviour:
     - name: origin/main
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: main
-    treeScroll: {x: 0, y: 1216}
+    treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys: []
@@ -6323,13 +6323,13 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-07-14T12:49:01.155-04:00
+      updatedTimeString: 2024-07-14T22:33:23.434-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-07-14T13:13:36.191-04:00
+      updatedTimeString: 2024-07-14T22:34:35.055-04:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-07-14T13:13:00.127-04:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -16436,10 +16436,10 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2024-07-14T13:14:58.511-04:00
+      updatedTimeString: 2024-07-14T14:30:43.234-04:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2024-07-14T13:14:58.501-04:00
+      updatedTimeString: 2024-07-14T14:30:37.191-04:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
@@ -26570,20 +26570,19 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: 2
+      selectedIndex: -1
     selectedEntry:
-      commitID: dcc57a5030c12e8842dc66485c6513f2819d189f
-      mergeA: ae2cd565a38afb452158b610824941ace3571fc4
-      mergeB: 69b2f7a3a58d8395d550a1e79b627bcef09c37f5
-      authorName: Joshua Culver
-      authorEmail: joshculver1@gmail.com
-      commitEmail: joshculver1@gmail.com
-      commitName: Joshua Culver
-      summary: Merge branch 'main' of https://github.com/joshuaculver/ActiveHazard
-        into main
+      commitID: 
+      mergeA: 
+      mergeB: 
+      authorName: 
+      authorEmail: 
+      commitEmail: 
+      commitName: 
+      summary: 
       description: 
-      timeString: 2024-07-10T20:59:49.000-04:00
-      commitTimeString: 2024-07-10T20:59:49.000-04:00
+      timeString: 0001-01-01T00:00:00.000+00:00
+      commitTimeString: 0001-01-01T00:00:00.000+00:00
       changes: []
     treeChanges:
       assets:
@@ -27323,13 +27322,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-07-14T13:14:57.083-04:00
+    updatedTimeString: 2024-07-14T14:31:27.126-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-07-14T13:14:58.501-04:00
+    updatedTimeString: 2024-07-14T14:35:20.047-04:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-07-14T13:13:36.191-04:00
+    updatedTimeString: 2024-07-14T14:35:20.038-04:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull

@@ -10,6 +10,7 @@ public class StateManager : MonoBehaviour, IGameManager
     {
         public Dictionary<string, bool>slideInventory;
         public bool inIntro;
+        public bool AEnding;
     }
 
     [SerializeField]
@@ -30,6 +31,7 @@ public class StateManager : MonoBehaviour, IGameManager
         Debug.Log("State manager starting...");
         playerProgress.slideInventory = new Dictionary<string, bool>();
         playerProgress.inIntro = true;
+        playerProgress.AEnding = false;
 
         status = ManagerStatus.Started;
         Debug.Log("Intro: " + playerProgress.inIntro);
@@ -105,6 +107,10 @@ public class StateManager : MonoBehaviour, IGameManager
         }
 
         playerProgress.inIntro = false;
+
+        Managers.Slides.EnableSlideCollectible('A', 1);
+        Managers.Slides.EnableSlideCollectible('A', 2);
+        Managers.Slides.EnableSlideCollectible('A', 3);
     }
 }
 

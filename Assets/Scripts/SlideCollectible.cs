@@ -29,11 +29,6 @@ public class SlideCollectible : Interactable
         }
     }
 
-    public void Update()
-    {
-
-    }
-
     public override void Interact()
     {
         Managers.Slides.CollectSlide(set, ID);
@@ -46,5 +41,44 @@ public class SlideCollectible : Interactable
         string objectID = partA + partB;
 
         return objectID;
+    }
+
+    public void CheckShowState()
+    {
+        if(showState > 3)
+        {
+            showState = 3;
+        }
+        else if(showState < 0)
+        {
+            showState = 0;
+        }
+
+        if(showState == 3)
+        {
+            spot.gameObject.SetActive(true);
+            beam.gameObject.SetActive(true);
+            emitter.gameObject.SetActive(true);
+        }
+        else if(showState == 2)
+        {
+            beam.gameObject.SetActive(true);
+            emitter.gameObject.SetActive(true);
+
+            spot.gameObject.SetActive(false);        
+        }
+        else if(showState == 1)
+        {
+            emitter.gameObject.SetActive(true);
+
+            spot.gameObject.SetActive(false);
+            beam.gameObject.SetActive(false);
+        }
+        else if(showState == 0)
+        {
+            spot.gameObject.SetActive(false);
+            beam.gameObject.SetActive(false);
+            emitter.gameObject.SetActive(false);
+        }
     }
 }

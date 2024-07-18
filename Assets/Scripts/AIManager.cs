@@ -15,12 +15,11 @@ public class AIManager : MonoBehaviour, IGameManager
     public Transform activeSpawn;
     public bool spawned = false;
     //Flips for whether danger is rising or falling
-    public int danger = 0;
+    public int danger;
     public bool dangerUp = true;
     private float dangTimer;
     public bool chased = false;
-    //15-minutes
-    private float demoTimer = 900f;
+    
 
     // Start is called before the first frame update
     public void Startup()
@@ -31,14 +30,17 @@ public class AIManager : MonoBehaviour, IGameManager
 
         for(int i = 0; i < newNodes.Length;i++)
         {
-            Debug.Log("Adding node");
+            Debug.Log("Adding node: " + newNodes[i].name);
             allNodes.Add(newNodes[i].transform);
         }
+
+        allNodes.Sort((x, y) => x.name.CompareTo(y.name));
 
         Debug.Log(allNodes);
 
         //3-minutes
         dangTimer = 180f;
+        danger = 3;
 
         status = ManagerStatus.Started;
     }
@@ -50,33 +52,24 @@ public class AIManager : MonoBehaviour, IGameManager
         {
             if(!spawned)
             {
-                danger = 1;
+                //danger = 1;
                 SpawnActive(FurthestNode().transform);
                 spawned = true;
             }
             else
             {
                 Destroy(active);
-                danger = 0;
+                //danger = 0;
                 spawned = false;
             }
         }
-        /*
-        //DEBUG
-        else if(Input.GetKeyDown(KeyCode.K))
-        {
-            danger = 11;
-            active.killMode = true;
-            active.DangerCheck(danger);
-        }
-        */
         if(dangTimer <= 0)
         {
             if(!spawned && dangerUp)
             {
                 danger += 1;
                 SpawnActive(FurthestNode().transform);
-                active.DangerCheck(danger);
+                DangerCheck();
                 spawned = true;
             }
             else if(dangerUp)
@@ -86,7 +79,7 @@ public class AIManager : MonoBehaviour, IGameManager
                     danger += 1;
                     if(spawned)
                     {
-                        active.DangerCheck(danger);
+                        DangerCheck();
                     }
                     Debug.Log("Danger: " + danger);
                 }
@@ -104,19 +97,44 @@ public class AIManager : MonoBehaviour, IGameManager
                     if(spawned)
                     {
                         Debug.Log("Danger: " + danger);
-                        active.DangerCheck(danger);
+                        DangerCheck();
                     }
                 }
             }
             dangTimer = 80f;
         }
         dangTimer -= Time.deltaTime;
-        demoTimer -= Time.deltaTime;
-        if(demoTimer <= 0 && !active.killMode)
+    }
+
+    public void DangerCheck()
+    {
+        if(active.status != AIStatus.Chase && active.status != AIStatus.Pursue)
         {
-            danger = 11;
-            active.killMode = true;
-            active.DangerCheck(danger);
+            if(danger == 0 || danger > 10)
+            {
+                return;
+            }
+
+            if(danger == 10)
+            {
+                Debug.Log("Danger check: 10");
+                active.changeState(AIStatus.Pursue);
+            }
+            else if(danger > 6 && danger <= 9)
+            {
+                Debug.Log("Danger check: switch to hunt");
+                active.changeState(AIStatus.Hunt);
+            }
+            else if(danger > 2 && danger <= 6)
+            {
+                Debug.Log("Danger check: switch to wander");
+                active.changeState(AIStatus.Wander);
+            }
+            else if(danger <= 2)
+            {
+                Debug.Log("Danger check: switch to avoid");
+                active.changeState(AIStatus.Avoid);
+            }
         }
     }
 
@@ -124,6 +142,7 @@ public class AIManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Nodes requested...");
         List<Transform> outList = new List<Transform>();
+        /*
         if(request.Contains("A") || request == "!")
         {
             Debug.Log("A nodes");
@@ -140,6 +159,8 @@ public class AIManager : MonoBehaviour, IGameManager
                 outList.Add(nodesB[i]);
             }
         }
+        */
+        outList = allNodes;
         return outList;
     }
 
@@ -147,7 +168,7 @@ public class AIManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Spawning hazard");
         active = Instantiate(actPrefab, pos.position, Quaternion.identity).GetComponent<AI>();
-        active.DangerCheck(danger);
+        DangerCheck();
     }
     
     //TODO part of AI looking behavior to replace with mathf.moveTowards
@@ -162,15 +183,15 @@ public class AIManager : MonoBehaviour, IGameManager
         Transform player = Managers.Player.player.transform;
         RaycastHit hit;
 
-        Transform returnNode = nodesA[0];
-        for(int i = 0; i < nodesA.Count; i++)
-            if(Physics.Raycast(Managers.Player.player.transform.position, nodesA[i].transform.position - Managers.Player.player.transform.position, out hit, Mathf.Infinity))
+        Transform returnNode = allNodes[0];
+        for(int i = 0; i < allNodes.Count; i++)
+            if(Physics.Raycast(Managers.Player.player.transform.position, allNodes[i].transform.position - Managers.Player.player.transform.position, out hit, Mathf.Infinity))
             {
-                if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > hit.distance)
+                if(Vector3.Distance(Managers.Player.player.transform.position, allNodes[i].transform.position) > hit.distance)
                 {
-                    if(Vector3.Distance(Managers.Player.player.transform.position, nodesA[i].transform.position) > Vector3.Distance(Managers.Player.player.transform.position, returnNode.transform.position))
+                    if(Vector3.Distance(Managers.Player.player.transform.position, allNodes[i].transform.position) > Vector3.Distance(Managers.Player.player.transform.position, returnNode.transform.position))
                     {
-                        returnNode = nodesA[i];
+                        returnNode = allNodes[i];
                     }
                 }
             }

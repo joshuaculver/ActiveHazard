@@ -101,7 +101,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                 CD -= Time.unscaledDeltaTime;
             }
 
-            if(Managers.AI.spawned && !Managers.AI.active.killMode)
+            if(Managers.AI.spawned)
             {
                 if(Managers.AI.active.attacking && atk.volume < defaultVol)
                 {
@@ -383,17 +383,6 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         if(Managers.AI.spawned)
         {
-            //DEBUG teehees
-            if(Managers.AI.active.killMode)
-            {
-                if(playing != killMode)
-                {
-                    Debug.Log("Playing search");
-                    PlayMus(killMode, defaultVol);
-                    prevStatus = Managers.AI.active.status;
-                    prevDanger = Managers.AI.danger;
-                }
-            }
             if(Managers.AI.active.status == prevStatus && Managers.AI.danger == prevDanger)
             {
                 Debug.Log("Music check: status and danger unchanged");

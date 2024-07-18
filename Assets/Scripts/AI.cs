@@ -42,7 +42,6 @@ public class AI : MonoBehaviour
     private int warnings = 2;
     private int warningsDefault = 2;
     public bool ignorePlayer = false;
-    public bool killMode = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -133,7 +132,7 @@ public class AI : MonoBehaviour
             else if(!agent.pathPending && agent.remainingDistance < 1f)
             {
                 //chance that when wandering or hunting AI stops to look around
-                if(status != AIStatus.Glance && status != AIStatus.Avoid && Random.Range(1,Managers.AI.danger) == 1)
+                if(status != AIStatus.Glance && status != AIStatus.Avoid && Random.Range(-4,Managers.AI.danger) == 1)
                 {
                     changeState(AIStatus.Glance);
                 }
@@ -143,18 +142,12 @@ public class AI : MonoBehaviour
                 }
             }
         }
-
-        if(killMode)
-        {
-            atkLen = 0.5f;
-            agent.angularSpeed = 10000000f;
-            agent.acceleration = 10000000f;
-            agent.speed = 8;
-        }
     }
 
     int Flip()
     {
+        int num = rndFlip.IndexOf(Random.Range(0,2));
+        flip = num;
         return rndFlip.IndexOf(Random.Range(0,2));
     }
 
@@ -296,52 +289,6 @@ public class AI : MonoBehaviour
         Managers.Music.check();
         
         Debug.Log("State:" + status);
-    }
-
-    public void DangerCheck(int danger)
-    {
-        if(killMode)
-        {
-            changeState(AIStatus.Chase);
-            lightSwitch(true);
-            warnings = 0;
-            agent.stoppingDistance = 3f;
-            agent.speed = 10;
-            spotLights[0].color = Color.red;
-            spotLights[0].intensity = 75;
-            spotLights[0].range = 40;
-            pursuitTimer = 0f;
-            return;
-        }
-        if(status != AIStatus.Chase && status != AIStatus.Pursue)
-        {
-            if(danger == 0 || danger > 10)
-            {
-                return;
-            }
-
-            if(danger == 10)
-            {
-                Debug.Log("Danger check: 10");
-                changeState(AIStatus.Pursue);
-            }
-            else if(danger > 6 && danger <= 9)
-            {
-                Debug.Log("Danger check: switch to hunt");
-                changeState(AIStatus.Hunt);
-            }
-            else if(danger > 2 && danger <= 6)
-            {
-                Debug.Log("Danger check: switch to wander");
-                changeState(AIStatus.Wander);
-            }
-            else if(danger <= 2)
-            {
-                Debug.Log("Danger check: switch to avoid");
-                changeState(AIStatus.Avoid);
-            }
-        
-        }
     }
 
     //TODO handle pausing timer/state changes/cool down when not in chase
@@ -520,7 +467,15 @@ public class AI : MonoBehaviour
             int currNode = destNode;
             while(currNode == destNode)
             {
-                destNode = Random.Range(0, nodes.Count);
+                //One in four to pick a random node. Otherwise advance through nodes sequentially.
+                if(Random.Range(1,5) == 4)
+                {
+                    destNode = Random.Range(0, nodes.Count);
+                }
+                else
+                {
+                    destNode = (destNode + flip) % nodes.Count;
+                }
             }
             if(Random.Range(1, 21) == 1)
             {
@@ -539,7 +494,7 @@ public class AI : MonoBehaviour
             //destNode = Random.Range(0, nodes.Length);
 
             //Iterates through node list linearly
-            //estNode = (destNode + 1) % nodes.Length;
+            //destNode = (destNode + 1) % nodes.Length;
         }
     }
 
@@ -555,7 +510,7 @@ public class AI : MonoBehaviour
         }
 
         //TODO figure out more interesting way to handle this
-        if(contactTime >= 30f)
+        if(contactTime >= 60f)
         {
             Debug.Log("Lost player");
             timing = false;
@@ -685,21 +640,6 @@ public class AI : MonoBehaviour
             }
         }
     }
-
-    /*
-       public static IEnumerator StartFade(AudioSource src, float duration, float targetVolume)
-    {
-        float currTime = 0f;
-        float start = src.volume;
-        while (currTime < duration)
-        {
-            currTime += Time.deltaTime;
-            src.volume = Mathf.Lerp(start, targetVolume, currTime / duration);
-            yield return null;
-        }
-        yield break;
-    }
-    */
 
     void lightSwitch(bool set)
     {

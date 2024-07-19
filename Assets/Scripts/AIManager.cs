@@ -54,6 +54,7 @@ public class AIManager : MonoBehaviour, IGameManager
             {
                 //danger = 1;
                 SpawnActive(FurthestNode().transform);
+                Managers.State.OpenLobby();
                 spawned = true;
             }
             else

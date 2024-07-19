@@ -467,8 +467,8 @@ public class AI : MonoBehaviour
             int currNode = destNode;
             while(currNode == destNode)
             {
-                //One in four to pick a random node. Otherwise advance through nodes sequentially.
-                if(Random.Range(1,5) == 4)
+                //One in ten to pick a random node. Otherwise advance through nodes sequentially.
+                if(Random.Range(1,11) == 4)
                 {
                     destNode = Random.Range(0, nodes.Count);
                 }

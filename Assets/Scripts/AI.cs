@@ -90,6 +90,7 @@ public class AI : MonoBehaviour
         }
 
         //Checking if player is infront of agent. Only behavior which ignores busy status
+        /*
         if(playerRay() && status != AIStatus.Avoid)
         {
             if(!ignorePlayer)
@@ -102,6 +103,7 @@ public class AI : MonoBehaviour
                 Debug.Log("No chasing today boss");
             }
         }
+        */
         //Normal behavior
         if(busy)
         {
@@ -620,6 +622,28 @@ public class AI : MonoBehaviour
         }
 
         return false;
+    }
+
+    public bool LOScheck()
+    {
+        Debug.Log("Hazard LOS check");
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Managers.Player.player.transform.position - transform.position, out hit, sightRange))
+        {
+            if(hit.collider.CompareTag("Player"))
+            {
+                Debug.Log("Has LOS");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void lightDistCheck()

@@ -5537,5 +5537,4 @@ MonoBehaviour:
   pursuitTimer: 0
   attacking: 0
   ignorePlayer: 0
-  killMode: 0
-  titleMode: 0
+  debugMarker: {fileID: 2406335247360661912, guid: afd92f4e5ad0fe54c8f33d7c2fa5f79a, type: 3}

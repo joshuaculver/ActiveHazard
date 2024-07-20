@@ -43,6 +43,8 @@ public class AI : MonoBehaviour
     private int warningsDefault = 2;
     public bool ignorePlayer = false;
 
+    public GameObject debugMarker;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -62,11 +64,14 @@ public class AI : MonoBehaviour
         busy = false;
 
         Managers.Music.check();
+
+        debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
     //Move update actions to functions. Create busy variable to cause return during udpate if new action isn't wanted
     void Update()
     {
+        debugMarker.transform.position = agent.destination;
         lightDistCheck();
         //Checking if agent is moving to turn sound emitter on or off
         if(!Mathf.Approximately(agent.velocity.x, 0) || !Mathf.Approximately(agent.velocity.y, 0))
@@ -142,6 +147,7 @@ public class AI : MonoBehaviour
                 }
             }
         }
+
     }
 
     int Flip()

@@ -30,7 +30,7 @@ public class AIManager : MonoBehaviour, IGameManager
 
         for(int i = 0; i < newNodes.Length;i++)
         {
-            Debug.Log("Adding node: " + newNodes[i].name);
+            //Debug.Log("Adding node: " + newNodes[i].name);
             allNodes.Add(newNodes[i].transform);
         }
 
@@ -55,11 +55,11 @@ public class AIManager : MonoBehaviour, IGameManager
                 //danger = 1;
                 SpawnActive(FurthestNode().transform);
                 Managers.State.OpenLobby();
-                spawned = true;
             }
             else
             {
-                Destroy(active);
+                Destroy(active.debugMarker);
+                Destroy(active.gameObject);
                 //danger = 0;
                 spawned = false;
             }
@@ -69,9 +69,7 @@ public class AIManager : MonoBehaviour, IGameManager
             if(!spawned && dangerUp)
             {
                 danger += 1;
-                SpawnActive(FurthestNode().transform);
-                DangerCheck();
-                spawned = true;
+                SpawnActive(FurthestNode());
             }
             else if(dangerUp)
             {
@@ -87,6 +85,7 @@ public class AIManager : MonoBehaviour, IGameManager
             }
             else
             {
+                /*
                 if(danger >= 1)
                 {
                     if(danger <= 4)
@@ -101,6 +100,20 @@ public class AIManager : MonoBehaviour, IGameManager
                         DangerCheck();
                     }
                 }
+                */
+                if(danger <= 2 && spawned)
+                {
+                    DespawnActive();
+                    danger -= 1;
+                }
+                else if(danger > 0)
+                {
+                    danger -= 1;
+                }
+                else
+                {
+                    dangerUp = true;
+                }
             }
             dangTimer = 80f;
         }
@@ -109,7 +122,7 @@ public class AIManager : MonoBehaviour, IGameManager
 
     public void DangerCheck()
     {
-        if(active.status != AIStatus.Chase && active.status != AIStatus.Pursue)
+        if(spawned && active.status != AIStatus.Chase && active.status != AIStatus.Pursue)
         {
             if(danger == 0 || danger > 10)
             {
@@ -126,15 +139,33 @@ public class AIManager : MonoBehaviour, IGameManager
                 Debug.Log("Danger check: switch to hunt");
                 active.changeState(AIStatus.Hunt);
             }
-            else if(danger > 2 && danger <= 6)
+            else
             {
-                Debug.Log("Danger check: switch to wander");
-                active.changeState(AIStatus.Wander);
+                if(spawned && danger < 1)
+                {
+                    DespawnActive();
+                }
             }
-            else if(danger <= 2)
+        }
+        else
+        {
+            if(danger > 2 && danger <= 6)
             {
-                Debug.Log("Danger check: switch to avoid");
-                active.changeState(AIStatus.Avoid);
+                SpawnActive(FurthestNode());
+                if(spawned)
+                {
+                    Debug.Log("Danger check: switch to wander");
+                    active.changeState(AIStatus.Wander);
+                }
+            }
+            else if(danger >= 1)
+            {
+                SpawnActive(FurthestNode());
+                if(spawned)
+                {
+                    Debug.Log("Danger check: switch to avoid");
+                    active.changeState(AIStatus.Avoid);
+                }
             }
         }
     }
@@ -167,9 +198,30 @@ public class AIManager : MonoBehaviour, IGameManager
 
     public void SpawnActive(Transform pos)
     {
+        if(Managers.acccesibilityMode)
+        {
+            Debug.Log("Accessibility Mode, no hazard spawning");
+            return;
+        }
         Debug.Log("Spawning hazard");
         active = Instantiate(actPrefab, pos.position, Quaternion.identity).GetComponent<AI>();
+        spawned = true;
         DangerCheck();
+        Managers.Music.check();
+    }
+
+    public void DespawnActive()
+    {
+        if(spawned)
+        {
+            Debug.Log("Despawning hazard");
+            if(!active.playerRay())
+            {
+                Destroy(active.debugMarker);
+                Destroy(active.gameObject);
+                spawned = false;
+            }
+        }
     }
     
     //TODO part of AI looking behavior to replace with mathf.moveTowards

@@ -126,7 +126,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                                 srcs[flip].volume -= 0.03f;
                             }
 
-                            Debug.Log("Attack volume ^:" + atk.volume);
+                            //Debug.Log("Attack volume ^:" + atk.volume);
                         }
 
                         atkFade = 0f;
@@ -146,7 +146,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                             {
                                 srcs[flip].volume += 0.015f;
                             }
-                            Debug.Log("Attack volume v:" + atk.volume);
+                            //Debug.Log("Attack volume v:" + atk.volume);
                         }
                         else if(atk.volume <= 0f)
                         {
@@ -157,7 +157,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                                 srcs[flip].volume = defaultVol;
                             }
                         }
-                        Debug.Log("Regular volume ^:" + srcs[flip].volume);
+                        //Debug.Log("Regular volume ^:" + srcs[flip].volume);
                         
                         atkFade = 0f;
                     }
@@ -240,10 +240,6 @@ public class MusicManager : MonoBehaviour, IGameManager
         }
 
         running = false;
-
-        Debug.Log("Stinging");
-
-        Debug.Log("Stopped");
         stingCD = true;
 
         flip = 1 - flip;

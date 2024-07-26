@@ -22,6 +22,7 @@ public class Managers : MonoBehaviour
     private List<IGameManager> _startSequence;
 
     public static bool isPaused = false;
+    public static bool acccesibilityMode;
 
     void Awake()
     {
@@ -41,6 +42,15 @@ public class Managers : MonoBehaviour
         _startSequence.Add(State);
 
         StartCoroutine(StartupManagers());
+
+        if(PlayerPrefs.GetInt("mode") == 1)
+        {
+            acccesibilityMode = true;
+        }
+        else
+        {
+            acccesibilityMode = false;
+        }
     }
 
     private IEnumerator StartupManagers()

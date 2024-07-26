@@ -1,9 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.SceneManagement;
-
 public class PlayerManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus status {get; private set;}
@@ -13,6 +12,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool playerInput;
     public bool interacting;
     public float interactRange = 5f;
+    public Queue<Transform> nearNodes;
 
     public Camera cam;
     public PlayerAudEmitter aud;
@@ -40,6 +40,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         projector = player.GetComponentInChildren<DecalProjector>();
         aud = player.GetComponentInChildren<PlayerAudEmitter>();
         playerInput = true;
+
+        nearNodes = new Queue<Transform>();
 
         status = ManagerStatus.Started;
     }
@@ -111,9 +113,17 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 Die();
             }
+            if(Input.GetKeyDown(KeyCode.T))
+            {
+                Managers.AI.danger += 1;
+                Managers.AI.DangerCheck();
+                Debug.Log("DEBUG increasing danger - " + Managers.AI.danger.ToString());
+            }
             if(Input.GetKeyDown(KeyCode.G))
             {
-                Attacked();
+                Managers.AI.danger -= 1;
+                Managers.AI.DangerCheck();
+                Debug.Log("DEBUG lowering danger - " + Managers.AI.danger.ToString());
             }
     }
 

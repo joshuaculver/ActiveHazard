@@ -34,6 +34,7 @@ public class AI : MonoBehaviour
     public bool timing = false;
     public float pursuitDelay = 2f;
     public float pursuitTimer = 0f;
+    private int huntIterations = 0;
 
     //Attack variables
     public bool attacking = false;
@@ -62,8 +63,6 @@ public class AI : MonoBehaviour
         Debug.Log("Done");
 
         busy = false;
-
-        Managers.Music.check();
 
         debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
@@ -163,6 +162,7 @@ public class AI : MonoBehaviour
     //TODO see if multiple states can be handled the same way i.e. if(status == AIStatus.Hunt || status == AIStatus.Glace)
     public void changeState(AIStatus newState)
     {
+        Debug.Log("Changing AI status");
         if(newState == status)
         {
             return;
@@ -170,6 +170,7 @@ public class AI : MonoBehaviour
 
         if(newState == AIStatus.Wander)
         {
+            Debug.Log("Changing AI status: Wander");
             if(status == AIStatus.Hunt)
             {
                 agent.ResetPath();
@@ -181,7 +182,8 @@ public class AI : MonoBehaviour
             }
             else if(status == AIStatus.Avoid)
             {
-                lightSwitch(true);
+                Managers.AI.DespawnActive();
+                //lightSwitch(true);
                 status = AIStatus.Wander;
             }
             else if(status == AIStatus.Glance)
@@ -195,6 +197,7 @@ public class AI : MonoBehaviour
         }
         else if(newState == AIStatus.Avoid)
         {
+            Debug.Log("Changing AI status: Avoid");
             if(status == AIStatus.Wander)
             {
                 agent.ResetPath();
@@ -214,8 +217,10 @@ public class AI : MonoBehaviour
         }
         else if(newState == AIStatus.Hunt)
         {
+            Debug.Log("Changing AI status: Hunt");
             if(status == AIStatus.Wander || status == AIStatus.Glance || status == AIStatus.Pursue)
             {
+                huntIterations = Random.Range(2, 5);
                 timing = true;
                 contactTime = 0;
                 status = AIStatus.Hunt;
@@ -225,6 +230,8 @@ public class AI : MonoBehaviour
                 {
                     lastSeen = Managers.Player.player.transform;
                 }
+                agent.ResetPath();
+                GoHunt();
             }
             else
             {
@@ -267,6 +274,7 @@ public class AI : MonoBehaviour
         }
         else if(newState == AIStatus.Glance)
         {
+            Debug.Log("Changing AI status: Glance");
             if(status == AIStatus.Wander)
             {
                 lastStatus = AIStatus.Wander;
@@ -310,7 +318,6 @@ public class AI : MonoBehaviour
                 
                 warnings -= 1;
                 atkTimer = 0f;
-                //emit.emitBang();
                 StartCoroutine(MuzzFlash());
                 Managers.Music.atkUpdate(warnings);
             }
@@ -333,8 +340,6 @@ public class AI : MonoBehaviour
             //Debug.Log("Aiming: " + atkTimer);
         }
     }
-
-    //TODO behaviour switch function? Pass status to switch to and handle state changes
 
     //Pathing and behavior for when agent is chasing the player
     void ChaseBehav()
@@ -407,15 +412,15 @@ public class AI : MonoBehaviour
                     Debug.Log("Reached destination");
                     GoWander();
                 }
-                else if(status == AIStatus.Hunt)
-                {   
-                    if(agent.remainingDistance < 1f)
-                    {
-                        agent.isStopped = true;
-                        GoHunt();
-                    }
+            else if(status == AIStatus.Hunt)
+            {   
+                if(agent.remainingDistance < 1f)
+                {
+                    agent.isStopped = true;
+                    GoHunt();
                 }
             }
+        }
     }
 
 
@@ -465,7 +470,7 @@ public class AI : MonoBehaviour
     //TODO make sure attack timer stops when leaving chase
     void GoWander()
     {
-        if (nodes.Count == 0)
+        if (nodes.Count <= 0)
         {
             return;
         }
@@ -477,12 +482,15 @@ public class AI : MonoBehaviour
             {
                 //One in ten to pick a random node. Otherwise advance through nodes sequentially.
                 if(Random.Range(1,11) == 4)
-                {
+                {  
                     destNode = Random.Range(0, nodes.Count);
+                    Debug.Log("Wandering to random node: " + destNode);
                 }
                 else
                 {
                     destNode = (destNode + flip) % nodes.Count;
+                    destNode = Mathf.Abs(destNode);
+                    Debug.Log("Wandering to next Node: " + destNode);
                 }
             }
             if(Random.Range(1, 21) == 1)
@@ -495,14 +503,9 @@ public class AI : MonoBehaviour
                 agent.speed = Random.Range(0.75f, 3.5f);
             }
             //agent.speed = 3;
-            agent.destination = nodes[destNode].position; //+ new Vector3(Random.Range(-4.0f, 4.0f), 0.0f, Random.Range(-4.0f, 4.0f));
-            Debug.Log("Wandering to: " + destNode);
+            agent.destination = nodes[destNode].position;
+            
             Debug.Log("At " + nodes[destNode].position);
-
-            //destNode = Random.Range(0, nodes.Length);
-
-            //Iterates through node list linearly
-            //destNode = (destNode + 1) % nodes.Length;
         }
     }
 
@@ -513,12 +516,28 @@ public class AI : MonoBehaviour
         {
             Debug.Log("Hunting");
             agent.speed = Random.Range(1.5f, 3.25f);
-            agent.destination = Managers.Player.player.transform.position;
+            //agent.destination = Managers.Player.player.transform.position; //+ new Vector3(Random.Range(-4.0f, 4.0f), 0.0f, Random.Range(-4.0f, 4.0f));
+            if(playerRay() || Vector3.Distance(transform.position, Managers.Player.player.transform.position) <= 5)
+            {
+                Debug.Log("Hunt: Either LOS or <= 5 distance");
+               agent.destination = Managers.Player.player.transform.position; 
+            }
+            else if(Managers.Player.nearNodes.Count > 0)
+            {
+                Debug.Log("Hunt: Dequeing near node");
+                agent.destination = Managers.Player.nearNodes.Dequeue().position;
+            }
+            else
+            {
+                Debug.Log("Hunt: near nodes empty");
+                agent.destination = Managers.Player.player.transform.position;         
+            }
             agent.isStopped = false;
+            huntIterations -= 1;
         }
 
         //TODO figure out more interesting way to handle this
-        if(contactTime >= 60f)
+        if(huntIterations <= 0)
         {
             Debug.Log("Lost player");
             timing = false;
@@ -593,7 +612,7 @@ public class AI : MonoBehaviour
     }
 
     //While in chase behavior casts a ray towards the player. In any other behavior casts ray infront of agent
-    bool playerRay()
+    public bool playerRay()
     {
         RaycastHit hit;
         Debug.DrawRay(transform.position , transform.TransformDirection(Vector3.forward) * 25f, Color.blue);
@@ -628,7 +647,7 @@ public class AI : MonoBehaviour
     {
         Debug.Log("Hazard LOS check");
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, Managers.Player.player.transform.position - transform.position, out hit, sightRange))
+        if(Physics.Raycast(transform.position, Managers.Player.player.transform.position - transform.position, out hit, Mathf.Infinity))
         {
             if(hit.collider.CompareTag("Player"))
             {
@@ -637,6 +656,7 @@ public class AI : MonoBehaviour
             }
             else
             {
+                Debug.Log("Not player - " + hit.collider.gameObject.name);
                 return false;
             }
         }

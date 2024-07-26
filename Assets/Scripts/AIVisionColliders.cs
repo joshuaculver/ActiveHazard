@@ -9,17 +9,24 @@ public class AIVisionColliders : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(Managers.AI.active.status != AIStatus.Chase)
         {
-            if(Managers.AI.active.LOScheck())
+            if(other.gameObject.tag == "Player")
             {
-                if(NoticeOnly)
+                Debug.Log("Player in hazard vision collider");
+                if(Managers.AI.active.LOScheck())
                 {
-                    Managers.AI.active.changeState(AIStatus.Hunt);
-                }
-                else
-                {
-                    Managers.AI.active.changeState(AIStatus.Chase);
+                    Debug.Log("Collider + LOS - NoticeOnly: " + NoticeOnly.ToString());
+                    if(NoticeOnly)
+                    {
+                        Debug.Log("Notice only collider");
+                        Managers.AI.active.changeState(AIStatus.Hunt);
+                    }
+                    else
+                    {
+                        Debug.Log("Chase collider");
+                        Managers.AI.active.changeState(AIStatus.Chase);
+                    }
                 }
             }
         }

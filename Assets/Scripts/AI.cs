@@ -44,6 +44,8 @@ public class AI : MonoBehaviour
     private int warningsDefault = 2;
     public bool ignorePlayer = false;
 
+    private bool chased = false;
+
     public GameObject debugMarker;
 
     // Start is called before the first frame update
@@ -543,13 +545,18 @@ public class AI : MonoBehaviour
             timing = false;
             changeState(AIStatus.Wander);
             agent.ResetPath();
-            Managers.AI.dangerUp = false;
+            if(chased)
+            {
+                chased = false;
+                Managers.AI.dangerUp = false;
+            }
         }
     }
 
     //Pathing for agent while player is near and agent has LOS
     void GoChase()
     {
+        chased = true;
         //Debug.Log("Chasing");
         agent.speed = 2.25f;
         if(playerRay())

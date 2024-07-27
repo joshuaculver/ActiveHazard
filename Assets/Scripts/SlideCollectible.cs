@@ -8,16 +8,18 @@ public class SlideCollectible : Interactable
     public int ID;
 
     private int showState;
+    private float timer = 0f;
+    private float timerWait;
 
-    private Light spot;
+    public Light spot;
     public MeshRenderer beam;
 
-    private SlideAudEmitter emitter;
+    public SlideAudEmitter emitter;
 
     public void Awake()
     {
-        spot = GetComponentInChildren<Light>();
-        emitter = GetComponentInChildren<SlideAudEmitter>();
+        //spot = GetComponentInChildren<Light>();
+        //emitter = GetComponentInChildren<SlideAudEmitter>();
 
         if(set == 'A' && ID == 0)
         {
@@ -27,11 +29,42 @@ public class SlideCollectible : Interactable
         {
             showState = 0;
         }
+
+        timerWait = ID * 20f;
+    }
+
+    void Update()
+    {
+        if(showState < 3)
+        {
+            timer += Time.deltaTime;
+
+            if(timer > timerWait)
+            {
+                showState += 1;
+                CheckShowState();
+                timer = 0f;
+            }
+        }
     }
 
     public override void Interact()
     {
-        Managers.Slides.CollectSlide(set, ID);
+        if(Managers.AI.spawned)
+        {
+            if(Managers.AI.active.status == AIStatus.Chase || Managers.AI.active.status == AIStatus.Pursue)
+            {
+                //TODO buzzer or something
+            }
+            else
+            {
+                Managers.Slides.CollectSlide(set, ID);
+            }
+        }
+        else
+        {
+            Managers.Slides.CollectSlide(set, ID);
+        }
     }
 
     public string GetID()
@@ -59,17 +92,20 @@ public class SlideCollectible : Interactable
             spot.gameObject.SetActive(true);
             beam.gameObject.SetActive(true);
             emitter.gameObject.SetActive(true);
+            emitter.active = true;
         }
         else if(showState == 2)
         {
             beam.gameObject.SetActive(true);
             emitter.gameObject.SetActive(true);
+            emitter.active = true;
 
             spot.gameObject.SetActive(false);        
         }
         else if(showState == 1)
         {
             emitter.gameObject.SetActive(true);
+            emitter.active = true;
 
             spot.gameObject.SetActive(false);
             beam.gameObject.SetActive(false);
@@ -79,6 +115,7 @@ public class SlideCollectible : Interactable
             spot.gameObject.SetActive(false);
             beam.gameObject.SetActive(false);
             emitter.gameObject.SetActive(false);
+            emitter.active = false;
         }
     }
 }

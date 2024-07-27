@@ -171,7 +171,9 @@ MonoBehaviour:
   radius: 0.75
   set: 65
   ID: 0
+  spot: {fileID: 3886972205538380587}
   beam: {fileID: 7837093006414634581}
+  emitter: {fileID: 9218846551322075079}
 --- !u!135 &4143260713634015823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -278,7 +280,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -384,7 +386,6 @@ GameObject:
   - component: {fileID: 530284149115798262}
   - component: {fileID: 7837093006414634581}
   - component: {fileID: 6313230982213526742}
-  - component: {fileID: 7277478104465885563}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1637,28 +1638,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8051401445837555501}
-  m_Mesh: {fileID: 0}
---- !u!64 &7277478104465885563
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8051401445837555501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &8694930808019355202
 GameObject:

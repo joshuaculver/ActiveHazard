@@ -115,7 +115,8 @@ public class AIManager : MonoBehaviour, IGameManager
                     dangerUp = true;
                 }
             }
-            dangTimer = 80f;
+            //TODO 
+            dangTimer = Random.Range(60f, 120f);
         }
         dangTimer -= Time.deltaTime;
     }

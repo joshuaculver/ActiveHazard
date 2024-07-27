@@ -45,7 +45,7 @@ public class StateManager : MonoBehaviour, IGameManager
         Debug.Log(playerProgress.slideInventory);
         if(playerProgress.slideInventory.TryAdd(objectID, true))
         {
-            Debug.Log("Added " + objectID + " to inventory");
+            Debug.Log("Adding " + objectID + " to inventory");
             StartCoroutine(WaitRemove(1.5f, set, id));
             //CheckInventory(set, id);
         }
@@ -59,7 +59,6 @@ public class StateManager : MonoBehaviour, IGameManager
         if(playerProgress.slideInventory.ContainsKey(objectID))
         {
             Debug.Log("Collected confirmed: " + objectID);
-            Debug.Log("Removing " + objectID);
             RemoveCollectible(objectID);
             return true;
         }
@@ -72,6 +71,7 @@ public class StateManager : MonoBehaviour, IGameManager
     private IEnumerator WaitRemove(float seconds, char set, int id)
     {
         float time = 0f;
+        Debug.Log("Waiting...");
 
         while(time < seconds)
         {
@@ -79,16 +79,17 @@ public class StateManager : MonoBehaviour, IGameManager
             yield return null;
         }
         CheckInventory(set, id);
+        Debug.Log("Removed");
     }
 
     public void RemoveCollectible(string ID)
     {
         for(int i = 0; i < slideCollectibles.Count; i++)
         {
-            Debug.Log(slideCollectibles[i].GetComponent<SlideCollectible>().GetID());
             if(slideCollectibles[i].GetComponent<SlideCollectible>().GetID() == ID)
             {
                 slideCollectibles[i].gameObject.SetActive(false);
+                Debug.Log("RemoveCollectible: " + ID.ToString());
             }
         }
     }

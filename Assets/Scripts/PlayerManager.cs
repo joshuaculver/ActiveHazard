@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
+
 public class PlayerManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus status {get; private set;}
@@ -26,6 +27,10 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public float normalFOV = 70;
 
     public RawImage icon;
+    public Texture handsIcon;
+    public Texture eyeIcon;
+
+    private float iconFadeSpd = 2f;
 
     public void Startup()
     {

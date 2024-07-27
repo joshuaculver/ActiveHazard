@@ -118,7 +118,7 @@ public class SlideManager : MonoBehaviour, IGameManager
         slideSet = setChar;
         slide = slideNum;
 
-        Managers.State.CheckInventory(slideSet, slide);
+        //Managers.State.CheckInventory(slideSet, slide);
         
         Managers.Music.check();
     }
@@ -140,11 +140,9 @@ public class SlideManager : MonoBehaviour, IGameManager
         {
             for(int i = 0; i < collectiblesA.Count; i++)
             {
-                Debug.Log(collectiblesA[i].ID.ToString() + " - " + id.ToString());
                 if(collectiblesA[i].ID == id)
                 {
                     collectiblesA[i].gameObject.SetActive(true);
-                    Debug.Log("Enabled");
                 }
             }
         }

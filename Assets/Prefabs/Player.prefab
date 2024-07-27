@@ -616,7 +616,7 @@ Transform:
   - {fileID: 9063339296841369916}
   - {fileID: 7442202267848385290}
   m_Father: {fileID: 1352709625128645982}
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!20 &369643414579055205
 Camera:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 70
   orthographic: 0
@@ -958,12 +958,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: 85c03c61e9a54a241b7945a190b93b67, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: 85c03c61e9a54a241b7945a190b93b67, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 61e83f808cf2e744da9cdd76f4fba73f, type: 2}
+      objectReference: {fileID: 2100000, guid: 94739c14e36fced4aa886f0cff1486b2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

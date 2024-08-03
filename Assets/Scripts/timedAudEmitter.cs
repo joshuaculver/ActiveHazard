@@ -20,7 +20,7 @@ public class timedAudEmitter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audSrc.volume = Managers.Music.defaultVol;
     }
 
     // Update is called once per frame
@@ -93,6 +93,11 @@ public class timedAudEmitter : MonoBehaviour
         FXsrc.clip = bangClip[pick];
 
         FXsrc.Play();
+    }
+
+    public void setVol(float vol)
+    {
+        audSrc.volume = vol;
     }
     
 }

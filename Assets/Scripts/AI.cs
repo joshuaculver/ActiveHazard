@@ -90,21 +90,6 @@ public class AI : MonoBehaviour
             pursuitTimer += Time.deltaTime;
         }
 
-        //Checking if player is infront of agent. Only behavior which ignores busy status
-        /*
-        if(playerRay() && status != AIStatus.Avoid)
-        {
-            if(!ignorePlayer)
-            {
-                changeState(AIStatus.Chase);
-            }
-            //DEBUG
-            else
-            {
-                Debug.Log("No chasing today boss");
-            }
-        }
-        */
         //Normal behavior
         if(busy)
         {
@@ -205,11 +190,13 @@ public class AI : MonoBehaviour
                 agent.ResetPath();
                 lightSwitch(false);
                 status = AIStatus.Avoid;
+                emit.setVol(Managers.Music.defaultFXVol / 2);
             }
             else if(status == AIStatus.Glance)
             {
                 lightSwitch(false);
                 status = AIStatus.Avoid;
+                emit.setVol(Managers.Music.defaultFXVol / 2);
             }
             else
             {

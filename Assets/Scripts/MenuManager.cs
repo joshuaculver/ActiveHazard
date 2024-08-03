@@ -30,7 +30,6 @@ public class MenuManager : MonoBehaviour, IGameManager
 
     public void Startup()
     {
-        solid.color = Color.black;
         mainCam = Managers.Player.cam;
         mainCam.enabled = true;
         slideCam.enabled = false;

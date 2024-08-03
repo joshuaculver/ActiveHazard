@@ -31,6 +31,7 @@ public class MusicManager : MonoBehaviour, IGameManager
     private float aimFade = 0.25f;
     //Volume music moves to when going to "normal" volume
     public float defaultVol = 1f;
+    public float defaultFXVol = 1f;
     public float SFXVol = 0.3f;
     private bool stingCD = false;
     public int prevDanger;

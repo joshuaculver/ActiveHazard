@@ -192,4 +192,16 @@ public class PlayerManager : MonoBehaviour, IGameManager
     {
         aud.queFly();
     }
+
+    public void canInteract(bool set)
+    {
+        if(set)
+        {
+            icon.texture = handsIcon;
+        }
+        else
+        {
+            icon.texture = eyeIcon;
+        }
+    }
 }

@@ -162,20 +162,26 @@ public class AI : MonoBehaviour
             {
                 agent.ResetPath();
                 status = AIStatus.Wander;
+
+                Managers.Player.canInteract(true);
             }
             else if(status == AIStatus.Pursue)
             {
                 status = AIStatus.Hunt;
+
+                Managers.Player.canInteract(true);
             }
             else if(status == AIStatus.Avoid)
             {
                 Managers.AI.DespawnActive();
                 //lightSwitch(true);
                 status = AIStatus.Wander;
+                Managers.Player.canInteract(true);
             }
             else if(status == AIStatus.Glance)
             {
                 status = AIStatus.Wander;
+                Managers.Player.canInteract(true);
             }
             else
             {
@@ -191,12 +197,16 @@ public class AI : MonoBehaviour
                 lightSwitch(false);
                 status = AIStatus.Avoid;
                 emit.setVol(Managers.Music.defaultFXVol / 2);
+
+                Managers.Player.canInteract(true);
             }
             else if(status == AIStatus.Glance)
             {
                 lightSwitch(false);
                 status = AIStatus.Avoid;
                 emit.setVol(Managers.Music.defaultFXVol / 2);
+
+                Managers.Player.canInteract(true);
             }
             else
             {
@@ -213,14 +223,15 @@ public class AI : MonoBehaviour
                 timing = true;
                 contactTime = 0;
                 status = AIStatus.Hunt;
-                //TODO make it so AI doesn't get to know exactly where the player if there's no last point of contact
-                //Maybe get the top 2-3 nodes nearest player and patrol those
+
                 if(lastSeen == null)
                 {
                     lastSeen = Managers.Player.player.transform;
                 }
                 agent.ResetPath();
                 GoHunt();
+
+                Managers.Player.canInteract(true);
             }
             else
             {
@@ -237,12 +248,16 @@ public class AI : MonoBehaviour
                 agent.stoppingDistance = 0f;
                 pursuitTimer = 0;
                 status = AIStatus.Pursue;
+
+                Managers.Player.canInteract(false);
             }
             else if(status == AIStatus.Hunt)
             {
                 timing = true;
                 contactTime = 0;
                 status = AIStatus.Pursue;
+
+                Managers.Player.canInteract(false);
             }
             else
             {
@@ -260,6 +275,7 @@ public class AI : MonoBehaviour
             Managers.AI.chased = true;
 
             StartCoroutine(Managers.Music.Sting());
+            Managers.Player.canInteract(false);
         }
         else if(newState == AIStatus.Glance)
         {

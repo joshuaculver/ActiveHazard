@@ -11,6 +11,9 @@ public class MusicManager : MonoBehaviour, IGameManager
     private static int flip = 0;
     private bool running;
 
+    //Used to check if there was music playing to switch back to for music that can interrupt
+    private bool wasPlaying;
+
     public AudioClip[] breath;
     public AudioClip sting;
     public AudioClip pursuit;
@@ -70,6 +73,8 @@ public class MusicManager : MonoBehaviour, IGameManager
         MusLock = false;
 
         running = true;
+
+        wasPlaying = false;
         Debug.Log("Music manager started");
 
         check();
@@ -212,6 +217,16 @@ public class MusicManager : MonoBehaviour, IGameManager
         source.loop = true;
         source.Play();
         playing = clip;
+
+        if(vol == 0)
+        {
+            wasPlaying = false;
+        }
+        else
+        {
+            wasPlaying = true;
+        }
+
         if(!atk.isPlaying)
         {
             StartCoroutine(StartFade(source, dur, defaultVol));
@@ -219,6 +234,30 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         CD = 10f;
         noMusTime = 0f;
+    }
+
+    private void FlipBackPlay()
+    {
+        AudioSource source = srcs[flip];
+
+        float dur = 3f;
+
+        //Fade out currently playing
+        StartCoroutine(StartFade(source, dur, 0f));
+
+        flip = 1 - flip;
+        source = srcs[flip];
+
+        //TODO make volume var. esp for options later
+        source.loop = true;
+        source.Play();
+        if(!atk.isPlaying)
+        {
+            StartCoroutine(StartFade(source, dur, defaultVol));
+        }
+
+        CD = 10f;
+        noMusTime = 0f;      
     }
 
     private void PlayOverride(AudioClip clip)
@@ -234,6 +273,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
     public IEnumerator Sting()
     {
+        bool wasCheck = wasPlaying;
         if(stingCD == true)
         {
             Debug.Log("Sting on CD");
@@ -263,6 +303,9 @@ public class MusicManager : MonoBehaviour, IGameManager
         }
 
         running = true;
+
+        wasPlaying = wasCheck;
+
         check();
         yield break;
     }
@@ -331,8 +374,12 @@ public class MusicManager : MonoBehaviour, IGameManager
             if(menuMus && !Managers.Menu.slideViewing)
             {
                 Debug.Log("Fading menu music out");
-                StartCoroutine(StartFade(srcs[flip], 3f, 0f));
+                //StartCoroutine(StartFade(srcs[flip], 1.5f, 0f));
                 menuMus = false;
+                if(wasPlaying)
+                {
+                    FlipBackPlay();
+                }
             }
             return;
         }
@@ -380,13 +427,16 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         if(Managers.AI.spawned)
         {
+            /*
             if(Managers.AI.active.status == prevStatus && Managers.AI.danger == prevDanger)
             {
                 Debug.Log("Music check: status and danger unchanged");
                 return;
             }
+
             else
             {
+            */
                 Debug.Log("Change music");
                 if(Managers.AI.active.status == AIStatus.Chase || Managers.AI.active.status == AIStatus.Pursue)
                 {
@@ -421,6 +471,19 @@ public class MusicManager : MonoBehaviour, IGameManager
                         }
                     }
                 }
+            //}
+
+            if(wasPlaying)
+            {
+                AudioSource source = srcs[flip];
+
+                float dur = 2f;
+
+                StartCoroutine(StartFade(source, dur, 0f));
+            }
+            else if(srcs[flip].volume == 0f)
+            {
+                StopAll();
             }
         }
     }
@@ -458,12 +521,14 @@ public class MusicManager : MonoBehaviour, IGameManager
     public void Stop()
     {
         running = false;
+        wasPlaying = false;
         StopAll();
     }
 
     public void Start()
     {
         running = true;
+        wasPlaying = true;
         StartAll();
     }
 }

@@ -216,11 +216,12 @@ public class AIManager : MonoBehaviour, IGameManager
         if(spawned)
         {
             Debug.Log("Despawning hazard");
-            if(!active.playerRay())
+            if(active.status != AIStatus.Avoid && !active.playerRay())
             {
                 Destroy(active.debugMarker);
                 Destroy(active.gameObject);
                 spawned = false;
+                Managers.Music.check();
             }
         }
     }

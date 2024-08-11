@@ -22,6 +22,10 @@ public class StateManager : MonoBehaviour, IGameManager
     public GameObject LobbyDoubleB; //Z-159.8
     public GameObject LobbySingle; //Z-145.7
 
+    public GameObject ExitOneA; //155.041
+    public GameObject ExitOneB; //-165.839
+    public GameObject ExitLights;
+
     public List<GameObject> introBlocks;
 
     public List<GameObject> slideCollectibles;
@@ -112,6 +116,15 @@ public class StateManager : MonoBehaviour, IGameManager
         Managers.Slides.EnableSlideCollectible('A', 1);
         Managers.Slides.EnableSlideCollectible('A', 2);
         Managers.Slides.EnableSlideCollectible('A', 3);
+    }
+
+    public void OpenExit()
+    {
+        Debug.Log("Opening Exit");
+        ExitOneA.transform.localEulerAngles = new Vector3(0f, 0f, 155.04f); //.448f
+        ExitOneB.transform.localEulerAngles = new Vector3(0f, 0f, -165.839f);
+
+        ExitLights.gameObject.SetActive(true);
     }
 }
 

@@ -20,7 +20,6 @@ public class MusicManager : MonoBehaviour, IGameManager
     public AudioClip search;
     public AudioClip[] aim;
     public AudioClip death;
-    public AudioClip killMode;
     public AudioClip[] slidesA;
     private AudioClip playing;
     public AIStatus prevStatus;

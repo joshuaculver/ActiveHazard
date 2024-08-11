@@ -48,6 +48,7 @@ public class AIManager : MonoBehaviour, IGameManager
     // Update is called once per frame
     void Update()
     {
+        //DEBUG
         if(Input.GetKeyDown(KeyCode.R))
         {
             if(!spawned)

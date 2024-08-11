@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadBob : MonoBehaviour
 {
-    public bool enable = true;
+    public bool enable;
 
     private float amplitude = 0.00055f;
     private float frequencey = 8.5f;
@@ -20,6 +20,7 @@ public class HeadBob : MonoBehaviour
     {
         controller = GetComponentInParent<CharacterController>();
         startPos = cam.localPosition;
+        enable = Managers.headBob;
     }
 
     // Update is called once per frame

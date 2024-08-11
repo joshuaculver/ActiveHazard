@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(MusicManager))]
 [RequireComponent(typeof(MenuManager))]
 [RequireComponent(typeof(SlideManager))]
+[RequireComponent(typeof(StateManager))]
 
 
 public class Managers : MonoBehaviour
@@ -23,6 +24,7 @@ public class Managers : MonoBehaviour
 
     public static bool isPaused = false;
     public static bool acccesibilityMode;
+    public static bool headBob;
 
     void Awake()
     {
@@ -50,6 +52,15 @@ public class Managers : MonoBehaviour
         else
         {
             acccesibilityMode = false;
+        }
+
+        if(PlayerPrefs.GetInt("headBob") == 1)
+        {
+            headBob = true;
+        }
+        else
+        {
+            headBob = false;
         }
     }
 

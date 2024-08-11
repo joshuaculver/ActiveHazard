@@ -91,8 +91,8 @@ MonoBehaviour:
   axes: 1
   sensitivityHor: 2
   sensitivityVert: 2
-  minimumVert: -45
-  maximumVert: 45
+  minimumVert: 0
+  maximumVert: 0
   canMove: 1
 --- !u!114 &8324543971972453837
 MonoBehaviour:
@@ -327,8 +327,8 @@ MonoBehaviour:
   axes: 2
   sensitivityHor: 3
   sensitivityVert: 3
-  minimumVert: -50
-  maximumVert: 40
+  minimumVert: -65
+  maximumVert: 65
   canMove: 1
 --- !u!114 &75084186458194801
 MonoBehaviour:

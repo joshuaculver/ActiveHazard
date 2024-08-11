@@ -24,6 +24,7 @@ public class StateManager : MonoBehaviour, IGameManager
 
     public GameObject ExitOneA; //155.041
     public GameObject ExitOneB; //-165.839
+    public GameObject ExitBlock;
     public GameObject ExitLights;
 
     public List<GameObject> introBlocks;
@@ -94,6 +95,7 @@ public class StateManager : MonoBehaviour, IGameManager
             {
                 slideCollectibles[i].gameObject.SetActive(false);
                 Debug.Log("RemoveCollectible: " + ID.ToString());
+                Managers.Slides.EnableNext();
             }
         }
     }
@@ -125,6 +127,7 @@ public class StateManager : MonoBehaviour, IGameManager
         ExitOneB.transform.localEulerAngles = new Vector3(0f, 0f, -165.839f);
 
         ExitLights.gameObject.SetActive(true);
+        ExitBlock.gameObject.SetActive(false);
     }
 }
 

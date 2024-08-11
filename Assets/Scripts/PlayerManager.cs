@@ -130,6 +130,10 @@ public class PlayerManager : MonoBehaviour, IGameManager
                 Managers.AI.DangerCheck();
                 Debug.Log("DEBUG lowering danger - " + Managers.AI.danger.ToString());
             }
+            if(Input.GetKeyDown(KeyCode.H))
+            {
+                Managers.State.OpenExit();
+            }
     }
 
     public void SpawnPlayer()

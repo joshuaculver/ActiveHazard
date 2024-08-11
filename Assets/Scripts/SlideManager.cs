@@ -62,20 +62,6 @@ public class SlideManager : MonoBehaviour, IGameManager
 
                     SetSlide(newSet, newSlide);
                     
-                    if(slideSet == 'A' && slide == 7)
-                    {
-                        slideLight.color = Color.red;
-                        slideLight.spotAngle = 17.5f;
-                        slideLight.innerSpotAngle = 15.5f;
-                        shader.spd = 25f;
-                    }
-                    else if(slideLight.color != Color.white)
-                    {
-                        shader.spd = 1f;
-                        slideLight.color = Color.white;
-                        slideLight.spotAngle = outerSpot;
-                        slideLight.innerSpotAngle = innerSpot;
-                    }
                     switchingSlide = false;
                 }
             }
@@ -119,7 +105,21 @@ public class SlideManager : MonoBehaviour, IGameManager
         slide = slideNum;
 
         //Managers.State.CheckInventory(slideSet, slide);
-        
+        if(slideSet == 'A' && slide == 7)
+        {
+            slideLight.color = Color.red;
+            slideLight.spotAngle = 17.5f;
+            slideLight.innerSpotAngle = 15.5f;
+            shader.spd = 25f;
+        }
+        else if(slideLight.color != Color.white)
+        {
+            shader.spd = 1f;
+            slideLight.color = Color.white;
+            slideLight.spotAngle = outerSpot;
+            slideLight.innerSpotAngle = innerSpot;
+        }
+
         Managers.Music.check();
     }
 
@@ -150,9 +150,10 @@ public class SlideManager : MonoBehaviour, IGameManager
 
     public void EnableNext()
     {
+        Debug.Log("Enabling next collectible");
         for(int i = 0; i < collectiblesA.Count; i++)
         {
-            if(!collectiblesA[i].isActiveAndEnabled)
+            if(!collectiblesA[i].isActiveAndEnabled && !Managers.State.playerProgress.slideInventory.ContainsKey('A' + i.ToString()))
             {
                 if(collectiblesA[i].ID != 7)
                 {
@@ -163,10 +164,30 @@ public class SlideManager : MonoBehaviour, IGameManager
             }
         }
 
+        bool final = true;
+
+        for(int i = 0; i < collectiblesA.Count; i++)
+        {
+            if(!Managers.State.playerProgress.slideInventory.ContainsKey('A' + i.ToString()))
+            {
+                if(i != 7)
+                {
+                    final = false;
+                }
+            }
+        }
         Debug.Log("No slides except final remaining");
         Debug.Log("Enabling");
 
-        collectiblesA[7].gameObject.SetActive(true);
+        if(final && !Managers.State.playerProgress.slideInventory.ContainsKey("A7"))
+        {
+            collectiblesA[7].gameObject.SetActive(true);
+        }
+
+        if(Managers.State.playerProgress.slideInventory.ContainsKey("A7"))
+        {
+            Managers.State.OpenExit();
+        }
     }
 
     public void CollectSlide(char set, int id)

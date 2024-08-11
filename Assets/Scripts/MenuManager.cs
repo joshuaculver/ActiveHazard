@@ -28,6 +28,8 @@ public class MenuManager : MonoBehaviour, IGameManager
 
     public bool playerDead = false;
 
+    public bool sceneChange;
+
     public void Startup()
     {
         mainCam = Managers.Player.cam;
@@ -54,7 +56,7 @@ public class MenuManager : MonoBehaviour, IGameManager
             }
             return;
         }
-        if(transitioning)
+        if(transitioning && !sceneChange)
         {
             if(solid.color.a < 1f)
             {
@@ -92,7 +94,7 @@ public class MenuManager : MonoBehaviour, IGameManager
                 transitioning = false;
             }
         }
-        else if(!transitioning && solid.color.a > 0f)
+        else if(!transitioning && !sceneChange && solid.color.a > 0f)
         {
             solid.color = new Color(0f, 0f, 0f, Mathf.MoveTowards(solid.color.a, 0f, fadeSpd * Time.unscaledDeltaTime));
         }
@@ -109,7 +111,7 @@ public class MenuManager : MonoBehaviour, IGameManager
             }
         }
         //Right mouse toggles slide menu
-        else if(Input.GetMouseButtonDown(1) && !slideViewing)
+        else if(Input.GetMouseButtonDown(1) && !slideViewing && !sceneChange)
         {
             if(Managers.Slides.haveSlide)
             {
@@ -153,7 +155,7 @@ public class MenuManager : MonoBehaviour, IGameManager
             Managers.Slides.SetSlide(initSet, initSlide);
             Managers.Pause();
             slideViewing = true;
-            //Managers.Slides.switchSlide(initSet, initSlide);
+            Managers.Slides.switchSlide(initSet, initSlide);
             SwitchCamera(slideCam);
         }
     }

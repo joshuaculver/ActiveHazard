@@ -11,7 +11,17 @@ public class OptionButton : MonoBehaviour
 
     public void Start()
     {
+        int saved = PlayerPrefs.GetInt(setting);
         toggle = GetComponent<Toggle>();
+
+        if(saved == 1)
+        {
+            toggle.isOn = true;
+        }
+        else
+        {
+            toggle.isOn = false;
+        }
 
         toggle.onValueChanged.AddListener(delegate {
             ToggleValueChanged(toggle);
@@ -30,6 +40,6 @@ public class OptionButton : MonoBehaviour
             set = 0;
         }
         PlayerPrefs.SetInt(setting, set);
-        Debug.Log("Saved setting" + setting + " - " + setting.ToString());
+        Debug.Log("Saved setting " + setting + " - " + set.ToString());
     }
 }

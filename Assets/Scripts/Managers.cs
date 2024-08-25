@@ -28,6 +28,16 @@ public class Managers : MonoBehaviour
 
     void Awake()
     {
+        int bobOpt = PlayerPrefs.GetInt("headBob");
+        if(bobOpt == 1)
+        {
+            headBob = true;
+        }
+        else
+        {
+            headBob = false;
+        }
+
         Player = GetComponent<PlayerManager>();
         AI = GetComponent<AIManager>();
         Music = GetComponent<MusicManager>();
@@ -52,15 +62,6 @@ public class Managers : MonoBehaviour
         else
         {
             acccesibilityMode = false;
-        }
-
-        if(PlayerPrefs.GetInt("headBob") == 1)
-        {
-            headBob = true;
-        }
-        else
-        {
-            headBob = false;
         }
     }
 

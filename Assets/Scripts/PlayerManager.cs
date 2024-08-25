@@ -54,6 +54,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         nearNodes = new Queue<Transform>();
 
         status = ManagerStatus.Started;
+        Debug.Log("Setting bob: " + Managers.headBob.ToString());
+        bob.enable = Managers.headBob;
     }
 
     public void Update()
@@ -175,6 +177,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public void Die()
     {
         gameOver = true;
+        pMove.moving = false;
         Hold();
         bob.enable = false;
         Animation anim = camAnim;

@@ -9,7 +9,17 @@ public class AccessibilityButton : MonoBehaviour
 
     public void Start()
     {
+        int saved = PlayerPrefs.GetInt("mode");
         toggle = GetComponent<Toggle>();
+
+        if(saved == 1)
+        {
+            toggle.isOn = true;
+        }
+        else
+        {
+            toggle.isOn = false;
+        }
 
         toggle.onValueChanged.AddListener(delegate {
             ToggleValueChanged(toggle);

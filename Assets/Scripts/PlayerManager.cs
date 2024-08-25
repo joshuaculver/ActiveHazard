@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     private MouseLook pCamX;
     private MouseLook pCamY;
     private DecalProjector projector;
+    public Animation camAnim;
     public bool gameOver = false;
 
     public float normalFOV = 70;
@@ -32,18 +33,22 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     private float iconFadeSpd = 2f;
 
+    private HeadBob bob;
+
     public void Startup()
     {
         Debug.Log("Player manager starting...");
         SpawnPlayer();
         playerAnimator = player.GetComponentInChildren<Animator>();
         cam = player.GetComponentInChildren<Camera>();
+        camAnim = cam.GetComponentInParent<Animation>();
         pMove = player.GetComponent<PlayerInput>();
         pCamX = player.GetComponent<MouseLook>();
         pCamY = cam.GetComponentInParent<MouseLook>();
         playerAnimator = playerAnimator.GetComponent<Animator>();
         projector = player.GetComponentInChildren<DecalProjector>();
         aud = player.GetComponentInChildren<PlayerAudEmitter>();
+        bob = player.GetComponentInChildren<HeadBob>();
         playerInput = true;
 
         nearNodes = new Queue<Transform>();
@@ -171,7 +176,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     {
         gameOver = true;
         Hold();
-        Animation anim = cam.GetComponent<Animation>();
+        bob.enable = false;
+        Animation anim = camAnim;
         Managers.Menu.CoverRoutine(.15f);
         projector.enabled = true;
         anim.Play();

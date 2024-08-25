@@ -6,9 +6,11 @@ public class MusicManager : MonoBehaviour, IGameManager
     public ManagerStatus status {get; private set;}
 
     public AudioSource[] srcs;
+    public AudioSource[] menuSrcs;
     //Index of current playing/active source
     public AudioSource atk;
     private static int flip = 0;
+    private static int menuFlip = 0;
     private bool running;
 
     //Used to check if there was music playing to switch back to for music that can interrupt
@@ -98,6 +100,8 @@ public class MusicManager : MonoBehaviour, IGameManager
             PlayOverride(death);
             srcs[flip].loop = false;
         }
+    
+        SourcesFade();
 
         if(running)
         {
@@ -186,6 +190,35 @@ public class MusicManager : MonoBehaviour, IGameManager
                 }
             }
         }
+        
+    }
+
+    //Fades out and pauses source that isn't playing
+    private void SourcesFade()
+    {
+        if(Managers.Menu.slideViewing)
+        {
+            if(srcs[flip].isPlaying && srcs[flip].volume > 0)
+            {
+                srcs[flip].volume  = Mathf.MoveTowards(srcs[flip].volume, 0f, 0.3f * Time.unscaledDeltaTime);
+            }
+            if(srcs[flip].volume <= 0)
+            {
+                srcs[flip].Pause();
+                wasPlaying = true;
+            }
+        }
+        else
+        {
+            if(menuSrcs[menuFlip].isPlaying && menuSrcs[menuFlip].volume > 0)
+            {
+                menuSrcs[menuFlip].volume  = Mathf.MoveTowards(menuSrcs[menuFlip].volume, 0f, 0.3f * Time.unscaledDeltaTime);
+            }
+            if(menuSrcs[menuFlip].volume <= 0)
+            {
+                menuSrcs[menuFlip].Pause();
+            }
+        }
     }
 
     //Uses two audio sources to crossfade
@@ -235,30 +268,38 @@ public class MusicManager : MonoBehaviour, IGameManager
         noMusTime = 0f;
     }
 
-    private void FlipBackPlay()
+    private void PlayMenu(AudioClip clip, float vol)
     {
-        AudioSource source = srcs[flip];
+        Debug.Log("Playing Menu Music");
+        if(menuSrcs[menuFlip].clip == clip && menuSrcs[menuFlip].volume == vol)
+        {
+            Debug.Log("Already playing - Menu");
+            return;
+        }
+        else if(Managers.Menu.slideViewing && menuSrcs[menuFlip].clip == clip && menuSrcs[menuFlip].volume != 0)
+        {
+            Debug.Log("Already playing - Menu");
+            return;
+        }
+        AudioSource source = menuSrcs[menuFlip];
 
-        float dur = 3f;
+        float dur = 2f;
 
         //Fade out currently playing
         StartCoroutine(StartFade(source, dur, 0f));
 
-        flip = 1 - flip;
-        source = srcs[flip];
+        menuFlip = 1 - menuFlip;
+        source = menuSrcs[menuFlip];
 
         //TODO make volume var. esp for options later
+        source.clip = clip;
         source.loop = true;
         source.Play();
-        if(!atk.isPlaying)
-        {
-            StartCoroutine(StartFade(source, dur, defaultVol));
-        }
 
-        CD = 10f;
-        noMusTime = 0f;      
+        StartCoroutine(StartFade(source, dur, defaultVol));
+
+        CD = 0f;
     }
-
     private void PlayOverride(AudioClip clip)
     {
         AudioSource source = srcs[flip];
@@ -377,7 +418,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                 menuMus = false;
                 if(wasPlaying)
                 {
-                    FlipBackPlay();
+                    srcs[flip].Play();
                 }
             }
             return;
@@ -393,93 +434,89 @@ public class MusicManager : MonoBehaviour, IGameManager
                 if(Managers.Slides.slide == 7)
                 {
                     Debug.Log("8");
-                    PlayMus(slidesA[4], 1f);
+                    PlayMenu(slidesA[4], 1f);
                     menuMus = true;
                 }
                 else if(Managers.Slides.slide == 6)
                 {
                     Debug.Log("7");
-                    PlayMus(slidesA[3], slideVol);
+                    PlayMenu(slidesA[3], slideVol);
                     menuMus = true;
                 }
                 else if(Managers.Slides.slide == 4 || Managers.Slides.slide == 5)
                 {
                     Debug.Log("4-6");
-                    PlayMus(slidesA[2], slideVol);
+                    PlayMenu(slidesA[2], slideVol);
                     menuMus = true;
                 }
                 else if(Managers.Slides.slide == 2 || Managers.Slides.slide == 3)
                 {
                     Debug.Log("2/3");
-                    PlayMus(slidesA[1], slideVol);
+                    PlayMenu(slidesA[1], slideVol);
                     menuMus = true;
                 }
                 else if(Managers.Slides.slide == 0 || Managers.Slides.slide == 1)
                 {
                     Debug.Log("0/1");
-                    PlayMus(slidesA[0], slideVol);
+                    PlayMenu(slidesA[0], slideVol);
                     menuMus = true;
                 }
             }
             return;
         }
 
+        if(wasPlaying)
+        {   
+            Debug.Log("Was playing");
+            AudioSource source = srcs[flip];
+
+            float dur = 1.5f;
+
+            source.Play();
+            StartCoroutine(StartFade(source, dur, defaultVol));
+
+            wasPlaying = false;
+
+            return;
+        }
+        
         if(Managers.AI.spawned)
         {
-            /*
-            if(Managers.AI.active.status == prevStatus && Managers.AI.danger == prevDanger)
+            Debug.Log("Change music");
+            if(Managers.AI.active.status == AIStatus.Chase || Managers.AI.active.status == AIStatus.Pursue)
             {
-                Debug.Log("Music check: status and danger unchanged");
-                return;
-            }
-
-            else
-            {
-            */
-                Debug.Log("Change music");
-                if(Managers.AI.active.status == AIStatus.Chase || Managers.AI.active.status == AIStatus.Pursue)
+                Debug.Log("Playing pursuit/chase");
+                if(playing != pursuit)
                 {
-                    Debug.Log("Playing pursuit/chase");
-                    if(playing != pursuit)
+                    PlayMus(pursuit, defaultVol);
+                    prevStatus = Managers.AI.active.status;
+                    prevDanger = Managers.AI.danger;
+                }
+            }
+            else if(Managers.AI.active.status == AIStatus.Hunt)
+            {
+                if(playing != search)
+                {
+                    Debug.Log("Playing search");
+                    PlayMus(search, defaultVol);
+                    prevStatus = Managers.AI.active.status;
+                    prevDanger = Managers.AI.danger;
+                }
+            }
+            else if(Managers.AI.active.status == AIStatus.Avoid || Managers.AI.active.status == AIStatus.Wander)
+            {
+                if(Managers.AI.danger >= 5)
+                {
+                    if(playing != breath[1])
                     {
-                        PlayMus(pursuit, defaultVol);
+                        Debug.Log("Playing breath 1");
+                        PlayMus(breath[1], defaultVol);
                         prevStatus = Managers.AI.active.status;
                         prevDanger = Managers.AI.danger;
                     }
                 }
-                else if(Managers.AI.active.status == AIStatus.Hunt)
-                {
-                    if(playing != search)
-                    {
-                        Debug.Log("Playing search");
-                        PlayMus(search, defaultVol);
-                        prevStatus = Managers.AI.active.status;
-                        prevDanger = Managers.AI.danger;
-                    }
-                }
-                else if(Managers.AI.active.status == AIStatus.Avoid || Managers.AI.active.status == AIStatus.Wander)
-                {
-                    if(Managers.AI.danger >= 5)
-                    {
-                        if(playing != breath[1])
-                        {
-                            Debug.Log("Playing breath 1");
-                            PlayMus(breath[1], defaultVol);
-                            prevStatus = Managers.AI.active.status;
-                            prevDanger = Managers.AI.danger;
-                        }
-                    }
-                }
-            //}
-
-            if(wasPlaying)
-            {
-                AudioSource source = srcs[flip];
-
-                float dur = 2f;
-
-                StartCoroutine(StartFade(source, dur, 0f));
             }
+
             else if(srcs[flip].volume == 0f)
             {
                 StopAll();

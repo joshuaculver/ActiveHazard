@@ -120,7 +120,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2.75f));
             }
-
+            /*
             if(Input.GetKeyDown(KeyCode.F))
             {
                 Die();
@@ -141,6 +141,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 Managers.State.OpenExit();
             }
+            */
     }
 
     public void SpawnPlayer()

@@ -49,6 +49,7 @@ public class AIManager : MonoBehaviour, IGameManager
     void Update()
     {
         //DEBUG
+        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             if(!spawned)
@@ -65,6 +66,7 @@ public class AIManager : MonoBehaviour, IGameManager
                 spawned = false;
             }
         }
+        */
         if(dangTimer <= 0)
         {
             if(!spawned && dangerUp)

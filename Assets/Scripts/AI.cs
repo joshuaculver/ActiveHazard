@@ -66,13 +66,13 @@ public class AI : MonoBehaviour
 
         busy = false;
 
-        debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        //debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
     //Move update actions to functions. Create busy variable to cause return during udpate if new action isn't wanted
     void Update()
     {
-        debugMarker.transform.position = agent.destination;
+        //debugMarker.transform.position = agent.destination;
         lightDistCheck();
         //Checking if agent is moving to turn sound emitter on or off
         if(!Mathf.Approximately(agent.velocity.x, 0) || !Mathf.Approximately(agent.velocity.y, 0))

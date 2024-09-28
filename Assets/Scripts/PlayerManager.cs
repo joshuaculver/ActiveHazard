@@ -55,6 +55,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
         status = ManagerStatus.Started;
         Debug.Log("Setting bob: " + Managers.headBob.ToString());
+
         bob.enable = Managers.headBob;
     }
 
@@ -216,6 +217,24 @@ public class PlayerManager : MonoBehaviour, IGameManager
         else
         {
             icon.texture = eyeIcon;
+        }
+    }
+    public void HeadBobToggle(bool set)
+    {
+        if(set == true)
+        {
+            if(Managers.headBob == true)
+            {
+                bob.enable = set;
+            }
+            else
+            {
+                bob.enable = false;
+            }
+        }
+        else
+        {
+            bob.enable = set;
         }
     }
 }

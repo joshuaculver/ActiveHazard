@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2544
     height: 1341
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 50
+  controlID: 110
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,16 +68,16 @@ MonoBehaviour:
     y: 0
     width: 560
     height: 1291
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 19}
   - {fileID: 13}
   - {fileID: 17}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 43
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 52
+  controlID: 44
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1428,10 +1428,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1996
-    y: 73
-    width: 563
-    height: 1286
+    x: 1992
+    y: 81
+    width: 559
+    height: 1270
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1442,14 +1442,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 2059.9579018000004
+  progressMessageClearTime: 21464.0722867
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -1534,440 +1534,22 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: main
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - db2eee200d92de84c9518c004fedb370
-        - e546feb9c9100f24998d95217029fcb3
-        - 12d6a7f1d4ee5e4479add510b9d9c90c
-        - 6344425e68571584d8c3ac95a26d82b3
-        - 85c783d237bc7ee4f8e7c9ae2805fc01
-        - 212a2b31837838342b3ad9384c4332d0
-        - 751b06f499de5e046b2d9c593fc026a1
-        - 9805493fc358b854995cfe82b77cec9b
-        - fae861a4b292f134ab98fc76edab5bf6
-        - 0d2e539e11c2aa74c95d180a8114e6ce
-        - 46147bbdd9cb2eb4eb132af7e5798142
-        - 00000000000000004100000000000000
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs\Systems.prefab
-          label: Systems.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\Systems.prefab
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Systems.prefab
-            projectPath: Assets\Prefabs\Systems.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\ConnectionOne.unity
-          label: ConnectionOne.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\ConnectionOne.unity
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne.unity
-            projectPath: Assets\Scenes\ConnectionOne.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes\ConnectionOne
-          label: ConnectionOne
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-          label: NavMesh-Nav.asset
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-            projectPath: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\EyeAgent.cs
-          label: EyeAgent.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\EyeAgent.cs
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\EyeAgent.cs
-            projectPath: Assets\Scripts\EyeAgent.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\SimpleAttached
-          label: SimpleAttached
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\SimpleAttached\LookAt.cs
-          label: LookAt.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\SimpleAttached\LookAt.cs
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\LookAt.cs
-            projectPath: Assets\Scripts\SimpleAttached\LookAt.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\SimpleAttached\TrackMovement.cs
-          label: TrackMovement.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\SimpleAttached\TrackMovement.cs
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\TrackMovement.cs
-            projectPath: Assets\Scripts\SimpleAttached\TrackMovement.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: ProjectSettings\NavMeshAreas.asset
-          label: NavMeshAreas.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\NavMeshAreas.asset
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\NavMeshAreas.asset
-            projectPath: ProjectSettings\NavMeshAreas.asset
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
         keys:
-        - Assets
-        - Assets\Prefabs
-        - Assets\Scenes
-        - Assets\Scenes\ConnectionOne
-        - Assets\Scripts
-        - Assets\Scripts\SimpleAttached
-        - ProjectSettings
-        - ProjectSettings\Packages
-        - ProjectSettings\Packages\com.unity.probuilder
         - UserSettings
         - UserSettings\Layouts
         values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\ConnectionOne
-          label: ConnectionOne
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\SimpleAttached
-          label: SimpleAttached
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings\Packages
-          label: Packages
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings\Packages\com.unity.probuilder
-          label: com.unity.probuilder
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
         - path: UserSettings
           label: UserSettings
           level: 0
@@ -2032,402 +1614,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs
-        label: Prefabs
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs\Systems.prefab
-        label: Systems.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Systems.prefab
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Systems.prefab
-          projectPath: Assets\Prefabs\Systems.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\ConnectionOne.meta
-        label: ConnectionOne.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\ConnectionOne.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne.meta
-          projectPath: Assets\Scenes\ConnectionOne.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes\ConnectionOne.unity
-        label: ConnectionOne.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\ConnectionOne.unity
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne.unity
-          projectPath: Assets\Scenes\ConnectionOne.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes\ConnectionOne
-        label: ConnectionOne
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-        label: NavMesh-Nav.asset
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-          projectPath: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-        label: NavMesh-Nav.asset.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-          projectPath: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\EyeAgent.cs
-        label: EyeAgent.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\EyeAgent.cs
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\EyeAgent.cs
-          projectPath: Assets\Scripts\EyeAgent.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\EyeAgent.cs.meta
-        label: EyeAgent.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\EyeAgent.cs.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\EyeAgent.cs.meta
-          projectPath: Assets\Scripts\EyeAgent.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\SimpleAttached
-        label: SimpleAttached
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\SimpleAttached\LookAt.cs
-        label: LookAt.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\SimpleAttached\LookAt.cs
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\LookAt.cs
-          projectPath: Assets\Scripts\SimpleAttached\LookAt.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\SimpleAttached\LookAt.cs.meta
-        label: LookAt.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\SimpleAttached\LookAt.cs.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\LookAt.cs.meta
-          projectPath: Assets\Scripts\SimpleAttached\LookAt.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\SimpleAttached\TrackMovement.cs
-        label: TrackMovement.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\SimpleAttached\TrackMovement.cs
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\TrackMovement.cs
-          projectPath: Assets\Scripts\SimpleAttached\TrackMovement.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-        label: TrackMovement.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-          projectPath: Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: ProjectSettings
-        label: ProjectSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\NavMeshAreas.asset
-        label: NavMeshAreas.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\NavMeshAreas.asset
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\NavMeshAreas.asset
-          projectPath: ProjectSettings\NavMeshAreas.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings\Packages
-        label: Packages
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\Packages\com.unity.probuilder
-        label: com.unity.probuilder
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-        label: Settings.json
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
-          projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: UserSettings
         label: UserSettings
         level: 0
@@ -2446,6 +1632,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -2502,81 +1706,9 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Prefabs\Systems.prefab
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Prefabs\Systems.prefab
-      projectPath: Assets\Prefabs\Systems.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\ConnectionOne.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne.meta
-      projectPath: Assets\Scenes\ConnectionOne.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\ConnectionOne.unity
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne.unity
-      projectPath: Assets\Scenes\ConnectionOne.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-      projectPath: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-      projectPath: Assets\Scenes\ConnectionOne\NavMesh-Nav.asset.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\EyeAgent.cs
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\EyeAgent.cs
-      projectPath: Assets\Scripts\EyeAgent.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\EyeAgent.cs.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\EyeAgent.cs.meta
-      projectPath: Assets\Scripts\EyeAgent.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\SimpleAttached\LookAt.cs
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\LookAt.cs
-      projectPath: Assets\Scripts\SimpleAttached\LookAt.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\SimpleAttached\LookAt.cs.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\LookAt.cs.meta
-      projectPath: Assets\Scripts\SimpleAttached\LookAt.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\SimpleAttached\TrackMovement.cs
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\TrackMovement.cs
-      projectPath: Assets\Scripts\SimpleAttached\TrackMovement.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-      projectPath: Assets\Scripts\SimpleAttached\TrackMovement.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: ProjectSettings\NavMeshAreas.asset
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\NavMeshAreas.asset
-      projectPath: ProjectSettings\NavMeshAreas.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\Packages\com.unity.probuilder\Settings.json
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\ProjectSettings\Packages\com.unity.probuilder\Settings.json
-      projectPath: ProjectSettings\Packages\com.unity.probuilder\Settings.json
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -2586,15 +1718,15 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 14 changed files
+    changedFilesText: 2 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-09-22T19:34:41.417-04:00
+      updatedTimeString: 2024-09-28T18:59:23.360-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-09-22T19:37:21.458-04:00
+      updatedTimeString: 2024-09-28T18:59:26.598-04:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-09-22T19:34:42.236-04:00
+      updatedTimeString: 2024-09-28T18:59:24.072-04:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -26879,13 +26011,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2024-09-07T14:32:12.159-04:00
+    updatedTimeString: 2024-09-28T18:59:23.360-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2024-09-07T14:32:44.607-04:00
+    updatedTimeString: 2024-09-28T18:59:23.588-04:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2024-09-08T15:37:18.822-04:00
+    updatedTimeString: 2024-09-28T18:59:26.598-04:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -26903,7 +26035,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 1
+  repositoryProgressValue: 0.99667776
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -29797,7 +28929,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -29805,16 +28937,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 1c6a0000
-    m_LastClickedID: 27164
-    m_ExpandedIDs: 00000000006a0000026a0000046a0000066a0000086a00000a6a00000c6a00000e6a0000106a0000126a0000146a0000166a0000186a00001a6a00001c6a00001e6a0000566a000000ca9a3b
+    m_SelectedIDs: 60690000
+    m_LastClickedID: 26976
+    m_ExpandedIDs: 0000000010690000126900001469000016690000186900001a6900001c6900001e69000020690000226900002469000026690000286900002a6900002c6900002e69000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -29842,7 +28974,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000006a0000026a0000046a0000066a0000086a00000a6a00000c6a00000e6a0000106a0000126a0000146a0000166a0000186a00001a6a00001c6a00001e6a0000
+    m_ExpandedIDs: 0000000010690000126900001469000016690000186900001a6900001c6900001e69000020690000226900002469000026690000286900002a6900002c6900002e690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -29982,9 +29114,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 5a670000
       m_LastClickedID: 0
-      m_ExpandedIDs: 66a4ffff66d2ffff88d3ffff28d4ffff2cfbffff70630000ca63000028770000
+      m_ExpandedIDs: 72efffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -30355,7 +29487,7 @@ MonoBehaviour:
       sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 0
   m_SceneLighting: 1
@@ -30364,9 +29496,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 151.22717, y: -76.70516, z: -48.27421}
+    m_Target: {x: 201.57822, y: 5.322824, z: 4.0469136}
     speed: 2
-    m_Value: {x: 151.22717, y: -76.70516, z: -48.27421}
+    m_Value: {x: 201.57822, y: 5.322824, z: 4.0469136}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -30412,13 +29544,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1415206, y: -0.7747852, z: 0.18790334, w: -0.5879471}
+    m_Target: {x: 0.0075769974, y: -0.7075562, z: -0.0068541644, w: -0.707512}
     speed: 2
-    m_Value: {x: -0.14114618, y: -0.7751588, z: 0.18799233, w: -0.58640033}
+    m_Value: {x: 0.007561743, y: -0.7081517, z: -0.0068610176, w: -0.7059864}
   m_Size:
-    m_Target: 91.57178
+    m_Target: 95.305336
     speed: 2
-    m_Value: 91.57178
+    m_Value: 95.305336
   m_Ortho:
     m_Target: 0
     speed: 2

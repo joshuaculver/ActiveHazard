@@ -55,7 +55,7 @@ public class AI : MonoBehaviour
         flare = spotLights[0].GetComponent<LensFlareComponentSRP>();
         //Gets the region of nodes to start patrolling
 
-        nodes = Managers.AI.reqNodes("!");
+        nodes = Managers.AI.reqNodes("HAZARD");
 
         Debug.Log("Status: " + status);
         destNode = 0;

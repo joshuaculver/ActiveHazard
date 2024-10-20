@@ -19,9 +19,14 @@ public class EyeAgent : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        nodes = Managers.AI.reqNodes("!");
+        nodes = Managers.AI.reqNodes("EYE");
 
         agent.destination = nodes[0].transform.position;
+
+        int area = NavMesh.GetAreaFromName("EyeArea");
+        agent.SetAreaCost(area, 1f);
+
+        agent.Warp(nodes[0].transform.position);
     }
 
     // Update is called once per frame
@@ -34,10 +39,12 @@ public class EyeAgent : MonoBehaviour
             agent.destination = nodes[Random.Range(0, nodes.Count)].transform.position;
             //agent.destination = Managers.Player.player.transform.position;
         }
+        /*
         if(AttackCheck())
         {
             
         }
+        */
     }
 
     private void EyeLightCheck()

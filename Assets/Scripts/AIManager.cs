@@ -5,9 +5,8 @@ using UnityEngine;
 public class AIManager : MonoBehaviour, IGameManager
 {
     public ManagerStatus status {get; private set;}
-    public List<Transform> nodesA;
-    public List<Transform> nodesB;
-    public List<Transform> nodesC;
+    public List<Transform> nodesHazard;
+    public List<Transform> nodesEye;
     public List<Transform> allNodes;
     public GameObject glanceRef;
     public AI active;
@@ -32,6 +31,14 @@ public class AIManager : MonoBehaviour, IGameManager
         {
             //Debug.Log("Adding node: " + newNodes[i].name);
             allNodes.Add(newNodes[i].transform);
+            if(newNodes[i].GetComponent<NodeScript>().eye)
+            {
+                nodesEye.Add(newNodes[i].transform);
+            }
+            else
+            {
+                nodesHazard.Add(newNodes[i].transform);
+            }
         }
 
         allNodes.Sort((x, y) => x.name.CompareTo(y.name));
@@ -45,28 +52,8 @@ public class AIManager : MonoBehaviour, IGameManager
         status = ManagerStatus.Started;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //DEBUG
-        /*
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            if(!spawned)
-            {
-                //danger = 1;
-                SpawnActive(FurthestNode().transform);
-                Managers.State.OpenLobby();
-            }
-            else
-            {
-                Destroy(active.debugMarker);
-                Destroy(active.gameObject);
-                //danger = 0;
-                spawned = false;
-            }
-        }
-        */
         if(dangTimer <= 0)
         {
             if(!spawned && dangerUp)
@@ -196,8 +183,19 @@ public class AIManager : MonoBehaviour, IGameManager
             }
         }
         */
-        outList = allNodes;
-        return outList;
+        if(request == "EYE")
+        {   
+            Debug.Log("Returning eye nodes");
+            return nodesEye;
+        }
+        else if(request == "HAZARD")
+        {
+            Debug.Log("Returning hazard nodes");
+            return nodesHazard;
+        }
+
+        Debug.Log("Returning all nodes");
+        return allNodes;
     }
 
     public void SpawnActive(Transform pos)

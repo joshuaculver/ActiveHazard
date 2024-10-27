@@ -301,10 +301,12 @@ GameObject:
   m_Component:
   - component: {fileID: 99806569}
   - component: {fileID: 99806568}
-  - component: {fileID: 99806564}
   - component: {fileID: 99806567}
   - component: {fileID: 99806565}
   - component: {fileID: 99806570}
+  - component: {fileID: 99806573}
+  - component: {fileID: 99806572}
+  - component: {fileID: 99806571}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -312,21 +314,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &99806564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99806563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c9f9ca5efd73dd4cb6c45301120a0c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  labelText: {fileID: 1587703883}
-  dialogueText: {fileID: 512903737}
-  animator: {fileID: 238958630}
 --- !u!114 &99806565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,25 +321,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99806563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26a4cb27c567dfb419e0db8fc99b362f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodesA:
-  - {fileID: 313032417}
-  - {fileID: 2001320525}
-  - {fileID: 938256200}
-  - {fileID: 370485818}
-  - {fileID: 142800111}
-  - {fileID: 218150490}
-  - {fileID: 1534721782}
-  nodesB:
-  - {fileID: 753250575}
-  - {fileID: 1825972644}
-  - {fileID: 1894425364}
-  - {fileID: 476104435}
-  - {fileID: 1571802229}
+  nodesHazard: []
+  nodesEye: []
   allNodes: []
   glanceRef: {fileID: 1194541231}
   active: {fileID: 0}
@@ -377,12 +352,19 @@ MonoBehaviour:
   playerPrefab: {fileID: 609018134222962859, guid: 17d3d6830456ae244afd53c8031f17c5, type: 3}
   playerSpawn: {fileID: 1977696695}
   player: {fileID: 0}
+  playerInput: 0
+  interacting: 0
+  interactRange: 5
   cam: {fileID: 0}
+  aud: {fileID: 0}
   playerAnimator: {fileID: 0}
-  black: {fileID: 128425256}
+  pMove: {fileID: 0}
+  camAnim: {fileID: 0}
   gameOver: 0
-  dead: 0
   normalFOV: 60
+  icon: {fileID: 0}
+  handsIcon: {fileID: 0}
+  eyeIcon: {fileID: 0}
 --- !u!114 &99806568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +402,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99806563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c5fb34cacb2e4e4c8b83ac036e4443e, type: 3}
   m_Name: 
@@ -428,6 +410,7 @@ MonoBehaviour:
   srcs:
   - {fileID: 1065767893}
   - {fileID: 981409207}
+  menuSrcs: []
   atk: {fileID: 689256321}
   breath:
   - {fileID: 8300000, guid: 02959ded1a0521e4c8457f2f869a2023, type: 3}
@@ -441,9 +424,82 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5e3025de42d59a94985367cccf2468bc, type: 3}
   - {fileID: 8300000, guid: d420bb4a31c1abd48b62535dd1750ded, type: 3}
   death: {fileID: 8300000, guid: 080d4b5cc91e32c44a5a50b9787b23b3, type: 3}
-  killMode: {fileID: 0}
+  slidesA: []
   prevStatus: 0
+  ambience: []
+  defaultVol: 1
+  defaultFXVol: 1
+  SFXVol: 0.3
   prevDanger: 0
+--- !u!114 &99806571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99806563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c098168ebd0d674cb24007eaaa9e156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProgress:
+    inIntro: 0
+    AEnding: 0
+  LobbyDoubleA: {fileID: 0}
+  LobbyDoubleB: {fileID: 0}
+  LobbySingle: {fileID: 0}
+  ExitOneA: {fileID: 0}
+  ExitOneB: {fileID: 0}
+  ExitBlock: {fileID: 0}
+  ExitLights: {fileID: 0}
+  introBlocks: []
+  slideCollectibles: []
+--- !u!114 &99806572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99806563}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29647df748f33942a84fb4a06ec40c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideUI: {fileID: 0}
+  slideImage: {fileID: 0}
+  slideBack: {fileID: 0}
+  shader: {fileID: 0}
+  slidesA: []
+  slideLight: {fileID: 0}
+  slideSet: 657
+  slide: 0
+  newSet: 46
+  newSlide: 0
+  switchingSlide: 0
+  haveSlide: 0
+  buttonsA: []
+  collectiblesA: []
+--- !u!114 &99806573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99806563}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77b6bc015dcb8c4db3d8b9c2d7e66c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuOpen: 0
+  pausePanel: {fileID: 0}
+  slideViewing: 0
+  solid: {fileID: 0}
+  slideCam: {fileID: 0}
+  playerDead: 0
+  sceneChange: 0
 --- !u!1 &121071692
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,7 +5381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99806564}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1

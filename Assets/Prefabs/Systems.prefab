@@ -1132,36 +1132,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a4cb27c567dfb419e0db8fc99b362f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodesA:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  nodesB:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  nodesC:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  nodesHazard: []
+  nodesEye: []
   allNodes: []
   glanceRef: {fileID: 5517960092166505175}
   active: {fileID: 0}
+  friend: {fileID: 0}
   actPrefab: {fileID: 8852457455763729971, guid: 92ef67ca3d9111b4d976db9f2b2e3671, type: 3}
+  friendPrefab: {fileID: 6417363216819644572, guid: 49307028db01ff54d9578f69a1e867e9, type: 3}
   activeSpawn: {fileID: 0}
   spawned: 0
   danger: 3
@@ -1187,17 +1165,16 @@ MonoBehaviour:
   - {fileID: 6592004605935520947}
   atk: {fileID: 7301919547575783358}
   breath:
-  - {fileID: 8300000, guid: 5c2e987b3dfd45b4bbdc1c4722757848, type: 3}
-  - {fileID: 8300000, guid: d2655b737f69666478b3d68f35672689, type: 3}
-  - {fileID: 8300000, guid: af4597ea8e1b4b043aae2076708d7b98, type: 3}
+  - {fileID: 8300000, guid: 5f0a346ea8f1cfa45a47f2094d6d6341, type: 3}
+  - {fileID: 8300000, guid: c49ae3b2760c459469ac585ab222c7eb, type: 3}
   sting: {fileID: 8300000, guid: 31869f666335ef6479b4f8b9e8e252e7, type: 3}
-  pursuit: {fileID: 8300000, guid: 49fd75d40645a0443afae3630b996a0f, type: 3}
-  search: {fileID: 8300000, guid: 64aa6e3235ec1314a97cfd173649c99c, type: 3}
+  pursuit: {fileID: 8300000, guid: 1cb280516f8efdc4e8ade1d1e9301e1b, type: 3}
+  search: {fileID: 8300000, guid: eb73c740a171b7e4da9ff7dda0b3b636, type: 3}
   aim:
   - {fileID: 8300000, guid: e2792017a9955db478204e94bc8a2957, type: 3}
   - {fileID: 8300000, guid: 5e3025de42d59a94985367cccf2468bc, type: 3}
   - {fileID: 8300000, guid: d420bb4a31c1abd48b62535dd1750ded, type: 3}
-  death: {fileID: 8300000, guid: 080d4b5cc91e32c44a5a50b9787b23b3, type: 3}
+  death: {fileID: 8300000, guid: e8a1c36221cd9034095d127f6fa0afcb, type: 3}
   slidesA:
   - {fileID: 8300000, guid: 84347895fa2293d41929dd267e49ff90, type: 3}
   - {fileID: 8300000, guid: d2bf6278231e06742a8c852f801cc0ce, type: 3}
@@ -1206,10 +1183,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 08950cbb681a73b4b8f2f0bff8a9f5c3, type: 3}
   prevStatus: 0
   ambience:
-  - {fileID: 8300000, guid: 42a092c154747f341bea98a3f1a1f41f, type: 3}
-  - {fileID: 8300000, guid: f80ab32ae0d32954b89d791650c6ed5a, type: 3}
-  - {fileID: 8300000, guid: 17550287b03efb24db27e4fe762ff7d3, type: 3}
-  - {fileID: 8300000, guid: b89e552510c8b024ba5c3d256ab0ab19, type: 3}
+  - {fileID: 8300000, guid: fd627c0980477f848b0ab48da73af304, type: 3}
+  - {fileID: 8300000, guid: b8fa35eb603b45b48941a06a537d9fc3, type: 3}
+  - {fileID: 8300000, guid: cf504db423cb9be408ccfb6bc2ffb0ec, type: 3}
+  - {fileID: 8300000, guid: 80cfd476ce500704bb1465bd329942b2, type: 3}
   defaultVol: 0.4
   defaultFXVol: 1
   SFXVol: 0.3

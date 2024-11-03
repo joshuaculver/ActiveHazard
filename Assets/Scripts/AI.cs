@@ -65,6 +65,14 @@ public class AI : MonoBehaviour
         Debug.Log("Done");
 
         busy = false;
+        if (status == AIStatus.Avoid)
+        {
+            lightSwitch(false);
+        }
+        else
+        {
+            lightSwitch(true);
+        }
 
         //debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
@@ -320,7 +328,6 @@ public class AI : MonoBehaviour
         {
             if(warnings > 0)
             {
-                
                 warnings -= 1;
                 atkTimer = 0f;
                 StartCoroutine(MuzzFlash());

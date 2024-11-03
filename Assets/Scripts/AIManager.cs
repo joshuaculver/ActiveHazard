@@ -10,7 +10,9 @@ public class AIManager : MonoBehaviour, IGameManager
     public List<Transform> allNodes;
     public GameObject glanceRef;
     public AI active;
+    public FriendAI friend;
     public GameObject actPrefab;
+    public GameObject friendPrefab;
     public Transform activeSpawn;
     public bool spawned = false;
     //Flips for whether danger is rising or falling

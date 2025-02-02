@@ -10,6 +10,7 @@ public class AIManager : MonoBehaviour, IGameManager
     public List<Transform> allNodes;
     public GameObject glanceRef;
     public AI active;
+    public EyeAgent eye;
     public FriendAI friend;
     public GameObject actPrefab;
     public GameObject friendPrefab;
@@ -52,6 +53,8 @@ public class AIManager : MonoBehaviour, IGameManager
         danger = 3;
 
         status = ManagerStatus.Started;
+        //DEBUG for testing with eye already in scene
+        eye.getNodes();
     }
 
     void Update()
@@ -188,16 +191,22 @@ public class AIManager : MonoBehaviour, IGameManager
         if(request == "EYE")
         {   
             Debug.Log("Returning eye nodes");
-            return nodesEye;
+            for(int i = 0;i < nodesEye.Count();i++)
+            {
+                outList.Add(nodesEye[i]);
+            }
         }
         else if(request == "HAZARD")
         {
             Debug.Log("Returning hazard nodes");
-            return nodesHazard;
+            for(int i = 0;i < nodesHazard.Count();i++)
+            {
+                outList.Add(nodesHazard[i]);
+            }
         }
 
         Debug.Log("Returning all nodes");
-        return allNodes;
+        return outList;
     }
 
     public void SpawnActive(Transform pos)
@@ -238,7 +247,6 @@ public class AIManager : MonoBehaviour, IGameManager
     //Finds the furthest node from the player that the player doesn't have LOS to
     public Transform FurthestNode()
     {
-        Transform player = Managers.Player.player.transform;
         RaycastHit hit;
 
         Transform returnNode = allNodes[0];

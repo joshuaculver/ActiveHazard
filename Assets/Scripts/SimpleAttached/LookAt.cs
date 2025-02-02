@@ -15,7 +15,7 @@ public class LookAt : MonoBehaviour
 
         float step = speed * Time.deltaTime;
 
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, speed);
 
         transform.rotation = Quaternion.LookRotation(newDir);
     }

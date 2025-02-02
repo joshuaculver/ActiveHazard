@@ -9,7 +9,7 @@ public class PlayerVision : MonoBehaviour
     {
         if(other.gameObject.tag == "Friend")
         {
-            Debug.Log("Friend in player vision collider");
+            //Debug.Log("Friend in player vision collider");
             Managers.AI.friend.observed = true;
         }
     }
@@ -17,7 +17,7 @@ public class PlayerVision : MonoBehaviour
     {
         if(other.gameObject.tag == "Friend")
         {
-            Debug.Log("Friend left player vision collider");
+            //Debug.Log("Friend left player vision collider");
             Managers.AI.friend.observed = false;
         }
     }

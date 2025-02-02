@@ -12,6 +12,9 @@ public class FriendAI : MonoBehaviour
     public bool following = true;
     public bool observed = false;
 
+    //Time player needs to be near friend to activate following
+    public float proximityTimer;
+
     //Timer for allowing animation and agent to act
     private float actTimer;
     //Time to wait before moving or acting
@@ -26,11 +29,20 @@ public class FriendAI : MonoBehaviour
         anim = GetComponent<Animator>();
 
         following = false;
+
+        proximityTimer = 60f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!following)
+        {
+            //If player proximal
+            //proximityTimer -= Time.DeltaTime;
+                //If proximityTimer <= 0f;
+                //following = true;
+        }
         //Need to change player vision colliders so that one can correctly change states
         if(!observed)
         {
@@ -52,7 +64,7 @@ public class FriendAI : MonoBehaviour
         }
         else
         {
-            Debug.Log("Friend done waiting");
+            ///Debug.Log("Friend done waiting");
             anim.speed = 1f;
             agent.isStopped = false;
             agent.ResetPath();

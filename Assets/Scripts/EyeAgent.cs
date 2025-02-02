@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
+using TMPro;
 
 public class EyeAgent : MonoBehaviour
 {
@@ -17,16 +18,18 @@ public class EyeAgent : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        nodes = new List<Transform>();
         agent = GetComponent<NavMeshAgent>();
 
-        nodes = Managers.AI.reqNodes("EYE");
+        //nodes = Managers.AI.reqNodes("EYE");
 
-        agent.destination = nodes[0].transform.position;
+        //agent.destination = nodes[0].transform.position;
 
         int area = NavMesh.GetAreaFromName("EyeArea");
         agent.SetAreaCost(area, 1f);
 
-        agent.Warp(nodes[0].transform.position);
+        //agent.Warp(nodes[0].transform.position);
+        getNodes();
     }
 
     // Update is called once per frame
@@ -34,17 +37,28 @@ public class EyeAgent : MonoBehaviour
     {
         EyeLightCheck();
 
-        if(!agent.pathPending && agent.remainingDistance < 1f)
+        //DEBUG if
+        if(nodes.Count > 0)
         {
-            agent.destination = nodes[Random.Range(0, nodes.Count)].transform.position;
-            //agent.destination = Managers.Player.player.transform.position;
+            if(!agent.pathPending && agent.remainingDistance < 1f)
+            {
+                agent.destination = nodes[Random.Range(0, nodes.Count)].transform.position;
+            }
+            if(AttackCheck())
+            {
+                attacking = true;
+                agent.destination = Managers.Player.player.transform.position;
+                    //If within proximity to continue chase
+            }
+            //Add cooldown/timer
+            else
+            {
+                if(!agent.pathPending && agent.remainingDistance < 1f)
+                {
+                    agent.destination = nodes[Random.Range(0, nodes.Count)].transform.position;
+                }
+            }
         }
-        /*
-        if(AttackCheck())
-        {
-            
-        }
-        */
     }
 
     private void EyeLightCheck()
@@ -98,5 +112,11 @@ public class EyeAgent : MonoBehaviour
         }
         
         return false;
+    }
+
+    public void getNodes()
+    {
+        //For weird init order stuff. Should request nodes in Awake after spawned by AI manager
+        nodes = Managers.AI.reqNodes("EYE");
     }
 }

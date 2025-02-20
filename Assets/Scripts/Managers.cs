@@ -28,8 +28,7 @@ public class Managers : MonoBehaviour
 
     void Awake()
     {
-        int bobOpt = PlayerPrefs.GetInt("headBob");
-        if(bobOpt == 1)
+        if(PlayerPrefs.GetInt("headBob") == 1)
         {
             headBob = true;
         }

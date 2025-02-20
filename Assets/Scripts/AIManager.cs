@@ -54,7 +54,7 @@ public class AIManager : MonoBehaviour, IGameManager
 
         status = ManagerStatus.Started;
         //DEBUG for testing with eye already in scene
-        eye.getNodes();
+        //eye.getNodes();
     }
 
     void Update()

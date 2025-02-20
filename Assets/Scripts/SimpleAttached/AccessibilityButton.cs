@@ -21,7 +21,7 @@ public class AccessibilityButton : MonoBehaviour
             toggle.isOn = false;
         }
 
-        toggle.onValueChanged.AddListener(delegate {
+        toggle.onValueChanged.AddListener(delegate{
             ToggleValueChanged(toggle);
         });
     }

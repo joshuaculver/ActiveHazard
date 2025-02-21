@@ -43,7 +43,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
     private float noMusTime = 0f;
     //Low for testing
-    private float ambThreshold = 300f;
+    private float ambThreshold = 60f;
     private int ambInstances = 0;
 
     //Was the last track for a menu/timescale = 0f context
@@ -60,6 +60,7 @@ public class MusicManager : MonoBehaviour, IGameManager
             srcs[i].playOnAwake = false;
             srcs[i].loop = true;
             srcs[i].volume = 0f;
+            srcs[i].clip = null;
         }
 
         atk.spatialBlend = 0f;
@@ -177,17 +178,23 @@ public class MusicManager : MonoBehaviour, IGameManager
         if(!srcs[flip].isPlaying || srcs[flip].volume <= 0f)
         {
             noMusTime += Time.deltaTime;
-
+            Debug.Log("Music timer:" + noMusTime);
             if(noMusTime >= ambThreshold)
             {
+                Debug.Log("Music threshold hit");
                 if(ambInstances <= Random.Range(3,10))
                 {
-                    PlayMus(ambience[Random.Range(0,2)], defaultVol);
+                    Debug.Log("Clip");
+                    PlayMus(ambience[Random.Range(0,2)], defaultVol, false);
+                    ambInstances += 1;
                 }
                 else
                 {
-                    PlayMus(ambience[3], defaultVol);
+                    Debug.Log("Full");
+                    PlayMus(ambience[3], defaultVol, false);
+                    ambInstances = 0;
                 }
+                noMusTime = 0;
             }
         }
         
@@ -222,7 +229,7 @@ public class MusicManager : MonoBehaviour, IGameManager
     }
 
     //Uses two audio sources to crossfade
-    private void PlayMus(AudioClip clip, float vol)
+    private void PlayMus(AudioClip clip, float vol, bool loop)
     {
         if(srcs[flip].clip == clip && srcs[flip].volume == vol)
         {
@@ -246,7 +253,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
         //TODO make volume var. esp for options later
         source.clip = clip;
-        source.loop = true;
+        source.loop = loop;
         source.Play();
         playing = clip;
 
@@ -488,7 +495,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                 Debug.Log("Playing pursuit/chase");
                 if(playing != pursuit)
                 {
-                    PlayMus(pursuit, defaultVol);
+                    PlayMus(pursuit, defaultVol, true);
                     prevStatus = Managers.AI.active.status;
                     prevDanger = Managers.AI.danger;
                 }
@@ -498,7 +505,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                 if(playing != search)
                 {
                     Debug.Log("Playing search");
-                    PlayMus(search, defaultVol);
+                    PlayMus(search, defaultVol, true);
                     prevStatus = Managers.AI.active.status;
                     prevDanger = Managers.AI.danger;
                 }
@@ -510,7 +517,7 @@ public class MusicManager : MonoBehaviour, IGameManager
                     if(playing != breath[1])
                     {
                         Debug.Log("Playing breath 1");
-                        PlayMus(breath[1], defaultVol);
+                        PlayMus(breath[1], defaultVol, true);
                         prevStatus = Managers.AI.active.status;
                         prevDanger = Managers.AI.danger;
                     }

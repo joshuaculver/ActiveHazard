@@ -18,6 +18,7 @@ public class MusicManager : MonoBehaviour, IGameManager
 
     public AudioClip[] breath;
     public AudioClip sting;
+    public AudioClip smSting;
     public AudioClip pursuit;
     public AudioClip search;
     public AudioClip[] aim;
@@ -38,12 +39,13 @@ public class MusicManager : MonoBehaviour, IGameManager
     public float defaultFXVol = 1f;
     public float SFXVol = 0.3f;
     private bool stingCD = false;
+    private bool smStingCD = false;
     public int prevDanger;
     private bool MusLock;
 
     private float noMusTime = 0f;
     //Low for testing
-    private float ambThreshold = 60f;
+    private float ambThreshold = 300f;
     private int ambInstances = 0;
 
     //Was the last track for a menu/timescale = 0f context
@@ -318,43 +320,86 @@ public class MusicManager : MonoBehaviour, IGameManager
         source.Play();
     }
 
-    public IEnumerator Sting()
+    public IEnumerator Sting(bool full)
     {
-        bool wasCheck = wasPlaying;
-        if(stingCD == true)
+        //Spotted sting
+        if(full)
         {
-            Debug.Log("Sting on CD");
+            bool wasCheck = wasPlaying;
+            if(stingCD == true)
+            {
+                Debug.Log("Sting on CD");
+                yield break;
+            }
+
+            running = false;
+            stingCD = true;
+
+            flip = 1 - flip;
+            AudioSource source = srcs[flip];
+
+            StopAll();
+
+            source.volume = 0.5f;
+            source.clip = sting;
+            source.loop = false;
+
+            float timeTo = source.clip.length - 3f;
+            float timing = 0f;
+            source.Play();
+
+            while(timing < timeTo)
+            {
+                timing += Time.deltaTime;
+                yield return null;
+            }
+
+            running = true;
+
+            wasPlaying = wasCheck;
+
+            check();
             yield break;
         }
-
-        running = false;
-        stingCD = true;
-
-        flip = 1 - flip;
-        AudioSource source = srcs[flip];
-
-        StopAll();
-
-        source.volume = 0.5f;
-        source.clip = sting;
-        source.loop = false;
-
-        float timeTo = source.clip.length - 3f;
-        float timing = 0f;
-        source.Play();
-
-        while(timing < timeTo)
+        //Distant suspicion/going to hunt sting
+        else if(!full)
         {
-            timing += Time.deltaTime;
-            yield return null;
+            bool wasCheck = wasPlaying;
+            if(smStingCD == true)
+            {
+                Debug.Log("Small sting on CD");
+                yield break;
+            }
+
+            running = false;
+            smStingCD = true;
+
+            flip = 1 - flip;
+            AudioSource source = srcs[flip];
+
+            StopAll();
+
+            source.volume = 0.5f;
+            source.clip = smSting;
+            source.loop = false;
+
+            float timeTo = source.clip.length - 3f;
+            float timing = 0f;
+            source.Play();
+
+            while(timing < timeTo)
+            {
+                timing += Time.deltaTime;
+                yield return null;
+            }
+
+            running = true;
+
+            wasPlaying = wasCheck;
+
+            check();
+            yield break; 
         }
-
-        running = true;
-
-        wasPlaying = wasCheck;
-
-        check();
-        yield break;
     }
 
     private void StopAll()

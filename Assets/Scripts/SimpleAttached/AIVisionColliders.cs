@@ -20,6 +20,8 @@ public class AIVisionColliders : MonoBehaviour
                     if(NoticeOnly)
                     {
                         Debug.Log("Notice only collider");
+                        //False for small/suspicion sting
+                        StartCoroutine(Managers.Music.Sting(false));
                         Managers.AI.active.changeState(AIStatus.Hunt);
                     }
                     else

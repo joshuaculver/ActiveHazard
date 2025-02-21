@@ -1137,6 +1137,7 @@ MonoBehaviour:
   allNodes: []
   glanceRef: {fileID: 5517960092166505175}
   active: {fileID: 0}
+  eye: {fileID: 0}
   friend: {fileID: 0}
   actPrefab: {fileID: 8852457455763729971, guid: 92ef67ca3d9111b4d976db9f2b2e3671, type: 3}
   friendPrefab: {fileID: 6417363216819644572, guid: 49307028db01ff54d9578f69a1e867e9, type: 3}
@@ -1168,6 +1169,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5f0a346ea8f1cfa45a47f2094d6d6341, type: 3}
   - {fileID: 8300000, guid: c49ae3b2760c459469ac585ab222c7eb, type: 3}
   sting: {fileID: 8300000, guid: 31869f666335ef6479b4f8b9e8e252e7, type: 3}
+  smSting: {fileID: 8300000, guid: d5cd06cf7328d814eb2a47936053e3c0, type: 3}
   pursuit: {fileID: 8300000, guid: 1cb280516f8efdc4e8ade1d1e9301e1b, type: 3}
   search: {fileID: 8300000, guid: eb73c740a171b7e4da9ff7dda0b3b636, type: 3}
   aim:

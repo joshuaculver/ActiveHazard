@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public Texture handsIcon;
     public Texture eyeIcon;
 
-    private float iconFadeSpd = 2f;
+    private float iconFadeSpd = 1.75f;
 
     private HeadBob bob;
 
@@ -84,14 +84,14 @@ public class PlayerManager : MonoBehaviour, IGameManager
                     {
                         if(icon.color.a < 1f)
                         {
-                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 1f, Time.unscaledDeltaTime * 2f));
+                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 1f, Time.unscaledDeltaTime * iconFadeSpd));
                         }
                     }
                     else
                     {
                         if(icon.color.a > 0f)
                         {
-                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2f));
+                            icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * iconFadeSpd));
                         }
                     }
                 }
@@ -99,7 +99,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
                 {
                     if(icon.color.a > 0f)
                     {
-                        icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2f));
+                        icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * iconFadeSpd));
                     }
                 }
 
@@ -119,7 +119,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             }
             else
             {
-                icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * 2.75f));
+                icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * (iconFadeSpd + (iconFadeSpd * 0.75f))));
             }
             //DEBUG
             if(Input.GetKeyDown(KeyCode.F))

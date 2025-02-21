@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour, IGameManager
     private SlideManager slides;
 
     public RawImage solid;
-    private float fadeSpd = 2.5f;
+    private float fadeSpd = 1.75f;
     public UnityEngine.UIElements.Button resume;
     public UnityEngine.UIElements.Button mainMenu;
 

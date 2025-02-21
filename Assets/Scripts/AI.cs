@@ -282,7 +282,8 @@ public class AI : MonoBehaviour
             status = AIStatus.Chase;
             Managers.AI.chased = true;
 
-            StartCoroutine(Managers.Music.Sting());
+            //True for full sting
+            StartCoroutine(Managers.Music.Sting(true));
             Managers.Player.canInteract(false);
         }
         else if(newState == AIStatus.Glance)

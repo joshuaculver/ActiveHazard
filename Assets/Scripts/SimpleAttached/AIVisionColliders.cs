@@ -17,7 +17,7 @@ public class AIVisionColliders : MonoBehaviour
                 if(Managers.AI.active.LOScheck())
                 {
                     Debug.Log("Collider + LOS - NoticeOnly: " + NoticeOnly.ToString());
-                    if(NoticeOnly)
+                    if(NoticeOnly && Managers.AI.active.status != AIStatus.Hunt && Managers.AI.active.status != AIStatus.Chase)
                     {
                         Debug.Log("Notice only collider");
                         //False for small/suspicion sting

@@ -365,7 +365,7 @@ public class MusicManager : MonoBehaviour, IGameManager
         else if(!full)
         {
             bool wasCheck = wasPlaying;
-            if(smStingCD == true)
+            if(smStingCD == true || stingCD == true)
             {
                 Debug.Log("Small sting on CD");
                 yield break;

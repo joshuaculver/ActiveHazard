@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Git for Unity
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 121
+  controlID: 56
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2971,13 +2971,13 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 63.977075400000004
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 1
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
@@ -3072,11 +3072,145 @@ MonoBehaviour:
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - db0430a691ff598418b1b6a460a3797b
+        - 709a60fc11a342f42806131ff8fa42d8
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models
+          label: Models
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models\Beam 1.fbx
+          label: Beam 1.fbx
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Beam 1.fbx
+            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Beam
+              1.fbx
+            projectPath: Assets\Models\Beam 1.fbx
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
       folders:
-        keys: []
-        values: []
+        keys:
+        - Assets
+        - Assets\Models
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Models
+          label: Models
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -3105,6 +3239,134 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Models
+        label: Models
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Models\Beam 1.fbx
+        label: Beam 1.fbx
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Beam 1.fbx
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Beam
+            1.fbx
+          projectPath: Assets\Models\Beam 1.fbx
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Beam 1.fbx.meta
+        label: Beam 1.fbx.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Beam 1.fbx.meta
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Beam
+            1.fbx.meta
+          projectPath: Assets\Models\Beam 1.fbx.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -3124,16 +3386,34 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+    gitStatusEntries:
+    - path: Assets\Models\Beam 1.fbx
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Beam 1.fbx
+      projectPath: Assets\Models\Beam 1.fbx
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Beam 1.fbx.meta
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\Beam 1.fbx.meta
+      projectPath: Assets\Models\Beam 1.fbx.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 3 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-02-21T18:07:17.693-05:00
+      updatedTimeString: 2025-02-22T15:13:05.537-05:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-02-21T18:07:09.093-05:00
+      updatedTimeString: 2025-02-22T15:22:23.578-05:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2025-02-21T18:06:26.058-05:00
+      updatedTimeString: 2025-02-22T15:13:06.363-05:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -27407,7 +27687,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/joshuaculver/ActiveHazard.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: main
@@ -27418,13 +27698,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-02-21T18:07:17.693-05:00
+    updatedTimeString: 2025-02-22T15:13:05.537-05:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-02-21T18:07:17.678-05:00
+    updatedTimeString: 2025-02-22T15:22:23.585-05:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-02-21T18:07:09.093-05:00
+    updatedTimeString: 2025-02-22T15:22:23.578-05:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -27442,8 +27722,8 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.9993302
-  repositoryProgressMessage: Pushed
+  repositoryProgressValue: 0
+  repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
@@ -30336,7 +30616,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Music
+    - Assets/Models
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -30344,16 +30624,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Music
+  - Assets/Models
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 848b0000
-    m_LastClickedID: 35716
-    m_ExpandedIDs: 000000008c8a00008e8a0000908a0000928a0000948a0000968a0000988a00009a8a00009c8a00009e8a0000a08a0000a28a0000a48a0000a68a0000a88a0000aa8a0000ac8a0000ae8a000000ca9a3b
+    scrollPos: {x: 0, y: 39}
+    m_SelectedIDs: 828b0000
+    m_LastClickedID: 35714
+    m_ExpandedIDs: 000000008c8a00008e8a0000908a0000928a0000948a0000968a0000988a00009a8a00009c8a00009e8a0000a08a0000a28a0000a48a0000a68a0000a88a0000aa8a0000ac8a0000ae8a0000948b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -30408,8 +30688,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000ba020000ae020000b0020000b8c20600927f000092a70000da9f0100b4020000bc000200a6020000be020000b06c0000b8730000ead100000000000054380300927c0000328300007c860000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000ba020000ae020000b0020000b8c20600927f000092a70000da9f0100b4020000bc000200a6020000be020000b06c0000b8730000ead100000000000054380300927c0000328300007c860000e68b00000e8e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -30903,9 +31183,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -15.536398, y: 28.634327, z: -9.932548}
+    m_Target: {x: -12.635355, y: 0.13501334, z: -1.7363436}
     speed: 2
-    m_Value: {x: -15.536398, y: 28.634327, z: -9.932548}
+    m_Value: {x: -12.635355, y: 0.13501334, z: -1.7363436}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -30951,13 +31231,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.23118086, y: 0.6823584, z: -0.20990367, w: 0.6621277}
+    m_Target: {x: 0.11334154, y: 0.69707936, z: -0.08579109, w: 0.70386446}
     speed: 2
-    m_Value: {x: 0.23118088, y: 0.68235844, z: -0.20990369, w: 0.66212773}
+    m_Value: {x: 0.11312502, y: 0.6975935, z: -0.085894406, w: 0.70227355}
   m_Size:
-    m_Target: 2.9683166
+    m_Target: 2.1374342
     speed: 2
-    m_Value: 2.9683166
+    m_Value: 2.1374342
   m_Ortho:
     m_Target: 0
     speed: 2

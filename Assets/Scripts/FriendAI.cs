@@ -8,8 +8,7 @@ public class FriendAI : MonoBehaviour
     private Animator anim;
     public NavMeshAgent agent; 
     
-    //DEBUG should be false
-    public bool following = true;
+    public bool following = false;
     public bool observed = false;
 
     //Time player needs to be near friend to activate following
@@ -42,6 +41,7 @@ public class FriendAI : MonoBehaviour
             //proximityTimer -= Time.DeltaTime;
                 //If proximityTimer <= 0f;
                 //following = true;
+            //else wander away from hazard if hazard spawned
         }
         //Need to change player vision colliders so that one can correctly change states
         if(!observed)

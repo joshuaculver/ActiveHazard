@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5682929774671395709}
   - component: {fileID: 8031116014884436612}
   - component: {fileID: 2398881343945245208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorCarpet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 23
+  m_VersionIndex: 38
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

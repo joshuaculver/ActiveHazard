@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 1818770335344169423}
   - component: {fileID: 2053000503207336008}
   - component: {fileID: 6960578556952657892}
-  - component: {fileID: 6930056817105783408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorNightmare
-  m_TagString: Untagged
+  m_TagString: MetalFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 26
+  m_VersionIndex: 50
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -354,18 +353,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &6930056817105783408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097774313482746532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a83d8687fd23b94a920d8d63b03d04c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 1
-  steps: []
-  spdMult: 1

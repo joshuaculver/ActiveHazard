@@ -8,6 +8,7 @@ TagManager:
   - Node
   - Active
   - Friend
+  - MetalFloor
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Geometry
   - MainCamInvis
-  - 
+  - Ground
   - 
   - 
   - 

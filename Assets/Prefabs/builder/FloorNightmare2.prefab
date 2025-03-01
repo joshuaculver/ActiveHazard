@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2880347470125192310}
   - component: {fileID: 2844800442100322897}
   - component: {fileID: 8012776262038012538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FloorNightmare2
-  m_TagString: Untagged
+  m_TagString: MetalFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 26
+  m_VersionIndex: 56
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

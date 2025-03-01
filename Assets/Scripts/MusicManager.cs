@@ -180,19 +180,19 @@ public class MusicManager : MonoBehaviour, IGameManager
         if(!srcs[flip].isPlaying || srcs[flip].volume <= 0f)
         {
             noMusTime += Time.deltaTime;
-            Debug.Log("Music timer:" + noMusTime);
+            //Debug.Log("Music timer:" + noMusTime);
             if(noMusTime >= ambThreshold)
             {
                 Debug.Log("Music threshold hit");
                 if(ambInstances <= Random.Range(3,10))
                 {
-                    Debug.Log("Clip");
+                    //Debug.Log("Clip");
                     PlayMus(ambience[Random.Range(0,2)], defaultVol, false);
                     ambInstances += 1;
                 }
                 else
                 {
-                    Debug.Log("Full");
+                    //Debug.Log("Full");
                     PlayMus(ambience[3], defaultVol, false);
                     ambInstances = 0;
                 }

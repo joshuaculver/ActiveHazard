@@ -15,6 +15,7 @@ public class PlayerAudEmitter : MonoBehaviour
     public AudioSource FXsrc;
 
     public AudioClip[] stepClip;
+    public AudioClip[] metalStepClip;
     public AudioClip[] flyByClip;
 
     void Awake()
@@ -61,12 +62,28 @@ public class PlayerAudEmitter : MonoBehaviour
     }
     
     void emitStep()
-    {
-        int pick = Random.Range(0, stepClip.Length);
-        audSrc.pitch = 1 + Random.Range(-0.25f, 0.25f);
-        audSrc.clip = stepClip[pick];
+    {   
+        RaycastHit hit;
 
-        audSrc.Play();
+        if(Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Ground")))
+        {
+            AudioClip stepPick;
+            if(hit.collider.CompareTag("MetalFloor"))
+            {
+                int pick = Random.Range(0, metalStepClip.Length);
+                stepPick = metalStepClip[pick];
+                Debug.Log("Metal");
+            }
+            else
+            {
+                int pick = Random.Range(0, stepClip.Length);
+                stepPick = stepClip[pick];
+                Debug.Log("Other: " + hit.distance);
+            }
+            audSrc.pitch = 1 + Random.Range(-0.25f, 0.25f);
+            audSrc.clip = stepPick;
+            audSrc.Play();
+        }
     }
     
     public void emitFlyBy()

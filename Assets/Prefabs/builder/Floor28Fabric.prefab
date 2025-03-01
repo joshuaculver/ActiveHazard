@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3241426115530297802}
   - component: {fileID: 640491329798635478}
   - component: {fileID: 6956815292841790140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor28Fabric
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 20
+  m_VersionIndex: 29
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

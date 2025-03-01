@@ -795,6 +795,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c0e11588c715c7d46befc253f89a7c8b, type: 3}
   - {fileID: 8300000, guid: fe39b6b5d3d677044aee8a7566a08f52, type: 3}
   - {fileID: 8300000, guid: 0bf2e8ebdadaa0d40a3028dced121b4a, type: 3}
+  metalStepClip:
+  - {fileID: 8300000, guid: 48d1b98e25b5a7f4d89d5ec6d5fc026f, type: 3}
+  - {fileID: 8300000, guid: 559c0562b5429f246adbaa9813075370, type: 3}
+  - {fileID: 8300000, guid: f89931825db8db042ad192d2b6984cf6, type: 3}
+  - {fileID: 8300000, guid: d2b192ef043949c4b9ef1198de9042e7, type: 3}
+  - {fileID: 8300000, guid: 3b10817724684264c9c5b0730c866f3e, type: 3}
   flyByClip:
   - {fileID: 8300000, guid: 2d264de2c5b3bfc40a20bc9577364cb9, type: 3}
   - {fileID: 8300000, guid: c66f4e495ce68fe46b5e66787d05c9e3, type: 3}
@@ -973,7 +979,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: c2b6d61d143fc4c8cb3a857d39f83568, type: 2}
   m_TargetDisplay: 0

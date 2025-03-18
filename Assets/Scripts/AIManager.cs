@@ -7,12 +7,15 @@ public class AIManager : MonoBehaviour, IGameManager
     public ManagerStatus status {get; private set;}
     public List<Transform> nodesHazard;
     public List<Transform> nodesEye;
+    public Transform eyeSpawn;
     public List<Transform> allNodes;
     public GameObject glanceRef;
     public AI active;
-    public EyeAgent eye;
+    private GameObject eye;
+    public EyeAgent eyeAgent;
     public FriendAI friend;
     public GameObject actPrefab;
+    public GameObject eyePrefab;
     public GameObject friendPrefab;
     public Transform activeSpawn;
     public bool spawned = false;
@@ -236,6 +239,19 @@ public class AIManager : MonoBehaviour, IGameManager
                 Managers.Music.check();
             }
         }
+    }
+
+    public void SpawnEye()
+    {
+        //Top level object transform is where visual for eye is. NavMesh agent is child object
+        eye = Instantiate(eyePrefab, eyeSpawn.position, Quaternion.identity);
+        eyeAgent = eye.GetComponent<EyeAgent>();
+        //Set eyeAgent position
+    }
+
+    public void DespawnEye()
+    {
+
     }
     
     //TODO part of AI looking behavior to replace with mathf.moveTowards

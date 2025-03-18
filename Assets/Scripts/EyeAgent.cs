@@ -21,15 +21,15 @@ public class EyeAgent : MonoBehaviour
         nodes = new List<Transform>();
         agent = GetComponent<NavMeshAgent>();
 
-        //nodes = Managers.AI.reqNodes("EYE");
+        nodes = Managers.AI.reqNodes("EYE");
 
-        //agent.destination = nodes[0].transform.position;
+        agent.destination = nodes[0].transform.position;
 
         int area = NavMesh.GetAreaFromName("EyeArea");
         agent.SetAreaCost(area, 1f);
 
-        //agent.Warp(nodes[0].transform.position);
-        getNodes();
+        agent.Warp(nodes[0].transform.position);
+        //getNodes();
     }
 
     // Update is called once per frame
@@ -113,10 +113,12 @@ public class EyeAgent : MonoBehaviour
         
         return false;
     }
-
+    /*
     public void getNodes()
     {
         //For weird init order stuff. Should request nodes in Awake after spawned by AI manager
         nodes = Managers.AI.reqNodes("EYE");
     }
+    */
+
 }

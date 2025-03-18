@@ -1134,12 +1134,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodesHazard: []
   nodesEye: []
+  eyeSpawn: {fileID: 0}
   allNodes: []
   glanceRef: {fileID: 5517960092166505175}
   active: {fileID: 0}
   eye: {fileID: 0}
   friend: {fileID: 0}
   actPrefab: {fileID: 8852457455763729971, guid: 92ef67ca3d9111b4d976db9f2b2e3671, type: 3}
+  eyePrefab: {fileID: 5752917711276114341, guid: 4881d914d34b85443864dc83bc955002, type: 3}
   friendPrefab: {fileID: 6417363216819644572, guid: 49307028db01ff54d9578f69a1e867e9, type: 3}
   activeSpawn: {fileID: 0}
   spawned: 0

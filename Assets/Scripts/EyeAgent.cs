@@ -7,10 +7,13 @@ public class EyeAgent : MonoBehaviour
     public NavMeshAgent agent;
 
     public List<Transform> nodes;
+    //Last node that the agent was moving towards
+    private Vector3 lastDest;
 
     public Light spotLight;
 
     private bool attacking;
+    private float activateTimer;
     public GameObject eyeMesh;
 
     // Start is called before the first frame update
@@ -27,6 +30,8 @@ public class EyeAgent : MonoBehaviour
         agent.SetAreaCost(area, 1f);
 
         agent.Warp(nodes[0].transform.position);
+
+        activateTimer = 3f;
         //getNodes();
     }
 
@@ -46,14 +51,21 @@ public class EyeAgent : MonoBehaviour
             {
                 attacking = true;
                 agent.destination = Managers.Player.player.transform.position;
-                    //If within proximity to continue chase
+                //If within proximity to continue chase
+                if(agent.remainingDistance <= 3f)
+                {
+                    activateTimer -= Time.deltaTime;
+                    //MenuManager.Cover(time, color)
+                    //Stop music
+                    //Check music
+                }
             }
             //Add cooldown/timer
             else
             {
                 if(!agent.pathPending && agent.remainingDistance < 1f)
                 {
-                    agent.destination = nodes[Random.Range(0, nodes.Count)].transform.position;
+                    agent.destination = lastDest;
                 }
             }
         }
@@ -82,7 +94,7 @@ public class EyeAgent : MonoBehaviour
         if(Managers.Player.player != null)
         {   
             //Could make this a collider
-            if(Vector3.Distance(transform.position, Managers.Player.transform.position) < 100f)
+            if(Vector3.Distance(transform.position, Managers.Player.transform.position) < 10f)
             {
                 Debug.Log("Proximity");
 

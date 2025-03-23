@@ -179,10 +179,28 @@ public class MenuManager : MonoBehaviour, IGameManager
         StartCoroutine(Cover(time));
     }
 
+    public void CoverRoutine(float time, Color color)
+    {
+        StartCoroutine(Cover(time, color));
+    }
+
     //Poorly named. Specifically the flash for being killed by hazard
     private IEnumerator Cover(float time)
     {
         solid.color = new Color(1f, 0.81f, 0.5f, 1f);
+        float currTime = 0f;
+        while(currTime < time)
+        {
+            currTime += Time.deltaTime;
+            yield return null;
+        }
+        solid.color = new Color(0f, 0f, 0f, 0f);
+        yield break;
+    }
+
+    private IEnumerator Cover(float time, Color color)
+    {
+        solid.color = color;
         float currTime = 0f;
         while(currTime < time)
         {

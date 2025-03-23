@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     public float speed = 3f;
+    //Default speed
+    public float defSpeed = 3f;
     public float gravity;
 
     public bool canMove;

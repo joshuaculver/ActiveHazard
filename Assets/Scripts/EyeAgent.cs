@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
-using TMPro;
 
 public class EyeAgent : MonoBehaviour
 {

@@ -3,25 +3,36 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 using System.Collections;
+using System.Data.SqlTypes;
 
 public class AI : MonoBehaviour
 {
     public NavMeshAgent agent;
-    //Debug
+    //Default speed which agent resets to if reverting from moveSpeed value
+    private float defSpeed = 1.5f;
+    //Is multiplied to set agent speed for behaviors
+    private float moveSpeed;
+    //Multiplies all movement speed
+    private float spdMod = 1f;
+
+
     public bool busy;
     public Light[] spotLights;
     public LensFlareComponentSRP flare;
     public ParticleSystem particles;
+
     public timedAudEmitter emit;
     //public Transform[] nodes;
     public List<Transform> nodes;
     public int destNode = 0;
+
     public AIStatus status;
     private AIStatus lastStatus;
     public GlanceStatus glanceStatus;
     private int looks;
     private float lookTime;
     private float dir;
+
     private List<int> rndFlip = new List<int>();
     private int flip;
 
@@ -34,6 +45,7 @@ public class AI : MonoBehaviour
     public bool timing = false;
     public float pursuitDelay = 2f;
     public float pursuitTimer = 0f;
+    //How many times the hazard will move to a node or player last known position before leaving hunt behavior 
     private int huntIterations = 0;
 
     //Attack variables
@@ -47,6 +59,9 @@ public class AI : MonoBehaviour
     private bool chased = false;
 
     public GameObject debugMarker;
+
+    //When true forces the hazard to stay in hunt behavior until contact is made with the player
+    public bool hardHunt = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -73,6 +88,8 @@ public class AI : MonoBehaviour
         {
             lightSwitch(true);
         }
+
+        moveSpeed = defSpeed;
 
         //debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
@@ -285,6 +302,14 @@ public class AI : MonoBehaviour
             //True for full sting
             StartCoroutine(Managers.Music.Sting(true));
             Managers.Player.canInteract(false);
+
+            //Contact was made so forced hunt can end
+            if(hardHunt)
+            {
+                spdMod = 1f;
+                hardHunt = false;
+            }
+
         }
         else if(newState == AIStatus.Glance)
         {
@@ -474,7 +499,8 @@ public class AI : MonoBehaviour
         }
 
         agent.destination = newDest.position;
-        agent.speed = 4f;
+        //agent.speed = 4f;
+        agent.speed = moveSpeed * 2.67f * spdMod;
 
         agent.isStopped = false;
     }
@@ -509,11 +535,13 @@ public class AI : MonoBehaviour
             if(Random.Range(1, 21) == 1)
             {
                 Debug.Log("Going fast randomly");
-                agent.speed = Random.Range(3.5f, 5f);
+                //agent.speed = Random.Range(3.5f, 5f);
+                agent.speed = Random.Range(moveSpeed * 2.4f, moveSpeed * 3.4f) * spdMod;
             }
             else
             {
-                agent.speed = Random.Range(0.75f, 3.5f);
+                //agent.speed = Random.Range(0.75f, 3.5f);
+                agent.speed = Random.Range(moveSpeed * 0.5f, moveSpeed * 2.4f) * spdMod;
             }
             //agent.speed = 3;
             agent.destination = nodes[destNode].position;
@@ -528,7 +556,8 @@ public class AI : MonoBehaviour
         if(!agent.pathPending)
         {
             Debug.Log("Hunting");
-            agent.speed = Random.Range(1.5f, 3.25f);
+            //agent.speed = Random.Range(1.5f, 3.25f);
+            agent.speed = Random.Range(moveSpeed, moveSpeed * 2.2f) * spdMod;
             //agent.destination = Managers.Player.player.transform.position; //+ new Vector3(Random.Range(-4.0f, 4.0f), 0.0f, Random.Range(-4.0f, 4.0f));
             if(playerRay() || Vector3.Distance(transform.position, Managers.Player.player.transform.position) <= 5)
             {
@@ -546,10 +575,12 @@ public class AI : MonoBehaviour
                 agent.destination = Managers.Player.player.transform.position;         
             }
             agent.isStopped = false;
+
             huntIterations -= 1;
         }
 
         //TODO figure out more interesting way to handle this
+        /*
         if(huntIterations <= 0)
         {
             Debug.Log("Lost player");
@@ -562,6 +593,27 @@ public class AI : MonoBehaviour
                 Managers.AI.dangerUp = false;
             }
         }
+        */
+        if(huntIterations <= 0)
+        {
+            if(hardHunt)
+            {
+                huntIterations = Random.Range(2, 5);
+                spdMod += Random.Range(moveSpeed * 0.03f, moveSpeed * 0.06f);
+            }
+            else
+            {
+                Debug.Log("Lost player");
+                timing = false;
+                changeState(AIStatus.Wander);
+                agent.ResetPath();
+                if(chased)
+                {
+                    chased = false;
+                    Managers.AI.dangerUp = false;
+                }
+            }
+        }
     }
 
     //Pathing for agent while player is near and agent has LOS
@@ -569,7 +621,8 @@ public class AI : MonoBehaviour
     {
         chased = true;
         //Debug.Log("Chasing");
-        agent.speed = 2.25f;
+        //agent.speed = 2.25f;
+        agent.speed = moveSpeed * 1.5f * spdMod;
         if(playerRay())
         {
             //Debug.Log("LOS");
@@ -584,7 +637,8 @@ public class AI : MonoBehaviour
 
     void GoPursue()
     {
-        agent.speed = 2.15f;
+        //agent.speed = 2.15f;
+        agent.speed = moveSpeed * 1.44f * spdMod;
         //Debug.Log("Updating destination in pursue");
         if(pursuitTimer >= pursuitDelay)
         {

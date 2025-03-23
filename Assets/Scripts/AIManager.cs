@@ -19,6 +19,7 @@ public class AIManager : MonoBehaviour, IGameManager
     public GameObject friendPrefab;
     public Transform activeSpawn;
     public bool spawned = false;
+    public bool eyeSpawned = false;
     //Flips for whether danger is rising or falling
     public int danger;
     public bool dangerUp = true;
@@ -233,7 +234,7 @@ public class AIManager : MonoBehaviour, IGameManager
             Debug.Log("Despawning hazard");
             if(active.status != AIStatus.Avoid && !active.playerRay())
             {
-                Destroy(active.debugMarker);
+                //Destroy(active.debugMarker);
                 Destroy(active.gameObject);
                 spawned = false;
                 Managers.Music.check();
@@ -247,11 +248,13 @@ public class AIManager : MonoBehaviour, IGameManager
         eye = Instantiate(eyePrefab, eyeSpawn.position, Quaternion.identity);
         eyeAgent = eye.GetComponent<EyeAgent>();
         //Set eyeAgent position
+        eyeSpawned = true;
     }
 
     public void DespawnEye()
     {
-
+        Destroy(eye.gameObject);
+        eyeSpawned = false;
     }
     
     //TODO part of AI looking behavior to replace with mathf.moveTowards

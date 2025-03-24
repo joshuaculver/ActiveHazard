@@ -56,8 +56,14 @@ public class EyeAgent : MonoBehaviour
                 {
                     activateTimer -= Time.deltaTime;
                     //MenuManager.Cover(time, color)
+                    Managers.Menu.CoverRoutine(1.5f, Color.black);
                     //Stop music
+                    Managers.Music.Stop();
+                    //Play breaker switch sound
+                    Managers.AI.SpawnActive(Managers.AI.FurthestNode(), true);
                     //Check music
+
+                    Managers.AI.DespawnEye();
                 }
             }
             //Add cooldown/timer

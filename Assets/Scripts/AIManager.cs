@@ -68,7 +68,7 @@ public class AIManager : MonoBehaviour, IGameManager
             if(!spawned && dangerUp)
             {
                 danger += 1;
-                SpawnActive(FurthestNode());
+                SpawnActive(FurthestNode(), false);
             }
             else if(dangerUp)
             {
@@ -151,7 +151,7 @@ public class AIManager : MonoBehaviour, IGameManager
         {
             if(danger > 2 && danger <= 6)
             {
-                SpawnActive(FurthestNode());
+                SpawnActive(FurthestNode(), false);
                 if(spawned)
                 {
                     Debug.Log("Danger check: switch to wander");
@@ -160,7 +160,7 @@ public class AIManager : MonoBehaviour, IGameManager
             }
             else if(danger >= 1)
             {
-                SpawnActive(FurthestNode());
+                SpawnActive(FurthestNode(), false);
                 if(spawned)
                 {
                     Debug.Log("Danger check: switch to avoid");
@@ -213,7 +213,7 @@ public class AIManager : MonoBehaviour, IGameManager
         return outList;
     }
 
-    public void SpawnActive(Transform pos)
+    public void SpawnActive(Transform pos, bool hardHunt)
     {
         if(Managers.acccesibilityMode)
         {
@@ -223,6 +223,17 @@ public class AIManager : MonoBehaviour, IGameManager
         Debug.Log("Spawning hazard");
         active = Instantiate(actPrefab, pos.position, Quaternion.identity).GetComponent<AI>();
         spawned = true;
+        if(active)
+        {
+            if(hardHunt)
+            {
+                active.hardHunt = true;
+            }
+            else
+            {
+                active.hardHunt = false; 
+            }
+        }
         DangerCheck();
         Managers.Music.check();
     }

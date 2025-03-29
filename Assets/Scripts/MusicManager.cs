@@ -230,6 +230,26 @@ public class MusicManager : MonoBehaviour, IGameManager
         }
     }
 
+    private IEnumerator MusicFade()
+    {
+        if(srcs[flip].isPlaying && srcs[flip].volume > 0)
+        {
+            while(srcs[flip].volume > 0)
+            {
+                srcs[flip].volume -= Time.deltaTime * 0.2f;
+                yield return null;
+            }
+
+            srcs[flip].Stop();
+
+            yield break;
+        }
+        else
+        {
+            yield break;
+        }
+    }
+
     //Uses two audio sources to crossfade
     private void PlayMus(AudioClip clip, float vol, bool loop)
     {
@@ -322,83 +342,86 @@ public class MusicManager : MonoBehaviour, IGameManager
 
     public IEnumerator Sting(bool full)
     {
-        //Spotted sting
-        if(full)
+        if(playing != pursuit)
         {
-            bool wasCheck = wasPlaying;
-            if(stingCD == true)
+            //Spotted sting
+            if(full)
             {
-                Debug.Log("Sting on CD");
+                bool wasCheck = wasPlaying;
+                if(stingCD == true)
+                {
+                    Debug.Log("Sting on CD");
+                    yield break;
+                }
+
+                running = false;
+                stingCD = true;
+
+                flip = 1 - flip;
+                AudioSource source = srcs[flip];
+
+                StopAll();
+
+                source.volume = 0.5f;
+                source.clip = sting;
+                source.loop = false;
+
+                float timeTo = source.clip.length - 3f;
+                float timing = 0f;
+                source.Play();
+
+                while(timing < timeTo)
+                {
+                    timing += Time.deltaTime;
+                    yield return null;
+                }
+
+                running = true;
+
+                wasPlaying = wasCheck;
+
+                check();
                 yield break;
             }
-
-            running = false;
-            stingCD = true;
-
-            flip = 1 - flip;
-            AudioSource source = srcs[flip];
-
-            StopAll();
-
-            source.volume = 0.5f;
-            source.clip = sting;
-            source.loop = false;
-
-            float timeTo = source.clip.length - 3f;
-            float timing = 0f;
-            source.Play();
-
-            while(timing < timeTo)
+            //Distant suspicion/going to hunt sting
+            else if(!full)
             {
-                timing += Time.deltaTime;
-                yield return null;
+                bool wasCheck = wasPlaying;
+                if(smStingCD == true || stingCD == true)
+                {
+                    Debug.Log("Small sting on CD");
+                    yield break;
+                }
+
+                running = false;
+                smStingCD = true;
+
+                flip = 1 - flip;
+                AudioSource source = srcs[flip];
+
+                StopAll();
+
+                source.volume = 0.5f;
+                source.clip = smSting;
+                source.loop = false;
+
+                float timeTo = source.clip.length - 3f;
+                float timing = 0f;
+                source.Play();
+
+                while(timing < timeTo)
+                {
+                    timing += Time.deltaTime;
+                    yield return null;
+                }
+
+                running = true;
+
+                wasPlaying = wasCheck;
+
+                check();
+                yield break; 
             }
-
-            running = true;
-
-            wasPlaying = wasCheck;
-
-            check();
-            yield break;
-        }
-        //Distant suspicion/going to hunt sting
-        else if(!full)
-        {
-            bool wasCheck = wasPlaying;
-            if(smStingCD == true || stingCD == true)
-            {
-                Debug.Log("Small sting on CD");
-                yield break;
-            }
-
-            running = false;
-            smStingCD = true;
-
-            flip = 1 - flip;
-            AudioSource source = srcs[flip];
-
-            StopAll();
-
-            source.volume = 0.5f;
-            source.clip = smSting;
-            source.loop = false;
-
-            float timeTo = source.clip.length - 3f;
-            float timing = 0f;
-            source.Play();
-
-            while(timing < timeTo)
-            {
-                timing += Time.deltaTime;
-                yield return null;
-            }
-
-            running = true;
-
-            wasPlaying = wasCheck;
-
-            check();
-            yield break; 
         }
     }
 
@@ -554,9 +577,14 @@ public class MusicManager : MonoBehaviour, IGameManager
                     prevStatus = Managers.AI.active.status;
                     prevDanger = Managers.AI.danger;
                 }
+
             }
             else if(Managers.AI.active.status == AIStatus.Avoid || Managers.AI.active.status == AIStatus.Wander)
             {
+                if(playing == search)
+                {
+                    StartCoroutine(MusicFade());
+                }
                 if(Managers.AI.danger >= 5)
                 {
                     if(playing != breath[1])

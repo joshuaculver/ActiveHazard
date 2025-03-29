@@ -179,171 +179,173 @@ public class AI : MonoBehaviour
         {
             return;
         }
-
-        if(newState == AIStatus.Wander)
+        else
         {
-            Debug.Log("Changing AI status: Wander");
-            if(status == AIStatus.Hunt)
+            if(newState == AIStatus.Wander)
             {
-                agent.ResetPath();
-                status = AIStatus.Wander;
-
-                Managers.Player.canInteract(true);
-            }
-            else if(status == AIStatus.Pursue)
-            {
-                status = AIStatus.Hunt;
-
-                Managers.Player.canInteract(true);
-            }
-            else if(status == AIStatus.Avoid)
-            {
-                Managers.AI.DespawnActive();
-                //lightSwitch(true);
-                status = AIStatus.Wander;
-                Managers.Player.canInteract(true);
-            }
-            else if(status == AIStatus.Glance)
-            {
-                status = AIStatus.Wander;
-                Managers.Player.canInteract(true);
-            }
-            else
-            {
-                Debug.Log("Cannot switch from " + status + " -> " + newState);
-            }
-        }
-        else if(newState == AIStatus.Avoid)
-        {
-            Debug.Log("Changing AI status: Avoid");
-            if(status == AIStatus.Wander)
-            {
-                agent.ResetPath();
-                lightSwitch(false);
-                status = AIStatus.Avoid;
-                emit.setVol(Managers.Music.defaultFXVol / 2);
-
-                Managers.Player.canInteract(true);
-            }
-            else if(status == AIStatus.Glance)
-            {
-                lightSwitch(false);
-                status = AIStatus.Avoid;
-                emit.setVol(Managers.Music.defaultFXVol / 2);
-
-                Managers.Player.canInteract(true);
-            }
-            else
-            {
-                Debug.Log("Cannot switch from " + status + " -> " + newState);
-            }
-
-        }
-        else if(newState == AIStatus.Hunt)
-        {
-            Debug.Log("Changing AI status: Hunt");
-            if(status == AIStatus.Wander || status == AIStatus.Glance || status == AIStatus.Pursue)
-            {
-                huntIterations = Random.Range(2, 5);
-                timing = true;
-                contactTime = 0;
-                status = AIStatus.Hunt;
-
-                if(lastSeen == null)
+                Debug.Log("Changing AI status: Wander");
+                if(status == AIStatus.Hunt)
                 {
-                    lastSeen = Managers.Player.player.transform;
+                    agent.ResetPath();
+                    status = AIStatus.Wander;
+
+                    Managers.Player.canInteract(true);
                 }
+                else if(status == AIStatus.Pursue)
+                {
+                    status = AIStatus.Hunt;
+
+                    Managers.Player.canInteract(true);
+                }
+                else if(status == AIStatus.Avoid)
+                {
+                    Managers.AI.DespawnActive();
+                    //lightSwitch(true);
+                    status = AIStatus.Wander;
+                    Managers.Player.canInteract(true);
+                }
+                else if(status == AIStatus.Glance)
+                {
+                    status = AIStatus.Wander;
+                    Managers.Player.canInteract(true);
+                }
+                else
+                {
+                    Debug.Log("Cannot switch from " + status + " -> " + newState);
+                }
+            }
+            else if(newState == AIStatus.Avoid)
+            {
+                Debug.Log("Changing AI status: Avoid");
+                if(status == AIStatus.Wander)
+                {
+                    agent.ResetPath();
+                    lightSwitch(false);
+                    status = AIStatus.Avoid;
+                    emit.setVol(Managers.Music.defaultFXVol / 2);
+
+                    Managers.Player.canInteract(true);
+                }
+                else if(status == AIStatus.Glance)
+                {
+                    lightSwitch(false);
+                    status = AIStatus.Avoid;
+                    emit.setVol(Managers.Music.defaultFXVol / 2);
+
+                    Managers.Player.canInteract(true);
+                }
+                else
+                {
+                    Debug.Log("Cannot switch from " + status + " -> " + newState);
+                }
+
+            }
+            else if(newState == AIStatus.Hunt)
+            {
+                Debug.Log("Changing AI status: Hunt");
+                if(status == AIStatus.Wander || status == AIStatus.Glance || status == AIStatus.Pursue)
+                {
+                    huntIterations = Random.Range(2, 5);
+                    timing = true;
+                    contactTime = 0;
+                    status = AIStatus.Hunt;
+
+                    if(lastSeen == null)
+                    {
+                        lastSeen = Managers.Player.player.transform;
+                    }
+                    agent.ResetPath();
+                    GoHunt();
+
+                    Managers.Player.canInteract(true);
+                }
+                else
+                {
+                    Debug.Log("Cannot switch from " + status + " -> " + newState);
+                }
+            }
+            else if(newState == AIStatus.Pursue)
+            {
+                if(status == AIStatus.Chase)
+                {
+                    attacking = false;
+                    timing = true;
+                    contactTime = 0;
+                    agent.stoppingDistance = 0f;
+                    pursuitTimer = 0;
+                    status = AIStatus.Pursue;
+
+                    Managers.Player.canInteract(false);
+                }
+                else if(status == AIStatus.Hunt)
+                {
+                    timing = true;
+                    contactTime = 0;
+                    status = AIStatus.Pursue;
+
+                    Managers.Player.canInteract(false);
+                }
+                else
+                {
+                    Debug.Log("Cannot switch from " + status + " -> " + newState);
+                }
+            }
+            //Switch to chase. Only state which should always be acccesible
+            else if(newState == AIStatus.Chase)
+            {
+                agent.stoppingDistance = 6f;
+                timing = true;
+                contactTime = 0;
                 agent.ResetPath();
-                GoHunt();
+                status = AIStatus.Chase;
+                Managers.AI.chased = true;
 
-                Managers.Player.canInteract(true);
-            }
-            else
-            {
-                Debug.Log("Cannot switch from " + status + " -> " + newState);
-            }
-        }
-        else if(newState == AIStatus.Pursue)
-        {
-            if(status == AIStatus.Chase)
-            {
-                attacking = false;
-                timing = true;
-                contactTime = 0;
-                agent.stoppingDistance = 0f;
-                pursuitTimer = 0;
-                status = AIStatus.Pursue;
-
+                //True for full sting
+                StartCoroutine(Managers.Music.Sting(true));
                 Managers.Player.canInteract(false);
-            }
-            else if(status == AIStatus.Hunt)
-            {
-                timing = true;
-                contactTime = 0;
-                status = AIStatus.Pursue;
 
-                Managers.Player.canInteract(false);
+                //Contact was made so forced hunt can end
+                if(hardHunt)
+                {
+                    spdMod = 1f;
+                    hardHunt = false;
+                }
+
             }
-            else
+            else if(newState == AIStatus.Glance)
             {
-                Debug.Log("Cannot switch from " + status + " -> " + newState);
+                Debug.Log("Changing AI status: Glance");
+                if(status == AIStatus.Wander)
+                {
+                    lastStatus = AIStatus.Wander;
+                    status = AIStatus.Glance;
+
+                    Managers.AI.glanceRef.transform.position = nodes[Random.Range(0,nodes.Count)].transform.position;
+
+                    looks = Random.Range(1, 6);
+                    lookTime = Random.Range(1f, 4f);
+                    dir = Random.Range(3f,7f) * Flip();
+                }
+                else if(status == AIStatus.Hunt)
+                {
+                    lastStatus = AIStatus.Hunt;
+                    status = AIStatus.Glance;
+
+                    Managers.AI.glanceRef.transform.position = lastSeen.position;
+                    looks = Random.Range(1, 4);
+                    lookTime = Random.Range(1f, 2f);
+                    dir = Random.Range(4f,8f) * Flip();
+                }
+                else
+                {
+                    Debug.Log("Cannot switch from " + status + " -> " + newState);
+                }
             }
+
+            Managers.Music.check();
+            
+            Debug.Log("State:" + status);
         }
-        //Switch to chase. Only state which should always be acccesible
-        else if(newState == AIStatus.Chase)
-        {
-            agent.stoppingDistance = 6f;
-            timing = true;
-            contactTime = 0;
-            agent.ResetPath();
-            status = AIStatus.Chase;
-            Managers.AI.chased = true;
-
-            //True for full sting
-            StartCoroutine(Managers.Music.Sting(true));
-            Managers.Player.canInteract(false);
-
-            //Contact was made so forced hunt can end
-            if(hardHunt)
-            {
-                spdMod = 1f;
-                hardHunt = false;
-            }
-
-        }
-        else if(newState == AIStatus.Glance)
-        {
-            Debug.Log("Changing AI status: Glance");
-            if(status == AIStatus.Wander)
-            {
-                lastStatus = AIStatus.Wander;
-                status = AIStatus.Glance;
-
-                Managers.AI.glanceRef.transform.position = nodes[Random.Range(0,nodes.Count)].transform.position;
-
-                looks = Random.Range(1, 6);
-                lookTime = Random.Range(1f, 4f);
-                dir = Random.Range(3f,7f) * Flip();
-            }
-            else if(status == AIStatus.Hunt)
-            {
-                lastStatus = AIStatus.Hunt;
-                status = AIStatus.Glance;
-
-                Managers.AI.glanceRef.transform.position = lastSeen.position;
-                looks = Random.Range(1, 4);
-                lookTime = Random.Range(1f, 2f);
-                dir = Random.Range(4f,8f) * Flip();
-            }
-            else
-            {
-                Debug.Log("Cannot switch from " + status + " -> " + newState);
-            }
-        }
-
-        Managers.Music.check();
-        
-        Debug.Log("State:" + status);
     }
 
     //TODO handle pausing timer/state changes/cool down when not in chase

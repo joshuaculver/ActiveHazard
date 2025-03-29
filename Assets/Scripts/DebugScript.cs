@@ -12,13 +12,13 @@ public class DebugScript : MonoBehaviour
             {
                 if(Managers.AI.spawned)
                 {
-                    Debug.Log("Spawning Hazard");
+                    Debug.Log("Despawning Hazard");
                     Managers.AI.DespawnActive();
                 }
                 else
                 {
-                    Debug.Log("Despawning Hazard");
-                    Managers.AI.SpawnActive(Managers.AI.activeSpawn);
+                    Debug.Log("Spawning Hazard");
+                    Managers.AI.SpawnActive(Managers.AI.activeSpawn, false);
                 }
             }
             if(Input.GetKeyUp(KeyCode.I))

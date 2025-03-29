@@ -55,6 +55,7 @@ public class EyeAgent : MonoBehaviour
                 if(agent.remainingDistance <= 3f)
                 {
                     activateTimer -= Time.deltaTime;
+                    //Move some of this to eye despawn/spawn
                     //MenuManager.Cover(time, color)
                     Managers.Menu.CoverRoutine(1.5f, Color.black);
                     //Stop music

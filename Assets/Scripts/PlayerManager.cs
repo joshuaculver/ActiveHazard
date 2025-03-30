@@ -178,12 +178,9 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     public void Die()
     {
-        Collider[] colliders = player.GetComponents<Collider>();
-        if(colliders.Length >= 2)
-        {
-            //There's a collider inside the player's main collider to help with ramps that has no friction which misbehaves during death
-            Destroy(colliders[2]);
-        }
+        Rigidbody plBody = player.GetComponent<Rigidbody>();
+        plBody.transform.position += new Vector3(0, 0.4f, 0);
+        plBody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
 
         gameOver = true;
         pMove.moving = false;

@@ -35,6 +35,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     private HeadBob bob;
 
+    public bool InEyeArea = false;
+
     public void Startup()
     {
         Debug.Log("Player manager starting...");

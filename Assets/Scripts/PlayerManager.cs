@@ -35,8 +35,6 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     private HeadBob bob;
 
-    public bool InEyeArea = false;
-
     public void Startup()
     {
         Debug.Log("Player manager starting...");
@@ -241,6 +239,38 @@ public class PlayerManager : MonoBehaviour, IGameManager
         else
         {
             bob.enable = set;
+        }
+    }
+
+    public void ChangeSpeed(float spdMult)
+    {
+        if(pMove)
+        {
+            pMove.ChangeSpeed(spdMult);
+            if(bob)
+            {
+                bob.ChangeBob(spdMult);
+            }
+            if(aud)
+            {
+                aud.changeStepWait(spdMult);
+            }
+        }
+    }
+
+    public void ResetSpeed()
+    {
+        if(pMove)
+        {
+            pMove.ResetSpeed();
+            if(bob)
+            {
+                bob.ResetBob();
+            }
+            if(aud)
+            {
+                aud.resetStepWait();
+            }
         }
     }
 }

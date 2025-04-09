@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EyeAreaScript : MonoBehaviour
 {
+    public float SpeedMod;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            Managers.Player.InEyeArea = true;
+            if(Managers.Player.player)
+            {
+                Managers.Player.ChangeSpeed(SpeedMod);
+            }
         }
     }
 
@@ -16,7 +21,10 @@ public class EyeAreaScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Managers.Player.InEyeArea = false;
+            if(Managers.Player.player)
+            {
+                Managers.Player.ResetSpeed();
+            }
         }
     }
 }

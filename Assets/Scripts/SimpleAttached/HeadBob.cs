@@ -8,6 +8,9 @@ public class HeadBob : MonoBehaviour
     private float amplitude = 0.00055f;
     private float frequencey = 8.5f;
 
+    private float defAmp = 0.00055f;
+    private float defFreq = 8.5f;
+
     float toggleSpd = 2.0f;
     Vector3 startPos;
     CharacterController controller;
@@ -79,5 +82,17 @@ public class HeadBob : MonoBehaviour
     private void playMotion(Vector3 motion)
     {
         cam.localPosition += motion;
+    }
+
+    public void ChangeBob(float bobMult)
+    {
+        amplitude = defAmp * bobMult;
+        frequencey = defFreq * bobMult;
+    }
+
+    public void ResetBob()
+    {
+        amplitude = defAmp;
+        frequencey = defFreq;
     }
 }

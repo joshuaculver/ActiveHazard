@@ -46,4 +46,14 @@ public class PlayerInput : MonoBehaviour
             _charController.Move(movement);
         }
     }
+
+    public void ChangeSpeed(float spdMult)
+    {
+        speed = defSpeed * spdMult;
+    }
+
+    public void ResetSpeed()
+    {
+        speed = defSpeed;
+    }
 }

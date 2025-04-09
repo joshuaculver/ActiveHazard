@@ -6,6 +6,7 @@ public class PlayerAudEmitter : MonoBehaviour
 
     public bool running = false;
     private float waitTime = 0.9f;
+    private float defWaitTime = 0.9f;
     private float timer = 0f;
     private float flyWait = 0.15f;
     private float flyTimer = 0f;
@@ -99,5 +100,15 @@ public class PlayerAudEmitter : MonoBehaviour
     {
         flyTimer = 0f;
         waiting = true;
+    }
+
+    public void changeStepWait(float waitMult)
+    {
+        waitTime = defWaitTime / waitMult;
+    }
+
+    public void resetStepWait()
+    {
+        waitTime = defWaitTime;
     }
 }

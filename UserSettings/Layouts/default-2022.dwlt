@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 41
+  controlID: 110
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,16 +68,16 @@ MonoBehaviour:
     y: 0
     width: 603
     height: 1307
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 22}
   - {fileID: 16}
   - {fileID: 20}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 42
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 43
+  controlID: 45
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -4050,9 +4050,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1931
+    x: 1957
     y: 73
-    width: 628
+    width: 602
     height: 1286
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -4064,14 +4064,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: -1
+  progressMessageClearTime: 2324.9471795
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -4243,267 +4243,20 @@ MonoBehaviour:
     - name: origin/main
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: main
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - db0430a691ff598418b1b6a460a3797b
-        - 4e29f0254991c5742a25d6d30d4e6ee1
-        - 18a2eaa6b5ca93943bc9c571788426ea
-        - 8c2bd9fcbfd3a5c4cb7db7123058cdf8
-        - 7d4ee161c1dbf7540a08b968dd22e3bb
-        - 5b777730bc54afa4f822df539a82a59f
-        - 9616abe36d4cd334cbb94dd6a8a06526
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models
-          label: Models
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models\cars
-          label: cars
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models\cars\Hatchback.fbx
-          label: Hatchback.fbx
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\cars\Hatchback.fbx
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Hatchback.fbx
-            projectPath: Assets\Models\cars\Hatchback.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Models\cars\Pickup.fbx
-          label: Pickup.fbx
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\cars\Pickup.fbx
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Pickup.fbx
-            projectPath: Assets\Models\cars\Pickup.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Models\cars\Sedan.fbx
-          label: Sedan.fbx
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\cars\Sedan.fbx
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Sedan.fbx
-            projectPath: Assets\Models\cars\Sedan.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Models\cars\SUV.fbx
-          label: SUV.fbx
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\cars\SUV.fbx
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\SUV.fbx
-            projectPath: Assets\Models\cars\SUV.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Models\cars\Van.fbx
-          label: Van.fbx
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\cars\Van.fbx
-            fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Van.fbx
-            projectPath: Assets\Models\cars\Van.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Models
-        - Assets\Models\cars
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models
-          label: Models
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models\cars
-          label: cars
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -4532,312 +4285,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Models
-        label: Models
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Models\cars.meta
-        label: cars.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars.meta
-          projectPath: Assets\Models\cars.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars
-        label: cars
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Models\cars\Hatchback.fbx
-        label: Hatchback.fbx
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Hatchback.fbx
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Hatchback.fbx
-          projectPath: Assets\Models\cars\Hatchback.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Hatchback.fbx.meta
-        label: Hatchback.fbx.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Hatchback.fbx.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Hatchback.fbx.meta
-          projectPath: Assets\Models\cars\Hatchback.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Pickup.fbx
-        label: Pickup.fbx
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Pickup.fbx
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Pickup.fbx
-          projectPath: Assets\Models\cars\Pickup.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Pickup.fbx.meta
-        label: Pickup.fbx.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Pickup.fbx.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Pickup.fbx.meta
-          projectPath: Assets\Models\cars\Pickup.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Sedan.fbx
-        label: Sedan.fbx
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Sedan.fbx
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Sedan.fbx
-          projectPath: Assets\Models\cars\Sedan.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Sedan.fbx.meta
-        label: Sedan.fbx.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Sedan.fbx.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Sedan.fbx.meta
-          projectPath: Assets\Models\cars\Sedan.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\SUV.fbx
-        label: SUV.fbx
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\SUV.fbx
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\SUV.fbx
-          projectPath: Assets\Models\cars\SUV.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\SUV.fbx.meta
-        label: SUV.fbx.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\SUV.fbx.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\SUV.fbx.meta
-          projectPath: Assets\Models\cars\SUV.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Van.fbx
-        label: Van.fbx
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Van.fbx
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Van.fbx
-          projectPath: Assets\Models\cars\Van.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\cars\Van.fbx.meta
-        label: Van.fbx.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cars\Van.fbx.meta
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Van.fbx.meta
-          projectPath: Assets\Models\cars\Van.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -4857,88 +4304,16 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Models\cars.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars.meta
-      projectPath: Assets\Models\cars.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Hatchback.fbx
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Hatchback.fbx
-      projectPath: Assets\Models\cars\Hatchback.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Hatchback.fbx.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Hatchback.fbx.meta
-      projectPath: Assets\Models\cars\Hatchback.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Pickup.fbx
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Pickup.fbx
-      projectPath: Assets\Models\cars\Pickup.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Pickup.fbx.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Pickup.fbx.meta
-      projectPath: Assets\Models\cars\Pickup.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Sedan.fbx
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Sedan.fbx
-      projectPath: Assets\Models\cars\Sedan.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Sedan.fbx.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Sedan.fbx.meta
-      projectPath: Assets\Models\cars\Sedan.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\SUV.fbx
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\SUV.fbx
-      projectPath: Assets\Models\cars\SUV.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\SUV.fbx.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\SUV.fbx.meta
-      projectPath: Assets\Models\cars\SUV.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Van.fbx
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Van.fbx
-      projectPath: Assets\Models\cars\Van.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cars\Van.fbx.meta
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\Assets\Models\cars\Van.fbx.meta
-      projectPath: Assets\Models\cars\Van.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 12 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2025-09-09T19:10:23.393-04:00
+      updatedTimeString: 2025-09-13T14:49:27.262-04:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2025-09-09T19:38:03.927-04:00
+      updatedTimeString: 2025-09-13T14:49:11.553-04:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2025-09-09T19:37:49.075-04:00
+      updatedTimeString: 2025-09-13T14:46:56.081-04:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -35857,7 +35232,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/joshuaculver/ActiveHazard.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: main
@@ -35868,13 +35243,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2025-04-16T19:52:07.713-04:00
+    updatedTimeString: 2025-09-13T14:49:27.262-04:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2025-04-16T19:55:43.694-04:00
+    updatedTimeString: 2025-09-13T14:49:27.853-04:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2025-04-16T19:55:43.688-04:00
+    updatedTimeString: 2025-09-13T14:49:11.553-04:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -35892,8 +35267,8 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
-  repositoryProgressMessage: 
+  repositoryProgressValue: 1
+  repositoryProgressMessage: Pushed
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
@@ -38786,7 +38161,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Music
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -38794,16 +38169,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Music
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Josh\Desktop\Unity\Sasm Nathotas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 235}
-    m_SelectedIDs: 226e0000
-    m_LastClickedID: 28194
-    m_ExpandedIDs: 00000000c86d0000ca6d0000cc6d0000d26d0000d46d0000d66d0000d86d0000da6d0000dc6d0000de6d0000e06d0000e26d00001e6e0000226e0000308f000000ca9a3b
+    scrollPos: {x: 0, y: 171}
+    m_SelectedIDs: 7a6e0000
+    m_LastClickedID: 28282
+    m_ExpandedIDs: 00000000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003e6e00009e6e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -38831,7 +38206,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c86d0000ca6d0000cc6d0000ce6d0000d06d0000d26d0000d46d0000d66d0000d86d0000da6d0000dc6d0000de6d0000e06d0000e26d0000
+    m_ExpandedIDs: 00000000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e00003e6e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -38971,23 +38346,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: dc39fdff6069fdff3881fdff94fffdff9003feff5030feffe235feff3c67feffce67feff7a6cfeff7e6cfeff946dfeff82a3feffa2eafeffaaeafeffb8eafeff16f3feff12f7fefff2faffff2afbffff2cfbfffff4640000206500008ed10000fed20000f8d8000098dc0000c0e100008ae200004ee30000a4ec000014ee00000ef40000dc180100e6180100626901001c6b0100f4790100
+      m_SelectedIDs: c6ebfeff
+      m_LastClickedID: -70714
+      m_ExpandedIDs: faeffefffeeffeff14f1feff3af5feff1a22ffffd88fffff72b1ffff76b1ffff08c2ffff2afbffff2cfbfffff4fffffff26400006e65000030e90000a0ea00009af000002a150100a6150100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Music 2
+        m_OriginalName: Music 2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -69674
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -39353,9 +38728,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.429676, y: -98.57611, z: 15.466835}
+    m_Target: {x: 107.67731, y: -88.8637, z: 71.07163}
     speed: 2
-    m_Value: {x: 16.429676, y: -98.57611, z: 15.466835}
+    m_Value: {x: 107.67731, y: -88.8637, z: 71.07163}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -39401,13 +38776,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.027353587, y: -0.9677765, z: 0.2538509, w: -0.0065047583}
+    m_Target: {x: 0.12337414, y: 0.76692075, z: -0.11189016, w: 0.62123954}
     speed: 2
-    m_Value: {x: -0.02694824, y: -0.9669047, z: 0.25366065, w: -0.005048489}
+    m_Value: {x: 0.123260394, y: 0.76621366, z: -0.111787006, w: 0.6206668}
   m_Size:
-    m_Target: 47.571583
+    m_Target: 49.282333
     speed: 2
-    m_Value: 47.571583
+    m_Value: 49.282333
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -39454,7 +38829,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 962
-    width: 1930
+    width: 1956
     height: 397
   m_SerializedDataModeController:
     m_DataMode: 0

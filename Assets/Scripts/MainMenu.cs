@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("SafeArea1");
     }
     public void QuitGame()
     {

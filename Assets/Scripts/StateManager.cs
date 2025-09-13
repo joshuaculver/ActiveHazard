@@ -5,11 +5,15 @@ using System;
 
 public class StateManager : MonoBehaviour, IGameManager
 {
+    //Area does not use normal gameplay/spawning/etc.
+    public bool specialState;
+
     [Serializable]
     public struct Progress
     {
         public Dictionary<string, bool>slideInventory;
         public bool inIntro;
+        //Leaving map 1
         public bool AEnding;
     }
 
@@ -33,13 +37,14 @@ public class StateManager : MonoBehaviour, IGameManager
 
     public void Startup()
     {
+        DontDestroyOnLoad(this);
         Debug.Log("State manager starting...");
         playerProgress.slideInventory = new Dictionary<string, bool>();
         playerProgress.inIntro = true;
         playerProgress.AEnding = false;
 
         status = ManagerStatus.Started;
-        Debug.Log("Intro: " + playerProgress.inIntro);
+        Debug.Log("Intro state: " + playerProgress.inIntro);
     }
 
     public void AddInventory(char set, int id)

@@ -45,6 +45,11 @@ public class PlayerInput : MonoBehaviour
             movement = transform.TransformDirection(movement);
             _charController.Move(movement);
         }
+        else
+        {
+           Vector3 movement = new Vector3(0, 0, 0);
+            _charController.Move(movement);
+        }
     }
 
     public void ChangeSpeed(float spdMult)

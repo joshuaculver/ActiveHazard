@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7089254337267718432}
   - component: {fileID: 4815935997356259982}
   - component: {fileID: 9026731143713838839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rail3
-  m_TagString: Untagged
+  m_TagString: MetalFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 8333268805584859568}
   - component: {fileID: 4127955319619944571}
   - component: {fileID: 6081185317907900894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,9 +639,9 @@ GameObject:
   - component: {fileID: 4721211632441194902}
   - component: {fileID: 7406328349517383350}
   - component: {fileID: 6046178952593232283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rail2
-  m_TagString: Untagged
+  m_TagString: MetalFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -962,7 +962,7 @@ GameObject:
   - component: {fileID: 7212118779245054145}
   - component: {fileID: 796455310040180631}
   - component: {fileID: 3067970682821693383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 604075757868057174}
   - component: {fileID: 5901782397431451746}
   - component: {fileID: 1053467940683233075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1279,7 @@ Transform:
   m_GameObject: {fileID: 5085215924499878325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5042502, y: -2.893182, z: -1.6}
+  m_LocalPosition: {x: 0.5, y: -2, z: -1.6}
   m_LocalScale: {x: 1, y: 3, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1312,8 +1312,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0001221, y: 0.9999695, z: 1.0000012}
-  m_Center: {x: -0.00079334073, y: 0.00046681188, z: 0.0000047683757}
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.47, z: 4.8}
 --- !u!1 &7336764834811633352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 1453143211419106970}
   - component: {fileID: 5926122706824897957}
   - component: {fileID: 5516579331852846613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,8 +1374,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0001221, y: 0.9999695, z: 1.0000012}
-  m_Center: {x: -0.00079334073, y: 0.00046681188, z: 0.0000047683757}
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 4.8}
 --- !u!1 &8123214529957660657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,7 +1389,7 @@ GameObject:
   - component: {fileID: 4310443969241986378}
   - component: {fileID: 4033588037883430333}
   - component: {fileID: 3244039901307771669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ramp1
   m_TagString: MetalFloor
   m_Icon: {fileID: 0}

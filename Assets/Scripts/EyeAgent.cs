@@ -81,17 +81,17 @@ public class EyeAgent : MonoBehaviour
     private void EyeLightCheck()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Geometry")))
+        if(Physics.Raycast(eyeMesh.transform.position, eyeMesh.transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Geometry")))
         {
                 spotLight.range = Mathf.MoveTowards(
                     spotLight.range,
-                    hit.distance * 200f,
-                    1000f * Time.deltaTime
+                    hit.distance * 1f,
+                    10f * Time.deltaTime
                 );
                 spotLight.intensity = Mathf.MoveTowards(
                     spotLight.intensity,
-                    hit.distance * 2000f,
-                    1000f * Time.deltaTime
+                    hit.distance * 1f,
+                    10f * Time.deltaTime
                 );
         }
     }

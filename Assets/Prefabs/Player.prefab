@@ -111,8 +111,12 @@ MonoBehaviour:
   speed: 3
   defSpeed: 3
   gravity: -5
+  runSpeedMult: 2.15
+  stamina: 600
+  staminaCap: 600
   canMove: 1
   moving: 0
+  sprinting: 0
 --- !u!54 &1401007728771774789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,6 +500,7 @@ MonoBehaviour:
   enable: 1
   cam: {fileID: 3602959589742088508}
   camHolder: {fileID: 1352709625128645982}
+  sprinting: 0
 --- !u!111 &2579574634219934710
 Animation:
   m_ObjectHideFlags: 0
@@ -1030,12 +1035,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &7094050575822254301
 GameObject:
   m_ObjectHideFlags: 0

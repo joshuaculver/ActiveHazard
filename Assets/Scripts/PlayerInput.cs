@@ -9,9 +9,13 @@ public class PlayerInput : MonoBehaviour
     //Default speed
     public float defSpeed = 3f;
     public float gravity;
+    public float runSpeedMult = 2.15f;
+    public float stamina = 600f; 
+    public float staminaCap = 600f;
 
     public bool canMove;
     public bool moving = false;
+    public bool sprinting = false;
 
     private CharacterController _charController;
     // Start is called before the first frame update
@@ -34,10 +38,35 @@ public class PlayerInput : MonoBehaviour
             {
                 moving = false;
             }
-            float deltaX = Input.GetAxis("Horizontal") * speed;
-            float deltaZ = Input.GetAxis("Vertical") * speed;
-            Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-            movement = Vector3.ClampMagnitude(movement, speed);
+
+            Vector3 movement;
+
+            if(stamina > 5f && Input.GetKey(KeyCode.LeftShift))
+            {
+                float deltaX = Input.GetAxis("Horizontal") * speed * runSpeedMult;
+                float deltaZ = Input.GetAxis("Vertical") * speed * runSpeedMult;
+                movement = new Vector3(deltaX, 0, deltaZ);
+
+                movement = Vector3.ClampMagnitude(movement, speed * runSpeedMult);
+
+                stamina -= 1f;
+                
+                sprinting = true;
+            }
+            else
+            {
+                float deltaX = Input.GetAxis("Horizontal") * speed;
+                float deltaZ = Input.GetAxis("Vertical") * speed;
+                movement = new Vector3(deltaX, 0, deltaZ);
+
+                movement = Vector3.ClampMagnitude(movement, speed);
+
+                if(stamina < staminaCap)
+                {
+                    stamina += 0.5f;
+                }
+                sprinting = false;
+            }
 
             movement.y = gravity;
 
@@ -54,7 +83,14 @@ public class PlayerInput : MonoBehaviour
 
     public void ChangeSpeed(float spdMult)
     {
-        speed = defSpeed * spdMult;
+        if(sprinting)
+        {
+            speed = defSpeed * spdMult * runSpeedMult;
+        }
+        else
+        {
+            speed = defSpeed * spdMult;
+        }
     }
 
     public void ResetSpeed()

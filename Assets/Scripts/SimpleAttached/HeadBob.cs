@@ -18,6 +18,8 @@ public class HeadBob : MonoBehaviour
     public Transform cam;
     public Transform camHolder;
 
+    public bool sprinting = false;
+
     private void Awake()
     {
         controller = GetComponentInParent<CharacterController>();

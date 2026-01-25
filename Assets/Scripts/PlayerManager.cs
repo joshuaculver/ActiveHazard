@@ -34,6 +34,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     private float iconFadeSpd = 1.75f;
 
     private HeadBob bob;
+    private bool sprinting = false;
 
     public void Startup()
     {
@@ -65,11 +66,23 @@ public class PlayerManager : MonoBehaviour, IGameManager
                 {
                     playerAnimator.SetBool("IsWalking", true);
                     aud.running = true;
+                    
+                    if(pMove.sprinting)
+                    {
+                        bob.ChangeBob(pMove.runSpeedMult);
+                        aud.changeStepWait(pMove.runSpeedMult);
+                    }
+                    else
+                    {
+                        bob.ChangeBob(1f);
+                        aud.changeStepWait(1f);
+                    }
                 }
             else if(!pMove.moving)
                 {
                     playerAnimator.SetBool("IsWalking", false);
                     aud.running = false;
+                    sprinting = false;
                 }
             
             if(playerInput)

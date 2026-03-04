@@ -54,7 +54,7 @@ public class SlideCollectible : Interactable
         {
             if(Managers.AI.active.status == AIStatus.Chase || Managers.AI.active.status == AIStatus.Pursue)
             {
-                //TODO buzzer or something
+                //TODO add unable to pick up collectible audio feedback
             }
             else
             {

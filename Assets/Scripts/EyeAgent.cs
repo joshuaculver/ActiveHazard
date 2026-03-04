@@ -40,7 +40,7 @@ public class EyeAgent : MonoBehaviour
     {
         EyeLightCheck();
 
-        //DEBUG if
+        //TODO DEBUG if
         if(nodes.Count > 0)
         {
             if(!agent.pathPending && agent.remainingDistance < 1f)
@@ -67,7 +67,7 @@ public class EyeAgent : MonoBehaviour
                     Managers.AI.DespawnEye();
                 }
             }
-            //Add cooldown/timer
+            //TODO Add cooldown/timer
             else
             {
                 if(!agent.pathPending && agent.remainingDistance < 1f)

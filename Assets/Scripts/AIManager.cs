@@ -255,7 +255,7 @@ public class AIManager : MonoBehaviour, IGameManager
 
     public void SpawnEye()
     {
-        //Top level object transform is where visual for eye is. NavMesh agent is child object
+        //Top level object transform is where visual for eye is. NavMeshAgent is child object
         eye = Instantiate(eyePrefab, eyeSpawn.position, Quaternion.identity);
         eyeAgent = eye.GetComponent<EyeAgent>();
         //Set eyeAgent position

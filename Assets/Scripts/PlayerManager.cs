@@ -134,7 +134,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 icon.color = new Color(1f, 1f, 1f, Mathf.MoveTowards(icon.color.a, 0f, Time.unscaledDeltaTime * (iconFadeSpd + (iconFadeSpd * 0.75f))));
             }
-            //DEBUG
+            //TODO DEBUG
             if(Input.GetKeyDown(KeyCode.F))
             {
                 Die();

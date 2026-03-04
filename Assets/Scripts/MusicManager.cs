@@ -95,7 +95,7 @@ public class MusicManager : MonoBehaviour, IGameManager
             return;
         }
 
-        //TODO hacky special state just for game over with it's own lock. Probably need a function for special case music/sound
+        //TODO Find cleaner solution instead of special state just for game over with it's own lock. Probably need a function for special case music/sound
         if(Managers.Player.gameOver)
         {
             MusLock = true;

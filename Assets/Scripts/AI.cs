@@ -22,7 +22,7 @@ public class AI : MonoBehaviour
     public ParticleSystem particles;
 
     public timedAudEmitter emit;
-    //public Transform[] nodes;
+
     public List<Transform> nodes;
     public int destNode = 0;
 
@@ -94,7 +94,7 @@ public class AI : MonoBehaviour
         //debugMarker = Instantiate(debugMarker, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
-    //Move update actions to functions. Create busy variable to cause return during udpate if new action isn't wanted
+    //TODO Move update actions to functions. Create busy variable to cause return during udpate if new action isn't wanted
     void Update()
     {
         //debugMarker.transform.position = agent.destination;
@@ -125,7 +125,7 @@ public class AI : MonoBehaviour
             //Main split for giving agent target for pathing
             if(status == AIStatus.Chase || status == AIStatus.Pursue)
             {
-                //"Attacking behavior
+                //Attacking behavior
                 if(playerRay())
                 {
                     LookTarget(Managers.Player.player.transform.position, 1f);
@@ -487,7 +487,7 @@ public class AI : MonoBehaviour
         }
         else
         {
-            //TODO make a less stinky way to sort
+            //TODO Find a cleaner way to sort
             //TODO agent currently looks for furthest node from player, when they should look for node furthest from player or shortest path distance
             newDest = tempNodes[0];
             for (int i = 0; i < tempNodes.Count; i++)
@@ -784,17 +784,17 @@ public class AI : MonoBehaviour
 
     void lightShadow(bool set)
     {
-        Debug.Log("Changing hazard spotlight shadows");
+        //Debug.Log("Changing hazard spotlight shadows");
         for(int i = 0; i < spotLights.Length; i++)
         {
             if(set)
             {
-                Debug.Log("Turning on shadows on hazard spotlight");
+                //Debug.Log("Turning on shadows on hazard spotlight");
                 spotLights[i].shadows = LightShadows.Hard;
             }
             else
             {
-                Debug.Log("Turning off shadows on hazard spotlight");
+                //Debug.Log("Turning off shadows on hazard spotlight");
                 spotLights[i].shadows = LightShadows.None;
             }
         }

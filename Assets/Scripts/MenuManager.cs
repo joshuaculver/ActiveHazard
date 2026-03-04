@@ -84,7 +84,7 @@ public class MenuManager : MonoBehaviour, IGameManager
                         Managers.State.OpenLobby();
                     }
                 }
-                //Switch to not transitioning to fade back in
+                //Switch not transitioning to fade back in
                 transitioning = false;
                 Debug.Log("Main cam:" + mainCam.enabled + " - Slide Cam:" + slideCam.enabled);
             }
@@ -147,7 +147,7 @@ public class MenuManager : MonoBehaviour, IGameManager
     {
         if(Managers.AI.spawned && Managers.AI.active.status == AIStatus.Chase || Managers.AI.spawned && Managers.AI.active.status == AIStatus.Pursue)
         {
-            //TODO put a buzzer here or something
+            //TODO add audio feedback for not being allowed to pick up collectable
             return;
         }
         else
@@ -184,7 +184,7 @@ public class MenuManager : MonoBehaviour, IGameManager
         StartCoroutine(Cover(time, color));
     }
 
-    //Poorly named. Specifically the flash for being killed by hazard
+    //Flash for being killed by hazard
     private IEnumerator Cover(float time)
     {
         solid.color = new Color(1f, 0.81f, 0.5f, 1f);

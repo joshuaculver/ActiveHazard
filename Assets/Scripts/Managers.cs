@@ -37,7 +37,6 @@ public class Managers : MonoBehaviour
             headBob = false;
         }
 
-        //Managers to initialize
         Player = GetComponent<PlayerManager>();
         AI = GetComponent<AIManager>();
         Music = GetComponent<MusicManager>();
